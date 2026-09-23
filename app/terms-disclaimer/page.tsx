@@ -8,7 +8,7 @@ import { site } from "@/lib/site";
 export const metadata = buildMetadata({
   title: "Terms of Use & Disclaimer",
   description:
-    "Terms for using the JK Edwards & Company website. Site content is general information, not tax, legal or investment advice, and doesn't create a client relationship.",
+    "Terms for using the JK Edwards & Company website. Our content is general information, not tax, legal or investment advice, and creates no client relationship.",
   path: "/terms-disclaimer",
 });
 

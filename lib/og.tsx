@@ -177,6 +177,7 @@ export async function renderIcon(size: number, { rounded = true }: { rounded?: b
           color: tokens.white,
           letterSpacing: -size * 0.01,
           marginTop: -size * 0.04,
+          marginLeft: -size * 0.05,
         }}
       >
         JK
@@ -184,10 +185,10 @@ export async function renderIcon(size: number, { rounded = true }: { rounded?: b
       <div
         style={{
           position: "absolute",
-          right: size * 0.14,
-          bottom: size * 0.16,
-          width: size * 0.13,
-          height: size * 0.13,
+          right: size * 0.1,
+          bottom: size * 0.11,
+          width: size * 0.12,
+          height: size * 0.12,
           background: tokens.accent,
           borderRadius: size * 0.02,
         }}

@@ -7,7 +7,7 @@ import { cn, formatHour } from "@/lib/utils";
 /** Name / address / phone / email / hours card with directions + call buttons. */
 export function ContactDetails({ className, showButtons = true }: { className?: string; showButtons?: boolean }) {
   return (
-    <div className={cn("rounded-2xl border border-line bg-white p-7 sm:p-8", className)}>
+    <div className={cn("@container rounded-2xl border border-line bg-white p-7 sm:p-8", className)}>
       <p className="font-serif text-2xl font-semibold text-ink">{site.name}</p>
       <address className="mt-5 space-y-4 not-italic">
         <p className="flex gap-3 text-ink">
@@ -52,12 +52,18 @@ export function ContactDetails({ className, showButtons = true }: { className?: 
       </div>
 
       {showButtons && (
-        <div className="mt-7 flex flex-col gap-3 sm:flex-row">
-          <ButtonLink href={site.links.directions} external variant="outline-dark" icon="none">
+        <div className="mt-7 flex flex-col gap-3 @min-[27rem]:flex-row @min-[27rem]:flex-wrap">
+          <ButtonLink
+            href={site.links.directions}
+            external
+            variant="outline-dark"
+            icon="none"
+            className="whitespace-nowrap"
+          >
             <Navigation aria-hidden className="h-4 w-4" strokeWidth={1.75} />
             Get Directions
           </ButtonLink>
-          <ButtonLink href={site.phone.href} variant="primary">
+          <ButtonLink href={site.phone.href} variant="primary" className="whitespace-nowrap">
             Call {site.phone.display}
           </ButtonLink>
         </div>

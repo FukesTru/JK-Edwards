@@ -11,6 +11,8 @@ export type SiteImage = {
   src: string;
   alt: string;
   generationId?: string;
+  /** Original Artlist URL, kept after `images:pull` self-hosts the file. */
+  remoteSrc?: string;
 };
 
 const images = manifest as Record<ImageKey, SiteImage>;

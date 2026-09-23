@@ -9,7 +9,7 @@ import { buildMetadata } from "@/lib/seo";
 export const metadata = buildMetadata({
   title: "Sitemap",
   description:
-    "Browse every page on the JK Edwards & Company website: tax, bookkeeping, payroll and IRS services, industries we serve, blog articles, FAQs and client resources.",
+    "Browse every page on the JK Edwards & Company site: tax, bookkeeping, payroll and IRS services, industries we serve, blog articles, FAQs and client resources.",
   path: "/sitemap",
 });
 
