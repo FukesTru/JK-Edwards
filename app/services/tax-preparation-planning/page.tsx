@@ -94,11 +94,11 @@ export default function TaxPreparationPage() {
           <SectionHeading id="tax-intro" eyebrow="Our approach" title="Tax help that doesn’t end on April 15" />
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-charcoal">
             <p>
-              Most people only think about taxes once a year — when the deadline is close and the options are
-              limited. We take a different approach. As your tax team we prepare accurate returns <em>and</em> look
-              ahead: estimating what you’ll owe, spotting deductions and credits before the year closes, and helping
-              you weigh decisions like buying equipment, changing your business structure or funding a retirement plan
-              with the tax impact in view.
+              Most people only think about taxes once a year — when the deadline is close and the options are limited.
+              We take a different approach. As your tax team we prepare accurate returns <em>and</em> look ahead:
+              estimating what you’ll owe, spotting deductions and credits before the year closes, and helping you weigh
+              decisions like buying equipment, changing your business structure or funding a retirement plan with the
+              tax impact in view.
             </p>
             <p>
               The process is fully digital and secure. Upload documents through TaxCaddy, meet with us in Hampton, by

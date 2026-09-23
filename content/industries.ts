@@ -25,8 +25,7 @@ export const industries: Industry[] = [
     name: "Trucking & Transportation",
     shortName: "Trucking & Transport",
     icon: "Truck",
-    blurb:
-      "Owner-operators and fleets: per diem, IFTA, Form 2290, equipment depreciation and driver payroll.",
+    blurb: "Owner-operators and fleets: per diem, IFTA, Form 2290, equipment depreciation and driver payroll.",
     navDescription: "Owner-operators, fleets & carriers",
     image: "industry-trucking",
     audience: "Trucking and transportation businesses, owner-operators and fleets",
@@ -42,8 +41,7 @@ export const industries: Industry[] = [
     name: "Healthcare Practices",
     shortName: "Healthcare",
     icon: "Stethoscope",
-    blurb:
-      "Medical, dental and therapy practices: monthly financials, practice tax planning and staff payroll.",
+    blurb: "Medical, dental and therapy practices: monthly financials, practice tax planning and staff payroll.",
     navDescription: "Medical, dental & therapy practices",
     image: "industry-healthcare",
     audience: "Independent medical, dental and therapy practices",
@@ -59,8 +57,7 @@ export const industries: Industry[] = [
     name: "Attorneys & Law Firms",
     shortName: "Attorneys & Law Firms",
     icon: "Scale",
-    blurb:
-      "Solo attorneys and firms: trust account reconciliation support, partner distributions and tax planning.",
+    blurb: "Solo attorneys and firms: trust account reconciliation support, partner distributions and tax planning.",
     navDescription: "Solo practitioners & small firms",
     image: "industry-attorneys",
     audience: "Attorneys, solo practitioners and law firms",
@@ -76,8 +73,7 @@ export const industries: Industry[] = [
     name: "U.S. Expats & Workers Abroad",
     shortName: "U.S. Expats",
     icon: "Globe",
-    blurb:
-      "Americans living and working overseas: annual returns, the FEIE, foreign tax credits and FBAR filing.",
+    blurb: "Americans living and working overseas: annual returns, the FEIE, foreign tax credits and FBAR filing.",
     navDescription: "Americans living & working overseas",
     image: "industry-expats",
     audience: "U.S. citizens and green card holders living or working abroad",

@@ -26,13 +26,21 @@ const blocks = [
     Icon: LaptopMinimalCheck,
     title: "Accounting system setup",
     text: "Books that are right from the first transaction: QuickBooks Online configured for your industry, bank feeds connected and a simple routine you can keep.",
-    points: ["Chart of accounts built for your business", "Bank, card and payment connections", "Receipt capture and bill pay workflow"],
+    points: [
+      "Chart of accounts built for your business",
+      "Bank, card and payment connections",
+      "Receipt capture and bill pay workflow",
+    ],
   },
   {
     Icon: PiggyBank,
     title: "Retirement plan analysis",
     text: "Find the plan that builds wealth for you and your employees without breaking the bank — and captures the tax deductions that come with it.",
-    points: ["SEP-IRA, SIMPLE IRA, Solo & traditional 401(k)", "Owner and employee contribution modeling", "Deadlines and setup coordination"],
+    points: [
+      "SEP-IRA, SIMPLE IRA, Solo & traditional 401(k)",
+      "Owner and employee contribution modeling",
+      "Deadlines and setup coordination",
+    ],
   },
   {
     Icon: CreditCard,
@@ -61,7 +69,11 @@ export default function NewBusinessSetupPage() {
 
       <Section tone="white" labelledBy="nb-intro">
         <SplitFeature image="blog-llc-s-corp" imageSide="right">
-          <SectionHeading id="nb-intro" eyebrow="Build the foundation" title="The decisions you make now pay off for years" />
+          <SectionHeading
+            id="nb-intro"
+            eyebrow="Build the foundation"
+            title="The decisions you make now pay off for years"
+          />
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-charcoal">
             <p>
               Starting a business means a hundred decisions at once — and a handful of them have tax and legal
@@ -70,8 +82,8 @@ export default function NewBusinessSetupPage() {
             </p>
             <p>
               We walk new owners through every step: comparing entity types, registering with Georgia and the IRS,
-              setting up accounting and payroll, and choosing a retirement plan. You’ll leave with a clean foundation,
-              a clear calendar of deadlines and a team to call when questions come up.
+              setting up accounting and payroll, and choosing a retirement plan. You’ll leave with a clean foundation, a
+              clear calendar of deadlines and a team to call when questions come up.
             </p>
           </div>
           <ButtonLink href="/contact" className="mt-8">

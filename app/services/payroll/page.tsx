@@ -37,15 +37,15 @@ export default function PayrollPage() {
           <SectionHeading id="payroll-intro" eyebrow="Payroll, handled" title="Payroll done right, every pay period" />
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-charcoal">
             <p>
-              Payroll looks simple until a deposit is late, a form is filed with the wrong numbers or an employee is
-              set up incorrectly — and then it becomes an expensive distraction. We take the day-to-day processing
-              off your plate and make sure every federal and Georgia deadline is met.
+              Payroll looks simple until a deposit is late, a form is filed with the wrong numbers or an employee is set
+              up incorrectly — and then it becomes an expensive distraction. We take the day-to-day processing off your
+              plate and make sure every federal and Georgia deadline is met.
             </p>
             <p>
               Our team includes a Certified Payroll Specialist who manages your payroll from setup to year-end:
-              calculating pay and withholding, running direct deposits, delivering e-paystubs, depositing payroll
-              taxes and filing quarterly and annual returns. Whether you have one employee or fifty — and whether you
-              use our system, ADP or Gusto — payroll just happens, correctly.
+              calculating pay and withholding, running direct deposits, delivering e-paystubs, depositing payroll taxes
+              and filing quarterly and annual returns. Whether you have one employee or fifty — and whether you use our
+              system, ADP or Gusto — payroll just happens, correctly.
             </p>
           </div>
           <ButtonLink href="/contact" className="mt-8">
@@ -60,7 +60,11 @@ export default function PayrollPage() {
           <IconGrid
             columns={4}
             items={[
-              { icon: "HandCoins", title: "Payroll runs", description: "Accurate pay, withholding and direct deposit every pay period." },
+              {
+                icon: "HandCoins",
+                title: "Payroll runs",
+                description: "Accurate pay, withholding and direct deposit every pay period.",
+              },
               {
                 icon: "Landmark",
                 title: "Federal & Georgia tax deposits",
@@ -71,15 +75,31 @@ export default function PayrollPage() {
                 title: "Quarterly 941 & state returns",
                 description: "Form 941, Georgia withholding and unemployment reports, filed on time.",
               },
-              { icon: "FileText", title: "W-2s and 1099s", description: "Year-end forms prepared and filed for employees and contractors." },
-              { icon: "Receipt", title: "Employee e-paystubs", description: "Secure online pay stubs employees can access anytime." },
+              {
+                icon: "FileText",
+                title: "W-2s and 1099s",
+                description: "Year-end forms prepared and filed for employees and contractors.",
+              },
+              {
+                icon: "Receipt",
+                title: "Employee e-paystubs",
+                description: "Secure online pay stubs employees can access anytime.",
+              },
               {
                 icon: "PiggyBank",
                 title: "Retirement remittance",
                 description: "Pension and retirement plan contributions sent where they belong.",
               },
-              { icon: "UserCheck", title: "New-hire setup", description: "Onboarding paperwork and new-hire reporting handled correctly." },
-              { icon: "Layers", title: "Works with ADP & Gusto", description: "Prefer your current platform? We’ll manage it for you." },
+              {
+                icon: "UserCheck",
+                title: "New-hire setup",
+                description: "Onboarding paperwork and new-hire reporting handled correctly.",
+              },
+              {
+                icon: "Layers",
+                title: "Works with ADP & Gusto",
+                description: "Prefer your current platform? We’ll manage it for you.",
+              },
             ]}
           />
         </div>
@@ -91,9 +111,9 @@ export default function PayrollPage() {
           title="Payroll penalty warning"
           cta={{ label: "Get Payroll Tax Help", href: "/services/irs-tax-resolution" }}
         >
-          The IRS treats unpaid payroll taxes seriously. Late deposits trigger penalties of up to 15%, and owners can
-          be held personally liable for unpaid withheld taxes under the Trust Fund Recovery Penalty. Already behind?
-          Our IRS resolution team can help you get current and request penalty relief where you qualify.
+          The IRS treats unpaid payroll taxes seriously. Late deposits trigger penalties of up to 15%, and owners can be
+          held personally liable for unpaid withheld taxes under the Trust Fund Recovery Penalty. Already behind? Our
+          IRS resolution team can help you get current and request penalty relief where you qualify.
         </Callout>
       </Section>
 
@@ -111,7 +131,8 @@ export default function PayrollPage() {
             steps={[
               {
                 title: "Setup & transition",
-                description: "We collect employee details, year-to-date records and tax accounts, then set up your payroll.",
+                description:
+                  "We collect employee details, year-to-date records and tax accounts, then set up your payroll.",
               },
               {
                 title: "Every pay period",

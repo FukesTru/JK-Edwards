@@ -24,7 +24,9 @@ export function Callout({
     <aside
       className={cn(
         "relative overflow-hidden rounded-2xl border p-7 sm:p-9",
-        kind === "warning" ? "border-accent/30 bg-[color-mix(in_oklab,var(--accent)_6%,white)]" : "border-line bg-paper",
+        kind === "warning"
+          ? "border-accent/30 bg-[color-mix(in_oklab,var(--accent)_6%,white)]"
+          : "border-line bg-paper",
         className,
       )}
     >

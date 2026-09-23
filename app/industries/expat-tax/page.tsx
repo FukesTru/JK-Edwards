@@ -71,7 +71,11 @@ export default function ExpatTaxPage() {
           <IconGrid
             columns={3}
             items={[
-              { icon: "FileText", title: "Annual U.S. returns", description: "Form 1040 prepared for your situation abroad." },
+              {
+                icon: "FileText",
+                title: "Annual U.S. returns",
+                description: "Form 1040 prepared for your situation abroad.",
+              },
               {
                 icon: "Globe",
                 title: "Foreign Earned Income Exclusion",
@@ -128,7 +132,10 @@ export default function ExpatTaxPage() {
             steps={[
               { title: "Video consultation", description: "We meet by Zoom at a time that works in your time zone." },
               { title: "Secure upload", description: "Send foreign and U.S. documents through our encrypted portal." },
-              { title: "Review & e-sign", description: "We prepare your return, FBAR and forms for online review and signature." },
+              {
+                title: "Review & e-sign",
+                description: "We prepare your return, FBAR and forms for online review and signature.",
+              },
             ]}
           />
         </div>

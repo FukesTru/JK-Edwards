@@ -36,9 +36,9 @@ export default function AttorneysPage() {
           <SectionHeading id="law-intro" eyebrow="For legal practices" title="Financial clarity for your practice" />
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-charcoal">
             <p>
-              Law firms have financial requirements most businesses never face: client funds held in trust, revenue
-              that arrives in unpredictable bursts on contingency matters and partners who each need to understand
-              their share. Getting it wrong isn’t just a bookkeeping problem — it can become an ethics problem.
+              Law firms have financial requirements most businesses never face: client funds held in trust, revenue that
+              arrives in unpredictable bursts on contingency matters and partners who each need to understand their
+              share. Getting it wrong isn’t just a bookkeeping problem — it can become an ethics problem.
             </p>
             <p>
               We support solo attorneys and small firms with organized books, monthly trust account reconciliation

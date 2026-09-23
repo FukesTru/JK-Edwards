@@ -23,7 +23,10 @@ export function ClientCenterStrip() {
             </h2>
             <p className="mt-1.5 text-charcoal">
               Jump straight to your portal, or visit the{" "}
-              <Link href="/client-center" className="font-semibold text-accent-strong underline-offset-4 hover:underline">
+              <Link
+                href="/client-center"
+                className="font-semibold text-accent-strong underline-offset-4 hover:underline"
+              >
                 Client Center
               </Link>{" "}
               for every tool.

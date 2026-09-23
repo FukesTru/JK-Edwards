@@ -55,11 +55,15 @@ export default function IrsResolutionPage() {
 
       <Section tone="white" labelledBy="irs-intro">
         <SplitFeature image="blog-irs-letter" imageSide="left">
-          <SectionHeading id="irs-intro" eyebrow="You’re not alone" title="You don’t have to face the IRS by yourself" />
+          <SectionHeading
+            id="irs-intro"
+            eyebrow="You’re not alone"
+            title="You don’t have to face the IRS by yourself"
+          />
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-charcoal">
             <p>
-              An IRS notice can make your stomach drop. The good news: most tax problems can be resolved, and you
-              don’t have to handle them yourself. Only three kinds of professionals have unlimited rights to represent
+              An IRS notice can make your stomach drop. The good news: most tax problems can be resolved, and you don’t
+              have to handle them yourself. Only three kinds of professionals have unlimited rights to represent
               taxpayers before the IRS — CPAs, attorneys and Enrolled Agents — and our team includes both an Enrolled
               Agent and a CPA.
             </p>
@@ -91,11 +95,31 @@ export default function IrsResolutionPage() {
           <IconGrid
             columns={4}
             items={[
-              { icon: "FileWarning", title: "IRS notices & letters", description: "Balance-due, mismatch and proposed-change notices." },
-              { icon: "FileSearch", title: "Unfiled tax returns", description: "Catch up on missing years and stop penalties from growing." },
-              { icon: "Landmark", title: "Tax liens & levies", description: "Release levies and address liens on property and accounts." },
-              { icon: "Banknote", title: "Wage garnishments", description: "Act quickly to stop or reduce garnishment of your pay." },
-              { icon: "ClipboardList", title: "IRS audits", description: "Full representation through examination and appeals." },
+              {
+                icon: "FileWarning",
+                title: "IRS notices & letters",
+                description: "Balance-due, mismatch and proposed-change notices.",
+              },
+              {
+                icon: "FileSearch",
+                title: "Unfiled tax returns",
+                description: "Catch up on missing years and stop penalties from growing.",
+              },
+              {
+                icon: "Landmark",
+                title: "Tax liens & levies",
+                description: "Release levies and address liens on property and accounts.",
+              },
+              {
+                icon: "Banknote",
+                title: "Wage garnishments",
+                description: "Act quickly to stop or reduce garnishment of your pay.",
+              },
+              {
+                icon: "ClipboardList",
+                title: "IRS audits",
+                description: "Full representation through examination and appeals.",
+              },
               {
                 icon: "Users",
                 title: "Payroll & employment tax",
@@ -106,7 +130,11 @@ export default function IrsResolutionPage() {
                 title: "Improper S corp elections",
                 description: "Late or invalid elections, relief requests and cleanup.",
               },
-              { icon: "Building2", title: "Georgia DOR notices", description: "Income, withholding and sales tax matters with the state." },
+              {
+                icon: "Building2",
+                title: "Georgia DOR notices",
+                description: "Income, withholding and sales tax matters with the state.",
+              },
             ]}
           />
         </div>
@@ -186,7 +214,7 @@ export default function IrsResolutionPage() {
               id="upload-heading"
               eyebrow="Start here"
               title="Upload your IRS notice"
-              intro="Send us a copy of the letter and a few details. A member of our resolution team will review it and call you within one business day."
+              intro="Send us a copy of the letter and a few details. A member of our resolution team will review it and call you to talk through your options."
             />
             <div className="mt-8 rounded-2xl border border-line bg-white p-6">
               <p className="flex items-center gap-2.5 font-semibold text-ink">

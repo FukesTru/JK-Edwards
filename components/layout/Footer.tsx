@@ -58,7 +58,10 @@ export function Footer() {
                   <span className="sr-only"> (opens directions in Google Maps)</span>
                 </span>
               </a>
-              <a href={site.phone.href} className="flex items-center gap-3 font-semibold text-white hover:text-accent-light">
+              <a
+                href={site.phone.href}
+                className="flex items-center gap-3 font-semibold text-white hover:text-accent-light"
+              >
                 <Phone aria-hidden className="h-4 w-4 shrink-0 text-accent-light" strokeWidth={1.75} />
                 <span className="tabular-nums">{site.phone.display}</span>
               </a>
@@ -167,7 +170,7 @@ export function Footer() {
           {/* Column 4 — mini contact form */}
           <div>
             <h3 className={headingClass}>Send us a message</h3>
-            <p className="mt-3 mb-5 text-sm text-mist">We reply within one business day.</p>
+            <p className="mt-3 mb-5 text-sm text-mist">Questions about taxes, books or payroll? Ask away.</p>
             <FooterContactForm />
           </div>
         </div>

@@ -80,14 +80,42 @@ export default function BusinessAdvisoryPage() {
           <IconGrid
             columns={3}
             items={[
-              { icon: "Calculator", title: "Budgeting", description: "An annual budget you’ll actually use, tracked monthly." },
-              { icon: "TrendingUp", title: "Revenue", description: "Trends by month, service line, customer or location." },
+              {
+                icon: "Calculator",
+                title: "Budgeting",
+                description: "An annual budget you’ll actually use, tracked monthly.",
+              },
+              {
+                icon: "TrendingUp",
+                title: "Revenue",
+                description: "Trends by month, service line, customer or location.",
+              },
               { icon: "Receipt", title: "Expenses", description: "Where the money goes — and where it’s leaking." },
-              { icon: "Users", title: "Payroll", description: "Labor cost as a share of revenue, and staffing decisions." },
-              { icon: "Coins", title: "Cost of goods sold", description: "True product and job costs to protect your margins." },
-              { icon: "CreditCard", title: "Credit card fees", description: "Processing costs that quietly eat into profit." },
-              { icon: "ChartLine", title: "Cash flow", description: "13-week and 12-month forecasts so there are no surprises." },
-              { icon: "Gauge", title: "Industry KPIs", description: "Benchmarks that show how you compare with your peers." },
+              {
+                icon: "Users",
+                title: "Payroll",
+                description: "Labor cost as a share of revenue, and staffing decisions.",
+              },
+              {
+                icon: "Coins",
+                title: "Cost of goods sold",
+                description: "True product and job costs to protect your margins.",
+              },
+              {
+                icon: "CreditCard",
+                title: "Credit card fees",
+                description: "Processing costs that quietly eat into profit.",
+              },
+              {
+                icon: "ChartLine",
+                title: "Cash flow",
+                description: "13-week and 12-month forecasts so there are no surprises.",
+              },
+              {
+                icon: "Gauge",
+                title: "Industry KPIs",
+                description: "Benchmarks that show how you compare with your peers.",
+              },
               {
                 icon: "ChartPie",
                 title: "Tax planning & projections",
@@ -110,10 +138,19 @@ export default function BusinessAdvisoryPage() {
           <ProcessTimeline
             tone="dark"
             steps={[
-              { title: "Discovery", description: "We learn your goals, review your books and agree on what to measure." },
+              {
+                title: "Discovery",
+                description: "We learn your goals, review your books and agree on what to measure.",
+              },
               { title: "Build your dashboard", description: "We set up the reports and KPIs that fit your business." },
-              { title: "Regular reviews", description: "Monthly or quarterly meetings to review results and forecasts." },
-              { title: "Adjust & grow", description: "Clear action items — pricing, hiring, spending — and follow-through." },
+              {
+                title: "Regular reviews",
+                description: "Monthly or quarterly meetings to review results and forecasts.",
+              },
+              {
+                title: "Adjust & grow",
+                description: "Clear action items — pricing, hiring, spending — and follow-through.",
+              },
             ]}
           />
         </div>

@@ -32,7 +32,12 @@ export function SplitFeature({
             imageSide === "left" ? "-left-4" : "-right-4",
           )}
         />
-        <div className={cn("relative overflow-hidden rounded-2xl bg-paper shadow-[0_40px_80px_-40px_rgba(22,24,27,0.55)]", aspect)}>
+        <div
+          className={cn(
+            "relative overflow-hidden rounded-2xl bg-paper shadow-[0_40px_80px_-40px_rgba(22,24,27,0.55)]",
+            aspect,
+          )}
+        >
           <Image src={photo.src} alt={photo.alt} fill sizes={sizes} className={cn("object-cover", imageClassName)} />
         </div>
         {badge && <div className="absolute -right-2 bottom-6 sm:-right-6">{badge}</div>}

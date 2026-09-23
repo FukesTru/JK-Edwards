@@ -10,7 +10,10 @@ export function StatsRow({ stats, tone = "dark" }: { stats: Stat[]; tone?: "ligh
       {stats.map((stat) => (
         <div
           key={stat.label}
-          className={cn("flex min-w-0 flex-col-reverse gap-2 border-l-2 pl-5", dark ? "border-accent/70" : "border-accent")}
+          className={cn(
+            "flex min-w-0 flex-col-reverse gap-2 border-l-2 pl-5",
+            dark ? "border-accent/70" : "border-accent",
+          )}
         >
           <dt className={cn("text-sm leading-snug font-medium", dark ? "text-mist" : "text-charcoal")}>{stat.label}</dt>
           <dd

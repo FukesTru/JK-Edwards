@@ -12,7 +12,7 @@ export function FooterContactForm() {
   if (status === "success") {
     return (
       <FormSuccess tone="dark" title="Thanks — message received." onReset={reset}>
-        A member of our team will reach out within one business day.
+        A member of our team will be in touch soon.
       </FormSuccess>
     );
   }

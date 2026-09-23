@@ -21,7 +21,9 @@ export function PortalGrid({ portals }: { portals: Portal[] }) {
                 <span className="grid h-12 w-12 place-items-center rounded-xl bg-accent/10 text-accent transition-colors group-hover:bg-accent group-hover:text-white">
                   <Icon aria-hidden className="h-6 w-6" strokeWidth={1.5} />
                 </span>
-                <span className="rounded-full bg-paper px-3 py-1 text-xs font-semibold text-charcoal">{portal.product}</span>
+                <span className="rounded-full bg-paper px-3 py-1 text-xs font-semibold text-charcoal">
+                  {portal.product}
+                </span>
               </div>
               <span className="mt-5 font-serif text-xl font-semibold text-ink">{portal.name}</span>
               <span className="mt-2 flex-1 text-[15px] leading-relaxed text-charcoal">{portal.description}</span>

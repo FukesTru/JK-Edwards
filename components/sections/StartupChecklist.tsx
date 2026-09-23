@@ -8,7 +8,8 @@ const steps = [
   },
   {
     title: "Register in Georgia",
-    description: "Form your LLC or corporation with the Georgia Secretary of State and get your local business license.",
+    description:
+      "Form your LLC or corporation with the Georgia Secretary of State and get your local business license.",
   },
   {
     title: "Open a business bank account",
@@ -24,7 +25,8 @@ const steps = [
   },
   {
     title: "Register for sales tax",
-    description: "Selling taxable goods or services? Register with the Georgia Department of Revenue to collect and file.",
+    description:
+      "Selling taxable goods or services? Register with the Georgia Department of Revenue to collect and file.",
   },
 ];
 

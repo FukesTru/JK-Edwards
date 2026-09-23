@@ -24,8 +24,12 @@ export function EbookOffer({
 }) {
   return (
     <div className="grid items-center gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-      <Placeholder block note="eBook PDF + cover art — client to provide (old Cloudinary files)" className="mx-auto w-full max-w-xs">
-        <div className="relative mx-auto aspect-[3/4] w-full max-w-xs -rotate-3 rounded-r-xl rounded-l-sm bg-gradient-to-br from-[#2a2d32] to-ink p-7 shadow-[30px_40px_60px_-30px_rgba(0,0,0,0.8)] ring-1 ring-white/10">
+      <Placeholder
+        block
+        note="eBook PDF + cover art — client to provide (old Cloudinary files)"
+        className="mx-auto w-full max-w-xs"
+      >
+        <div className="relative mx-auto aspect-[3/4] w-full max-w-xs -rotate-3 rounded-l-sm rounded-r-xl bg-gradient-to-br from-[#2a2d32] to-ink p-7 shadow-[30px_40px_60px_-30px_rgba(0,0,0,0.8)] ring-1 ring-white/10">
           <div aria-hidden className="absolute inset-y-0 left-0 w-3 rounded-l-sm bg-black/30" />
           <div className="flex h-full flex-col justify-between pl-3">
             <div>

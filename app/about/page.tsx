@@ -67,8 +67,8 @@ export default function AboutPage() {
             </p>
             <p>
               We are passionate about the success of our clients. That means looking at the whole picture — not just
-              this year’s return, but the business you’re building, the family you’re providing for and the goals
-              you’re working toward. Tax, bookkeeping, payroll and advice work together, coordinated by one team.
+              this year’s return, but the business you’re building, the family you’re providing for and the goals you’re
+              working toward. Tax, bookkeeping, payroll and advice work together, coordinated by one team.
             </p>
             <p>
               Our clients are individuals, families and small and medium-sized businesses in Henry County and across
@@ -113,7 +113,10 @@ export default function AboutPage() {
               aria-labelledby="credentials-heading"
               className="flex h-full flex-col justify-center rounded-2xl bg-ink p-7 text-white"
             >
-              <p id="credentials-heading" className="text-xs font-semibold tracking-[0.18em] text-accent-light uppercase">
+              <p
+                id="credentials-heading"
+                className="text-xs font-semibold tracking-[0.18em] text-accent-light uppercase"
+              >
                 Credentials explained
               </p>
               <dl className="mt-5 space-y-5">
@@ -148,7 +151,10 @@ export default function AboutPage() {
         />
         <ul className="mx-auto mt-10 grid max-w-4xl gap-4 sm:grid-cols-2 lg:grid-cols-4">
           {site.affiliations.map((badge) => (
-            <li key={badge.name} className="flex flex-col items-center rounded-2xl border border-line bg-white p-6 text-center">
+            <li
+              key={badge.name}
+              className="flex flex-col items-center rounded-2xl border border-line bg-white p-6 text-center"
+            >
               <BadgeCheck aria-hidden className="h-9 w-9 text-accent" strokeWidth={1.5} />
               <p className="mt-3 font-semibold text-ink">{badge.name}</p>
               <p className="mt-1 text-sm text-charcoal">{badge.detail}</p>

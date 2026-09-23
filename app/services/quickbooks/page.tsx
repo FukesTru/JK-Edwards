@@ -50,8 +50,8 @@ export default function QuickBooksPage() {
           <SectionHeading id="qb-intro" eyebrow="ProAdvisor team" title="Get more out of QuickBooks" />
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-charcoal">
             <p>
-              QuickBooks is only as useful as the way it’s set up. A cluttered chart of accounts, duplicate
-              transactions or bank feeds that never get reviewed turn it into a source of stress instead of insight.
+              QuickBooks is only as useful as the way it’s set up. A cluttered chart of accounts, duplicate transactions
+              or bank feeds that never get reviewed turn it into a source of stress instead of insight.
             </p>
             <p>
               Our certified ProAdvisors set up new files correctly, clean up existing ones, train your team on the
@@ -76,12 +76,36 @@ export default function QuickBooksPage() {
           <IconGrid
             columns={3}
             items={[
-              { icon: "Rocket", title: "Setup", description: "New company files with a chart of accounts built for your business." },
-              { icon: "Wrench", title: "Cleanup", description: "Fix miscategorized transactions, duplicates and unreconciled accounts." },
-              { icon: "Users", title: "Training", description: "Hands-on training for owners and staff — at your pace." },
-              { icon: "Gauge", title: "Optimization", description: "Automation, bank rules and reports that save hours every month." },
-              { icon: "RefreshCw", title: "Desktop → Online migration", description: "Plan, convert and verify your data with no loose ends." },
-              { icon: "Monitor", title: "Hosted Desktop (Rightworks)", description: "Run QuickBooks Desktop securely in the cloud from anywhere." },
+              {
+                icon: "Rocket",
+                title: "Setup",
+                description: "New company files with a chart of accounts built for your business.",
+              },
+              {
+                icon: "Wrench",
+                title: "Cleanup",
+                description: "Fix miscategorized transactions, duplicates and unreconciled accounts.",
+              },
+              {
+                icon: "Users",
+                title: "Training",
+                description: "Hands-on training for owners and staff — at your pace.",
+              },
+              {
+                icon: "Gauge",
+                title: "Optimization",
+                description: "Automation, bank rules and reports that save hours every month.",
+              },
+              {
+                icon: "RefreshCw",
+                title: "Desktop → Online migration",
+                description: "Plan, convert and verify your data with no loose ends.",
+              },
+              {
+                icon: "Monitor",
+                title: "Hosted Desktop (Rightworks)",
+                description: "Run QuickBooks Desktop securely in the cloud from anywhere.",
+              },
             ]}
           />
         </div>

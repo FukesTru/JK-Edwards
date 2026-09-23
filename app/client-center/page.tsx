@@ -18,9 +18,15 @@ export const metadata = buildMetadata({
 });
 
 const safeSendSteps = [
-  { title: "Open the secure email", text: "When your return is ready, you’ll receive an email with a secure SafeSend link." },
+  {
+    title: "Open the secure email",
+    text: "When your return is ready, you’ll receive an email with a secure SafeSend link.",
+  },
   { title: "Verify your identity", text: "Follow the prompts to confirm it’s you before your return opens." },
-  { title: "Review your return", text: "Read the summary, then review your full return and any documents we included." },
+  {
+    title: "Review your return",
+    text: "Read the summary, then review your full return and any documents we included.",
+  },
   { title: "E-sign", text: "Sign Form 8879 and any other authorizations electronically — no printing or mailing." },
   { title: "Pay & download", text: "Pay any invoice and download copies of everything for your records." },
 ];
@@ -29,7 +35,10 @@ const taxCaddySteps = [
   { title: "Accept your invitation", text: "Open the TaxCaddy invitation from our office and create your account." },
   { title: "Check your list", text: "TaxCaddy shows a personalized checklist of the documents we need from you." },
   { title: "Upload documents", text: "Snap photos with the mobile app or upload files from your computer." },
-  { title: "Stay in touch", text: "Answer questions, e-sign documents and follow your return’s progress in one place." },
+  {
+    title: "Stay in touch",
+    text: "Answer questions, e-sign documents and follow your return’s progress in one place.",
+  },
 ];
 
 const forms: { name: string; description: string; href?: string; note?: string }[] = [

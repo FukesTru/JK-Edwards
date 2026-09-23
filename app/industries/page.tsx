@@ -80,7 +80,8 @@ export default function IndustriesPage() {
               {
                 icon: "MessagesSquare",
                 title: "We speak your language",
-                description: "IFTA, reimbursements, trust accounts, FBARs — no time lost explaining how your business works.",
+                description:
+                  "IFTA, reimbursements, trust accounts, FBARs — no time lost explaining how your business works.",
               },
               {
                 icon: "BadgeDollarSign",
@@ -116,7 +117,6 @@ export default function IndustriesPage() {
           </ul>
         </div>
       </Section>
-
     </>
   );
 }

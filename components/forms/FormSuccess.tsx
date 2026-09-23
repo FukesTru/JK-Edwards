@@ -24,7 +24,11 @@ export function FormSuccess({
         tone === "dark" ? "border-white/10 bg-white/[0.04] text-white" : "border-line bg-paper text-ink",
       )}
     >
-      <CircleCheckBig aria-hidden className={cn("h-9 w-9", tone === "dark" ? "text-accent-light" : "text-accent")} strokeWidth={1.5} />
+      <CircleCheckBig
+        aria-hidden
+        className={cn("h-9 w-9", tone === "dark" ? "text-accent-light" : "text-accent")}
+        strokeWidth={1.5}
+      />
       <p className="mt-4 font-serif text-2xl font-semibold">{title}</p>
       {children && (
         <div className={cn("mt-2 leading-relaxed", tone === "dark" ? "text-mist" : "text-charcoal")}>{children}</div>

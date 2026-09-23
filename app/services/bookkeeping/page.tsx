@@ -38,9 +38,9 @@ export default function BookkeepingPage() {
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-charcoal">
             <p>
               Bookkeeping is the foundation of every good financial decision — and it’s the first thing to slip when
-              you’re busy running a business. We keep your books current and accurate every month: reconciling each
-              bank and credit card account, categorizing transactions correctly and turning the results into
-              financial statements you can actually read.
+              you’re busy running a business. We keep your books current and accurate every month: reconciling each bank
+              and credit card account, categorizing transactions correctly and turning the results into financial
+              statements you can actually read.
             </p>
             <p>
               We work in QuickBooks Online or Xero, capture receipts with Dext and manage bills through Bill.com, so
@@ -119,8 +119,8 @@ export default function BookkeepingPage() {
           cta={{ label: "Get a Cleanup Quote", href: "/contact" }}
         >
           Unreconciled accounts, a year of uncategorized transactions, a box of receipts — we’ve seen it all. We’ll
-          rebuild your books from bank and card statements, fix past errors and hand you a clean starting point, with
-          no judgment.
+          rebuild your books from bank and card statements, fix past errors and hand you a clean starting point, with no
+          judgment.
         </Callout>
       </Section>
 

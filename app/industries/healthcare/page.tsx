@@ -67,8 +67,8 @@ export default function HealthcarePage() {
               <p>
                 We give practice owners a clear monthly picture of how the practice is performing — with plain-English
                 feedback on what changed and why — and plan taxes around the way healthcare owners are actually paid.
-                From payroll for providers and staff to entity and retirement planning, we handle the financial side
-                so you can spend your time with patients.
+                From payroll for providers and staff to entity and retirement planning, we handle the financial side so
+                you can spend your time with patients.
               </p>
             </div>
             <ButtonLink href="/contact" className="mt-8">

@@ -68,15 +68,51 @@ export default function TruckingPage() {
           <IconGrid
             columns={3}
             items={[
-              { icon: "Truck", title: "Owner-operator taxes", description: "Schedule C or entity returns, quarterly estimates and planning." },
-              { icon: "CalendarCheck", title: "Per diem", description: "Tracking days on the road and claiming the transportation-industry rate." },
-              { icon: "Fuel", title: "Fuel & mileage tracking", description: "Clean records by truck and by jurisdiction." },
-              { icon: "FileCheck2", title: "Form 2290 (HVUT)", description: "Heavy Highway Vehicle Use Tax filings and Schedule 1 for registration." },
-              { icon: "Route", title: "IFTA support", description: "Quarterly fuel tax reporting across every state you run." },
-              { icon: "Wrench", title: "Depreciation on rigs & equipment", description: "Section 179 and bonus depreciation strategy for tractors and trailers." },
-              { icon: "HandCoins", title: "Driver payroll", description: "W-2 driver payroll, withholding and quarterly filings." },
-              { icon: "FileText", title: "1099 contractors", description: "Classification, W-9 collection and 1099-NEC filing." },
-              { icon: "Building2", title: "Entity structure for fleets", description: "LLC, S corp and multi-entity planning as you add trucks." },
+              {
+                icon: "Truck",
+                title: "Owner-operator taxes",
+                description: "Schedule C or entity returns, quarterly estimates and planning.",
+              },
+              {
+                icon: "CalendarCheck",
+                title: "Per diem",
+                description: "Tracking days on the road and claiming the transportation-industry rate.",
+              },
+              {
+                icon: "Fuel",
+                title: "Fuel & mileage tracking",
+                description: "Clean records by truck and by jurisdiction.",
+              },
+              {
+                icon: "FileCheck2",
+                title: "Form 2290 (HVUT)",
+                description: "Heavy Highway Vehicle Use Tax filings and Schedule 1 for registration.",
+              },
+              {
+                icon: "Route",
+                title: "IFTA support",
+                description: "Quarterly fuel tax reporting across every state you run.",
+              },
+              {
+                icon: "Wrench",
+                title: "Depreciation on rigs & equipment",
+                description: "Section 179 and bonus depreciation strategy for tractors and trailers.",
+              },
+              {
+                icon: "HandCoins",
+                title: "Driver payroll",
+                description: "W-2 driver payroll, withholding and quarterly filings.",
+              },
+              {
+                icon: "FileText",
+                title: "1099 contractors",
+                description: "Classification, W-9 collection and 1099-NEC filing.",
+              },
+              {
+                icon: "Building2",
+                title: "Entity structure for fleets",
+                description: "LLC, S corp and multi-entity planning as you add trucks.",
+              },
             ]}
           />
         </div>

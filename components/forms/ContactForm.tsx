@@ -37,8 +37,8 @@ export function ContactForm() {
     return (
       <FormSuccess title="Thank you — we’ll be in touch soon." onReset={reset}>
         <p>
-          Your request is on its way to our Hampton team. We’ll contact you within one business day, using your
-          preferred method, to schedule your free consultation.
+          Your request is on its way to our Hampton team. We’ll reach out using your preferred contact method to
+          schedule your free consultation.
         </p>
         <p className="mt-2">Need us sooner? Call (770) 472-2005.</p>
       </FormSuccess>

@@ -4,7 +4,14 @@ import { cn } from "@/lib/utils";
 export type ProcessStep = { title: string; description: string };
 
 /** Numbered 3–5 step timeline: horizontal with a connecting line on desktop, vertical on mobile. */
-export function ProcessTimeline({ steps, tone = "light" }: { steps: ProcessStep[]; tone?: "light" | "dark" }) {
+export function ProcessTimeline({
+  steps,
+  tone = "light",
+}: {
+  steps: ProcessStep[];
+  /** Section background the timeline sits on (sets the ring around each number). */
+  tone?: "light" | "paper" | "dark";
+}) {
   const dark = tone === "dark";
   return (
     <Stagger
@@ -25,11 +32,15 @@ export function ProcessTimeline({ steps, tone = "light" }: { steps: ProcessStep[
         )}
       />
       {steps.map((step, index) => (
-        <StaggerItem as="li" key={step.title} className="relative flex gap-5 md:flex-col md:items-center md:text-center">
+        <StaggerItem
+          as="li"
+          key={step.title}
+          className="relative flex gap-5 md:flex-col md:items-center md:text-center"
+        >
           <span
             className={cn(
               "relative z-10 grid h-12 w-12 shrink-0 place-items-center rounded-full bg-accent font-serif text-lg font-semibold text-white tabular-nums ring-8",
-              dark ? "ring-ink" : "ring-white",
+              dark ? "ring-ink" : tone === "paper" ? "ring-paper" : "ring-white",
             )}
           >
             {index + 1}

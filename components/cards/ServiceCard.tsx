@@ -43,7 +43,10 @@ export function ServiceCard({
           ))}
         </ul>
       )}
-      <span aria-hidden className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-semibold text-accent-strong">
+      <span
+        aria-hidden
+        className="mt-auto inline-flex items-center gap-1.5 pt-6 text-sm font-semibold text-accent-strong"
+      >
         Learn more
         <ArrowRight className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-1" />
       </span>

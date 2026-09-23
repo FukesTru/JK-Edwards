@@ -24,6 +24,8 @@ type MetadataInput = {
   publishedTime?: string;
   modifiedTime?: string;
   noindex?: boolean;
+  /** Share image (defaults to the site-wide logo card). */
+  image?: typeof defaultOgImage;
 };
 
 export function buildMetadata({
@@ -35,6 +37,7 @@ export function buildMetadata({
   publishedTime,
   modifiedTime,
   noindex,
+  image = defaultOgImage,
 }: MetadataInput): Metadata {
   const fullTitle = absoluteTitle ? title : `${title} | ${site.name}`;
   return {
@@ -48,14 +51,14 @@ export function buildMetadata({
       description,
       siteName: site.name,
       locale: "en_US",
-      images: [defaultOgImage],
+      images: [image],
       ...(type === "article" ? { publishedTime, modifiedTime } : {}),
     },
     twitter: {
       card: "summary_large_image",
       title: fullTitle,
       description,
-      images: [defaultOgImage.url],
+      images: [{ url: image.url, alt: image.alt }],
     },
     ...(noindex ? { robots: { index: false, follow: true } } : {}),
   };

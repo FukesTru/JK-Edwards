@@ -95,15 +95,15 @@ export function PageHero({
             </h1>
             <span
               aria-hidden
-              className="animate-fade-up mt-6 block h-1 w-16 rounded-full bg-accent [animation-delay:120ms]"
+              className="mt-6 block h-1 w-16 animate-fade-up rounded-full bg-accent [animation-delay:120ms]"
             />
             {subtitle && (
-              <div className="animate-fade-up mt-6 max-w-2xl text-lg leading-relaxed text-white/85 [animation-delay:180ms] md:text-xl">
+              <div className="mt-6 max-w-2xl animate-fade-up text-lg leading-relaxed text-white/85 [animation-delay:180ms] md:text-xl">
                 {subtitle}
               </div>
             )}
             {(primaryCta || secondaryCta) && (
-              <div className="animate-fade-up mt-9 flex flex-col gap-3 [animation-delay:240ms] sm:flex-row sm:flex-wrap">
+              <div className="mt-9 flex animate-fade-up flex-col gap-3 [animation-delay:240ms] sm:flex-row sm:flex-wrap">
                 {primaryCta && (
                   <ButtonLink href={primaryCta.href} external={primaryCta.external} size="lg">
                     {primaryCta.label}
@@ -121,7 +121,7 @@ export function PageHero({
                 )}
               </div>
             )}
-            {children && <div className="animate-fade-up mt-8 [animation-delay:300ms]">{children}</div>}
+            {children && <div className="mt-8 animate-fade-up [animation-delay:300ms]">{children}</div>}
           </div>
           {aside && <div className="animate-fade-up [animation-delay:200ms]">{aside}</div>}
         </div>

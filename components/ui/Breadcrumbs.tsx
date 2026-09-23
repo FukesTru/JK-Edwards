@@ -25,7 +25,7 @@ export function Breadcrumbs({ items }: { items: Crumb[] }) {
                     </span>
                   ) : (
                     <>
-                      <Link href={crumb.path} className="hover:text-accent-strong hover:underline underline-offset-2">
+                      <Link href={crumb.path} className="underline-offset-2 hover:text-accent-strong hover:underline">
                         {crumb.name}
                       </Link>
                       <ChevronRight aria-hidden className="h-3.5 w-3.5 text-steel" strokeWidth={1.5} />

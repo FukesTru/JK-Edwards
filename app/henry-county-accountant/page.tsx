@@ -69,25 +69,25 @@ export default function HenryCountyPage() {
                 JK Edwards &amp; Company is rooted in Henry County. From our office on McDonough Road in Hampton, we
                 work with the people and businesses that make this corner of metro-south Atlanta such a good place to
                 live and work — families in Hampton and Locust Grove, contractors and shop owners around the historic
-                McDonough square, logistics companies along the I-75 corridor and professional practices in
-                Stockbridge. We also serve neighbors just across the county line in Griffin.
+                McDonough square, logistics companies along the I-75 corridor and professional practices in Stockbridge.
+                We also serve neighbors just across the county line in Griffin.
               </p>
               <p>
                 Henry County has grown quickly, and growth brings complexity: new businesses deciding how to structure
-                themselves, households with rental properties and side income, trucking and distribution companies
-                with multi-state filings, and retirees navigating Social Security and required distributions. Being
-                local means we understand those realities — and it means you can sit down with us face to face when a
+                themselves, households with rental properties and side income, trucking and distribution companies with
+                multi-state filings, and retirees navigating Social Security and required distributions. Being local
+                means we understand those realities — and it means you can sit down with us face to face when a
                 conversation matters.
               </p>
               <p>
                 Clients come to us for tax preparation and planning, monthly bookkeeping, payroll, IRS problem
-                resolution and advice on growing a business. Many start with a single return and stay for years
-                because they value one team that knows their whole financial picture. Prefer to work remotely? Nearly
-                everything we do is available online through secure portals, e-signatures and video meetings.
+                resolution and advice on growing a business. Many start with a single return and stay for years because
+                they value one team that knows their whole financial picture. Prefer to work remotely? Nearly everything
+                we do is available online through secure portals, e-signatures and video meetings.
               </p>
               <p>
-                Whether you’re in Hampton, McDonough, Stockbridge, Locust Grove or Griffin, stop by, call or book a
-                free consultation. We’re glad to be your neighbors.
+                Whether you’re in Hampton, McDonough, Stockbridge, Locust Grove or Griffin, stop by, call or book a free
+                consultation. We’re glad to be your neighbors.
               </p>
             </div>
           </div>

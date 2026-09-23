@@ -20,7 +20,9 @@ export function RelatedLinks({
   return (
     <div>
       <SectionHeading eyebrow={eyebrow} title={title} />
-      <Stagger className={cn("mt-10 grid gap-5 sm:grid-cols-2", links.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3")}>
+      <Stagger
+        className={cn("mt-10 grid gap-5 sm:grid-cols-2", links.length === 4 ? "lg:grid-cols-4" : "lg:grid-cols-3")}
+      >
         {links.map((link) => {
           const Icon = icons[link.icon];
           return (

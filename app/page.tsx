@@ -107,10 +107,7 @@ export default function HomePage() {
           ))}
           <StaggerItem>
             <div className="relative flex h-full flex-col justify-between overflow-hidden rounded-2xl bg-ink p-7 text-white">
-              <div
-                aria-hidden
-                className="absolute -top-16 -right-16 h-48 w-48 rounded-full bg-accent/30 blur-3xl"
-              />
+              <div aria-hidden className="absolute -top-16 -right-16 h-48 w-48 rounded-full bg-accent/30 blur-3xl" />
               <div className="relative">
                 <CalendarCheck aria-hidden className="h-9 w-9 text-accent-light" strokeWidth={1.5} />
                 <p className="mt-6 font-serif text-[1.35rem] leading-snug font-semibold">Not sure where to start?</p>
@@ -172,7 +169,12 @@ export default function HomePage() {
             title="Specialized in the industries we serve"
             intro="Industry-specific rules, margins and deductions — we know them, so you don’t have to learn them the hard way."
           />
-          <ButtonLink href="/industries" variant="outline-light" icon="arrow" className="shrink-0 self-start lg:self-auto">
+          <ButtonLink
+            href="/industries"
+            variant="outline-light"
+            icon="arrow"
+            className="shrink-0 self-start lg:self-auto"
+          >
             All industries
           </ButtonLink>
         </div>
@@ -207,7 +209,7 @@ export default function HomePage() {
       </Section>
 
       {/* Stats */}
-      <section aria-label="JK Edwards & Company at a glance" className="bg-ink bg-grain py-14 text-white md:py-16">
+      <section aria-label="JK Edwards & Company at a glance" className="bg-grain bg-ink py-14 text-white md:py-16">
         <div className="mx-auto w-full max-w-[1200px] px-5 sm:px-6 lg:px-8">
           <StatsRow
             stats={[

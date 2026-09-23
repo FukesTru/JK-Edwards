@@ -56,8 +56,7 @@ export const site = {
     quickbooksPurchase: "https://completebusinessgroup.com/jk-edwards-company/",
     directions:
       "https://www.google.com/maps/dir/?api=1&destination=1883+McDonough+Rd+Suite+200A%2C+Hampton%2C+GA+30228",
-    mapEmbed:
-      "https://www.google.com/maps?q=1883+McDonough+Rd+Suite+200A,+Hampton,+GA+30228&output=embed",
+    mapEmbed: "https://www.google.com/maps?q=1883+McDonough+Rd+Suite+200A,+Hampton,+GA+30228&output=embed",
     /** PLACEHOLDER: replace with the Google Business Profile review URL once confirmed. */
     googleReviews:
       "https://www.google.com/maps/search/?api=1&query=JK+Edwards+%26+Company+1883+McDonough+Rd+Hampton+GA",

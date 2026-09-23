@@ -46,8 +46,8 @@ export default function ServicesPage() {
               <p>
                 Every client brings a different mix of needs — a W-2 family with a rental property, a trucking company
                 with ten drivers, a new LLC deciding whether to become an S corporation. JK Edwards &amp; Company brings
-                tax preparation, bookkeeping, payroll, IRS representation and business advisory under one roof, so
-                your numbers are handled by one coordinated team instead of a patchwork of providers.
+                tax preparation, bookkeeping, payroll, IRS representation and business advisory under one roof, so your
+                numbers are handled by one coordinated team instead of a patchwork of providers.
               </p>
               <p>
                 That coordination matters. When the people doing your books also prepare your return and run your

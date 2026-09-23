@@ -20,11 +20,7 @@ export function IconGrid({
   return (
     <Stagger
       as="ul"
-      className={cn(
-        "grid gap-4 sm:grid-cols-2",
-        columns === 3 && "lg:grid-cols-3",
-        columns === 4 && "lg:grid-cols-4",
-      )}
+      className={cn("grid gap-4 sm:grid-cols-2", columns === 3 && "lg:grid-cols-3", columns === 4 && "lg:grid-cols-4")}
     >
       {items.map((item) => {
         const Icon = icons[item.icon];
@@ -51,7 +47,13 @@ export function IconGrid({
               <Icon aria-hidden className="h-5 w-5" strokeWidth={1.5} />
             </span>
             <div>
-              <h3 className={cn("font-semibold", compact ? "text-[15px]" : "text-[1.05rem]", dark ? "text-white" : "text-ink")}>
+              <h3
+                className={cn(
+                  "font-semibold",
+                  compact ? "text-[15px]" : "text-[1.05rem]",
+                  dark ? "text-white" : "text-ink",
+                )}
+              >
                 {item.title}
               </h3>
               {item.description && (

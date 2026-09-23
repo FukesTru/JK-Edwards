@@ -40,7 +40,11 @@ export function EbookForm({ ebook, downloadUrl }: { ebook: string; downloadUrl?:
       </div>
       <Honeypot />
       <FormError message={error} />
-      <button type="submit" disabled={status === "submitting"} className={buttonClasses("primary", "lg", "w-full sm:w-auto")}>
+      <button
+        type="submit"
+        disabled={status === "submitting"}
+        className={buttonClasses("primary", "lg", "w-full sm:w-auto")}
+      >
         {status === "submitting" ? (
           <>
             <LoaderCircle aria-hidden className="h-4 w-4 animate-spin" />

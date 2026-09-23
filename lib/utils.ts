@@ -5,7 +5,19 @@ import { extendTailwindMerge } from "tailwind-merge";
 const twMerge = extendTailwindMerge({
   extend: {
     theme: {
-      color: ["ink", "ink-soft", "charcoal", "steel", "accent", "accent-hover", "accent-light", "accent-strong", "paper", "mist", "line"],
+      color: [
+        "ink",
+        "ink-soft",
+        "charcoal",
+        "steel",
+        "accent",
+        "accent-hover",
+        "accent-light",
+        "accent-strong",
+        "paper",
+        "mist",
+        "line",
+      ],
     },
   },
 });

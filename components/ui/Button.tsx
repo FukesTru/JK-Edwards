@@ -50,7 +50,7 @@ function ButtonIcon({ kind }: { kind: IconKind }) {
     return (
       <ArrowUpRight
         aria-hidden
-        className="h-4 w-4 transition-transform duration-200 group-hover:-translate-y-0.5 group-hover:translate-x-0.5"
+        className="h-4 w-4 transition-transform duration-200 group-hover:translate-x-0.5 group-hover:-translate-y-0.5"
         strokeWidth={1.75}
       />
     );

@@ -26,7 +26,7 @@ export function IrsNoticeForm() {
         resetLabel="Send another notice"
       >
         <p>
-          A member of our resolution team will review it and contact you within one business day. Keep the original
+          A member of our resolution team will review it and contact you to talk through next steps. Keep the original
           letter and note any response deadline — we’ll plan around it.
         </p>
       </FormSuccess>
@@ -61,11 +61,12 @@ export function IrsNoticeForm() {
 
       <div>
         <p className="mb-1.5 block text-sm font-medium text-ink">
-          Upload your notice <span className="ml-1 text-xs font-normal text-charcoal">(optional · PDF or photo, 4 MB max)</span>
+          Upload your notice{" "}
+          <span className="ml-1 text-xs font-normal text-charcoal">(optional · PDF or photo, 4 MB max)</span>
         </p>
         <label
           htmlFor="irs-file"
-          className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-line bg-paper/60 px-6 py-8 text-center transition-colors hover:border-accent/50 hover:bg-paper focus-within:border-accent"
+          className="flex cursor-pointer flex-col items-center justify-center gap-2 rounded-xl border-2 border-dashed border-line bg-paper/60 px-6 py-8 text-center transition-colors focus-within:border-accent hover:border-accent/50 hover:bg-paper"
         >
           <Upload aria-hidden className="h-7 w-7 text-accent" strokeWidth={1.5} />
           <span className="text-[15px] font-semibold text-ink">
@@ -81,7 +82,11 @@ export function IrsNoticeForm() {
             onChange={(event) => {
               const file = event.target.files?.[0];
               setFileName(file?.name ?? "");
-              setFileError(file && file.size > MAX_BYTES ? "That file is larger than 4 MB — please upload a smaller scan or photo." : "");
+              setFileError(
+                file && file.size > MAX_BYTES
+                  ? "That file is larger than 4 MB — please upload a smaller scan or photo."
+                  : "",
+              );
             }}
           />
         </label>
@@ -109,7 +114,11 @@ export function IrsNoticeForm() {
       <Honeypot />
       <FormError message={error} />
 
-      <button type="submit" disabled={status === "submitting"} className={buttonClasses("primary", "lg", "w-full sm:w-auto")}>
+      <button
+        type="submit"
+        disabled={status === "submitting"}
+        className={buttonClasses("primary", "lg", "w-full sm:w-auto")}
+      >
         {status === "submitting" ? (
           <>
             <LoaderCircle aria-hidden className="h-4 w-4 animate-spin" />

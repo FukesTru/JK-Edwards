@@ -12,7 +12,7 @@ export function MapEmbed({ className, height = 380 }: { className?: string; heig
         height={height}
         loading="lazy"
         referrerPolicy="no-referrer-when-downgrade"
-        className="block w-full border-0 grayscale-[35%] contrast-[1.05]"
+        className="block w-full border-0 contrast-[1.05] grayscale-[35%]"
         style={{ height }}
       />
     </div>

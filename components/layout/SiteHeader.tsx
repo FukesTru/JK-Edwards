@@ -132,105 +132,104 @@ export function SiteHeader({ nav, phone, payBillHref }: Props) {
 
   return (
     <>
-    <header
-      className={cn(
-        "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,border-color] duration-300",
-        solid
-          ? "border-b border-white/5 bg-ink/95 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] backdrop-blur-md"
-          : "border-b border-transparent bg-transparent",
-      )}
-    >
-      <div className="mx-auto flex h-[var(--header-height)] w-full max-w-[1440px] items-center justify-between gap-6 px-5 sm:px-6 lg:px-8">
-        <Logo tone="dark" />
+      <header
+        className={cn(
+          "fixed inset-x-0 top-0 z-50 transition-[background-color,box-shadow,border-color] duration-300",
+          solid
+            ? "border-b border-white/5 bg-ink/95 shadow-[0_10px_30px_-10px_rgba(0,0,0,0.5)] backdrop-blur-md"
+            : "border-b border-transparent bg-transparent",
+        )}
+      >
+        <div className="mx-auto flex h-[var(--header-height)] w-full max-w-[1440px] items-center justify-between gap-6 px-5 sm:px-6 lg:px-8">
+          <Logo tone="dark" />
 
-        {/* Desktop navigation */}
-        <nav ref={navRef} aria-label="Main" className="hidden lg:block">
-          <ul className="flex items-center gap-0.5">
-            {nav.map((entry) =>
-              entry.kind === "link" ? (
-                <li key={entry.href}>
-                  <Link
-                    href={entry.href}
-                    aria-current={pathname === entry.href ? "page" : undefined}
-                    className={cn(
-                      "rounded-md px-3 py-2 text-[15px] font-medium text-white/85 transition-colors hover:text-white",
-                      pathname === entry.href && "text-white",
-                    )}
-                  >
-                    {entry.label}
-                  </Link>
-                </li>
-              ) : (
-                <DesktopMenu
-                  key={entry.id}
-                  menu={entry}
-                  open={openMenu === entry.id}
-                  active={entry.groups.some((g) => g.items.some((i) => pathname.startsWith(i.href)))}
-                  onHoverOpen={() => openWithHover(entry.id)}
-                  onHoverClose={scheduleClose}
-                  onToggle={() => toggleMenu(entry.id)}
-                  onOpen={() => setOpenMenu(entry.id)}
-                  onClose={() => setOpenMenu(null)}
-                />
-              ),
-            )}
-          </ul>
-        </nav>
+          {/* Desktop navigation */}
+          <nav ref={navRef} aria-label="Main" className="hidden lg:block">
+            <ul className="flex items-center gap-0.5">
+              {nav.map((entry) =>
+                entry.kind === "link" ? (
+                  <li key={entry.href}>
+                    <Link
+                      href={entry.href}
+                      aria-current={pathname === entry.href ? "page" : undefined}
+                      className={cn(
+                        "rounded-md px-3 py-2 text-[15px] font-medium text-white/85 transition-colors hover:text-white",
+                        pathname === entry.href && "text-white",
+                      )}
+                    >
+                      {entry.label}
+                    </Link>
+                  </li>
+                ) : (
+                  <DesktopMenu
+                    key={entry.id}
+                    menu={entry}
+                    open={openMenu === entry.id}
+                    active={entry.groups.some((g) => g.items.some((i) => pathname.startsWith(i.href)))}
+                    onHoverOpen={() => openWithHover(entry.id)}
+                    onHoverClose={scheduleClose}
+                    onToggle={() => toggleMenu(entry.id)}
+                    onOpen={() => setOpenMenu(entry.id)}
+                    onClose={() => setOpenMenu(null)}
+                  />
+                ),
+              )}
+            </ul>
+          </nav>
 
-        {/* Desktop utilities */}
-        <div className="hidden items-center gap-3 lg:flex xl:gap-4">
-          <Link
-            href="/client-center"
-            className="hidden text-sm font-medium text-white/85 transition-colors hover:text-white xl:inline"
-          >
-            Client Center
-          </Link>
-          <a
-            href={payBillHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={cn(buttonClasses("outline-light", "sm"), "hidden xl:inline-flex")}
-          >
-            Pay Bill
-          </a>
-          <a
-            href={phone.href}
-            aria-label={`Call ${phone.display}`}
-            className="inline-flex items-center gap-2 rounded-md text-sm font-semibold text-white transition-colors hover:text-accent-light"
-          >
-            <Phone aria-hidden className="h-4 w-4 text-accent-light" strokeWidth={1.75} />
-            <span className="hidden tabular-nums min-[1440px]:inline">{phone.display}</span>
-          </a>
-          <Link href="/contact" className={cn(buttonClasses("primary", "sm"), "px-4 py-2.5")}>
-            Book a Consultation
-            <ArrowRight aria-hidden className="h-4 w-4 transition-transform group-hover:translate-x-1" />
-          </Link>
+          {/* Desktop utilities */}
+          <div className="hidden items-center gap-3 lg:flex xl:gap-4">
+            <Link
+              href="/client-center"
+              className="hidden text-sm font-medium text-white/85 transition-colors hover:text-white xl:inline"
+            >
+              Client Center
+            </Link>
+            <a
+              href={payBillHref}
+              target="_blank"
+              rel="noopener noreferrer"
+              className={cn(buttonClasses("outline-light", "sm"), "hidden xl:inline-flex")}
+            >
+              Pay Bill
+            </a>
+            <a
+              href={phone.href}
+              aria-label={`Call ${phone.display}`}
+              className="inline-flex items-center gap-2 rounded-md text-sm font-semibold text-white transition-colors hover:text-accent-light"
+            >
+              <Phone aria-hidden className="h-4 w-4 text-accent-light" strokeWidth={1.75} />
+              <span className="hidden tabular-nums min-[1440px]:inline">{phone.display}</span>
+            </a>
+            <Link href="/contact" className={cn(buttonClasses("primary", "sm"), "px-4 py-2.5")}>
+              Book a Consultation
+              <ArrowRight aria-hidden className="h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </Link>
+          </div>
+
+          {/* Mobile controls */}
+          <div className="flex items-center gap-1 lg:hidden">
+            <a
+              href={phone.href}
+              aria-label={`Call ${phone.display}`}
+              className="grid h-11 w-11 place-items-center rounded-full text-white hover:bg-white/10"
+            >
+              <Phone aria-hidden className="h-5 w-5" strokeWidth={1.75} />
+            </a>
+            <button
+              ref={hamburgerRef}
+              type="button"
+              aria-label="Open menu"
+              aria-expanded={mobileOpen}
+              aria-controls="mobile-menu"
+              onClick={() => setMobileOpen(true)}
+              className="grid h-11 w-11 place-items-center rounded-full text-white hover:bg-white/10"
+            >
+              <Menu aria-hidden className="h-6 w-6" strokeWidth={1.75} />
+            </button>
+          </div>
         </div>
-
-        {/* Mobile controls */}
-        <div className="flex items-center gap-1 lg:hidden">
-          <a
-            href={phone.href}
-            aria-label={`Call ${phone.display}`}
-            className="grid h-11 w-11 place-items-center rounded-full text-white hover:bg-white/10"
-          >
-            <Phone aria-hidden className="h-5 w-5" strokeWidth={1.75} />
-          </a>
-          <button
-            ref={hamburgerRef}
-            type="button"
-            aria-label="Open menu"
-            aria-expanded={mobileOpen}
-            aria-controls="mobile-menu"
-            onClick={() => setMobileOpen(true)}
-            className="grid h-11 w-11 place-items-center rounded-full text-white hover:bg-white/10"
-          >
-            <Menu aria-hidden className="h-6 w-6" strokeWidth={1.75} />
-          </button>
-        </div>
-      </div>
-
-    </header>
+      </header>
 
       {/* Mobile full-screen menu (sibling of <header> so backdrop-filter can't trap position:fixed) */}
       <div

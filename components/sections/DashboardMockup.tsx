@@ -88,7 +88,9 @@ export function DashboardMockup() {
                 <div
                   key={tick}
                   aria-hidden
-                  className={tick === 0 ? "absolute inset-x-0 h-px bg-[#c9c4bc]" : "absolute inset-x-0 h-px bg-[#eeebe6]"}
+                  className={
+                    tick === 0 ? "absolute inset-x-0 h-px bg-[#c9c4bc]" : "absolute inset-x-0 h-px bg-[#eeebe6]"
+                  }
                   style={{ bottom: `${(tick / MAX) * 100}%` }}
                 />
               ))}

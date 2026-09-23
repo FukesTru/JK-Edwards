@@ -6,12 +6,15 @@ import { site } from "@/lib/site";
 /** Full-width call to action shown before the footer on every page. */
 export function CtaBand() {
   return (
-    <section aria-labelledby="cta-band-heading" className="relative isolate overflow-hidden bg-ink text-white bg-grain">
+    <section aria-labelledby="cta-band-heading" className="bg-grain relative isolate overflow-hidden bg-ink text-white">
       <div
         aria-hidden
         className="absolute inset-0 -z-10 bg-[radial-gradient(55%_120%_at_100%_100%,color-mix(in_oklab,var(--accent)_35%,transparent),transparent_70%)]"
       />
-      <div aria-hidden className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/70 to-transparent" />
+      <div
+        aria-hidden
+        className="absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-accent/70 to-transparent"
+      />
       <Container className="py-16 md:py-20">
         <Reveal className="flex flex-col gap-8 lg:flex-row lg:items-center lg:justify-between">
           <div className="max-w-2xl">
