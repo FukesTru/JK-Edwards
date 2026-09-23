@@ -1,0 +1,20 @@
+import manifest from "@/content/images.json";
+
+/**
+ * Site photography generated with Artlist (Seedream 5.0).
+ * `src` points at the Artlist CDN until `npm run images:pull` downloads the
+ * files into /public/images and rewrites the manifest to local paths.
+ */
+export type ImageKey = keyof typeof manifest;
+
+export type SiteImage = {
+  src: string;
+  alt: string;
+  generationId?: string;
+};
+
+const images = manifest as Record<ImageKey, SiteImage>;
+
+export function getImage(key: ImageKey): SiteImage {
+  return images[key];
+}

@@ -1,0 +1,32 @@
+/*
+ * JK Edwards & Company — design tokens
+ * Brand colors come from the firm's existing logo (burnt orange + charcoal).
+ * Every color used on the site should reference one of these variables.
+ */
+:root {
+  /* Core palette (brand spec) */
+  --ink: #16181b; /* dark hero backgrounds, footer */
+  --charcoal: #54565a; /* secondary text on light, borders on dark */
+  --steel: #7b7d80; /* dividers, large muted text */
+  --accent: #c04d00; /* primary buttons, underline bars, icons */
+  --accent-hover: #a34100; /* button hover */
+  --paper: #f7f5f2; /* warm light section backgrounds */
+  --white: #ffffff; /* cards */
+
+  /*
+   * Accessibility companions (WCAG 2.1 AA). --accent on --ink is 3.6:1, which
+   * only passes for large text / UI, so small accent text on dark surfaces
+   * uses --accent-light (6.8:1). Small accent text on --paper uses
+   * --accent-strong (5.8:1). Muted copy on dark uses --mist (9:1).
+   */
+  --accent-light: #f0843e;
+  --accent-strong: #a34100;
+  --mist: #b9bbbe;
+  --line: #e7e2db; /* hairlines on light surfaces */
+  --ink-soft: #1f2226; /* raised surfaces on dark */
+
+  /* Layout */
+  --content-max: 1200px;
+  --radius-button: 6px;
+  --header-height: 76px;
+}
