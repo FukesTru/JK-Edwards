@@ -5,11 +5,11 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { routeGroups, routes } from "@/lib/routes";
 import { buildMetadata } from "@/lib/seo";
-import { prices } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Sitemap",
-  description: `Every page on our site: flat ${prices.taxPrep} CPA-signed tax preparation, ${prices.taxResolution} IRS tax resolution, pricing, FAQs and the Fayette and Coweta County areas we serve.`,
+  description:
+    "Every page on our site: CPA-signed tax preparation, IRS tax resolution, pricing, FAQs, how it works and the Fayette and Coweta County, GA communities we serve.",
   path: "/sitemap",
 });
 

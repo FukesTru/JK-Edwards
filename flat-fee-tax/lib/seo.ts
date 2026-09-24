@@ -7,13 +7,13 @@ export const defaultOgImage = {
   url: absoluteUrl("/opengraph-image"),
   width: 1200,
   height: 630,
-  alt: `${site.brandName} — ${prices.taxPrep} CPA-signed tax returns in ${site.primaryCity}`,
+  alt: `${site.brandName} — CPA-signed tax returns in ${site.primaryCity}`,
 };
 
 type MetadataInput = {
   /** Primary keyword title — " | {brandName}" is appended. Keep it short enough for the final brand name. */
   title: string;
-  /** 150–160 characters: keyword, city/GA, price, "CPA-signed" and a call to action. */
+  /** 150–160 characters: keyword, city/GA, "CPA-signed" and a call to action. Prices only on Pricing and the two service pages. */
   description: string;
   path: string;
   /** Use the title exactly as given. */
@@ -99,6 +99,12 @@ const offer = (name: string, price: number, path: string) => ({
   availability: "https://schema.org/InStock",
 });
 
+/** Catalog entry without a price — prices are marked up only on the pages that show them. */
+const catalogItem = (name: string, path: string) => ({
+  "@type": "Offer",
+  itemOffered: { "@type": "Service", name, url: absoluteUrl(path) },
+});
+
 /** Site-wide business entity. City pages pass a single city for `areaServed`. */
 export function accountingServiceSchema(city?: string) {
   const telephone = real(site.phone);
@@ -113,13 +119,12 @@ export function accountingServiceSchema(city?: string) {
     url: `${siteUrl}/`,
     logo: absoluteUrl("/brand/icon-512.png"),
     image: absoluteUrl("/opengraph-image"),
-    description: `Flat-fee tax preparation (${prices.taxPrep}) and IRS tax resolution (${prices.taxResolution}) in ${site.primaryCity}. Every return is prepared and signed by a licensed CPA and reviewed by an Enrolled Agent.`,
+    description: `Tax preparation and IRS tax resolution in ${site.primaryCity}. Every return is prepared and signed by a licensed CPA and reviewed by an Enrolled Agent.`,
     ...(telephone ? { telephone } : {}),
     ...(email ? { email } : {}),
     address: postalAddress(),
     geo: { "@type": "GeoCoordinates", latitude: site.geo.latitude, longitude: site.geo.longitude },
     ...(hours ? { openingHours: hours } : {}),
-    priceRange: `${prices.taxPrep}–${prices.taxResolution}`,
     areaServed: city ? cityPlace(city) : allAreas,
     founder: { "@id": kaiId },
     employee: [{ "@id": kaiId }, { "@id": cpaId }],
@@ -136,10 +141,10 @@ export function accountingServiceSchema(city?: string) {
     ],
     hasOfferCatalog: {
       "@type": "OfferCatalog",
-      name: "Flat-fee services",
+      name: "Services",
       itemListElement: [
-        offer("Tax Preparation", site.prices.taxPrep, "/tax-preparation"),
-        offer("Tax Resolution", site.prices.taxResolution, "/tax-resolution"),
+        catalogItem("Tax Preparation", "/tax-preparation"),
+        catalogItem("Tax Resolution", "/tax-resolution"),
       ],
     },
   };
@@ -157,9 +162,9 @@ export function websiteSchema() {
   };
 }
 
-type ServiceInput = { name: string; description: string; path: string; price: number; serviceType: string };
+type ServiceInput = { name: string; description: string; path: string; price?: number; serviceType: string };
 
-/** Service + Offer (price) for the two flat-fee services and the tax-prep sub-pages. */
+/** Service schema. Pass `price` only on pages that show it (Pricing and the two service pages). */
 export function serviceSchema({ name, description, path, price, serviceType }: ServiceInput) {
   return {
     "@context": "https://schema.org",
@@ -171,7 +176,7 @@ export function serviceSchema({ name, description, path, price, serviceType }: S
     url: absoluteUrl(path),
     provider: { "@id": businessId },
     areaServed: allAreas,
-    offers: offer(name, price, path),
+    ...(price ? { offers: offer(name, price, path) } : {}),
   };
 }
 

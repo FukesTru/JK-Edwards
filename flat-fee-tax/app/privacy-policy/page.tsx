@@ -3,11 +3,12 @@ import { LegalDocument } from "@/components/sections/LegalDocument";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { PageHero } from "@/components/ui/PageHero";
 import { buildMetadata } from "@/lib/seo";
-import { emailHref, phoneHref, prices, site } from "@/lib/site";
+import { emailHref, phoneHref, site } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Privacy Policy",
-  description: `How we collect, use and protect the information you share through our website and forms. Forms never ask for SSNs or bank details. ${prices.taxPrep} CPA-signed returns.`,
+  description:
+    "How we collect, use and protect the information you share through our website and forms. Our forms never ask for Social Security numbers or bank details.",
   path: "/privacy-policy",
 });
 

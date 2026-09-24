@@ -1,9 +1,8 @@
+import { Landmark } from "lucide-react";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
-import { Price } from "@/components/ui/PriceCard";
 import { cta } from "@/lib/cta";
-import { prices, site } from "@/lib/site";
 import { cn } from "@/lib/utils";
 
 const issues = [
@@ -13,7 +12,7 @@ const issues = [
   "Penalty abatement requests",
 ];
 
-/** Navy split section: "Got a letter from the IRS? Flat $749 to take it off your plate." */
+/** Navy split section: "Got a letter from the IRS? We’ll take it off your plate." */
 export function ResolutionTeaser({
   className,
   headingLevel = "h2",
@@ -35,7 +34,7 @@ export function ResolutionTeaser({
               id="resolution-teaser"
               className="mt-4 font-serif text-[2rem] leading-[1.12] font-bold text-balance sm:text-[2.5rem]"
             >
-              Got a letter from the IRS? Flat {prices.taxResolution} to take it off your plate.
+              Got a letter from the IRS? We’ll take it off your plate.
             </Heading>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-mist">
               An Enrolled Agent reads your notice, explains it in plain English and — with your power of attorney —
@@ -61,9 +60,13 @@ export function ResolutionTeaser({
             </div>
           </div>
           <div className="rounded-3xl border border-white/10 bg-navy-2 p-8 text-center">
-            <p className="text-xs font-semibold tracking-[0.2em] text-mist uppercase">Flat fee</p>
-            <Price amount={site.prices.taxResolution} className="mt-3 text-[5rem] text-gold" />
-            <p className="mt-3 text-mist">IRS problems handled by an Enrolled Agent</p>
+            <span className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-gold/15 text-gold">
+              <Landmark aria-hidden className="h-8 w-8" strokeWidth={1.5} />
+            </span>
+            <p className="mt-5 font-serif text-2xl font-semibold text-white">Represented by an Enrolled Agent</p>
+            <p className="mt-2 text-mist">
+              Federally licensed by the IRS, with unlimited rights to represent taxpayers before it.
+            </p>
           </div>
         </Reveal>
       </Container>

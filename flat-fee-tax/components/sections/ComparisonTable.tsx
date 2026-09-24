@@ -1,11 +1,13 @@
 import { Check, Minus } from "lucide-react";
-import { prices } from "@/lib/site";
-
 const rows = [
   { label: "Who signs your return", typical: "Often a seasonal preparer", us: "A licensed CPA" },
   { label: "Second professional review", typical: "Rarely", us: "An Enrolled Agent reviews every return" },
-  { label: "Pricing", typical: "Per-form add-ons are common", us: `One flat fee — ${prices.taxPrep}` },
-  { label: "Complex schedules (C, E, K-1, 1099-B)", typical: "Often an extra charge", us: "Included" },
+  {
+    label: "Complex schedules (C, E, K-1, 1099-B)",
+    typical: "Not every preparer handles them",
+    us: "Handled on every return",
+  },
+  { label: "If the IRS sends a notice", typical: "Varies by preparer", us: "An Enrolled Agent can represent you" },
 ];
 
 /** "Typical tax shop vs. us" — factual, names no competitors and quotes no prices for others. */

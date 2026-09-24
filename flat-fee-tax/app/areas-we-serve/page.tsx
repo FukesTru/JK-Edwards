@@ -9,11 +9,11 @@ import { ServiceAreaMap } from "@/components/sections/ServiceAreaMap";
 import { RelatedLinks } from "@/components/sections/RelatedLinks";
 import { cities, cityAnchor, smallTownNotes } from "@/content/cities";
 import { buildMetadata } from "@/lib/seo";
-import { prices } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Tax Preparer Fayette County GA",
-  description: `Tax preparer for Fayette and Coweta County, GA: flat ${prices.taxPrep} CPA-signed returns in Peachtree City, Fayetteville, Newnan and nearby, or fully online. Book today.`,
+  description:
+    "Tax preparer for Fayette and Coweta County, GA: CPA-signed, EA-reviewed returns in Peachtree City, Fayetteville, Newnan and nearby, or fully online. Book now.",
   path: "/areas-we-serve",
 });
 
@@ -24,7 +24,7 @@ export default function AreasWeServePage() {
       <PageHero
         eyebrow="Areas we serve"
         title="Tax Preparation Across Fayette & Coweta County, GA"
-        subtitle="In person at our Peachtree City office, or fully virtual anywhere in Georgia — with the same flat price and two licensed professionals on every return."
+        subtitle="In person at our Peachtree City office, or fully virtual anywhere in Georgia — with two licensed professionals on every return."
         image="ptc-lake"
         imageClassName="object-[60%_center]"
       />
@@ -36,7 +36,7 @@ export default function AreasWeServePage() {
             <SectionHeading
               id="map-heading"
               eyebrow="Where we work"
-              title="Seven communities, one flat price"
+              title="Seven communities, one standard of care"
               intro="Our office is in Peachtree City, near the center of Fayette and Coweta County. Wherever you are in Georgia, you can also work with us online."
             />
             <ul className="mt-8 space-y-4">

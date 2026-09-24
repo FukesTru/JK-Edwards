@@ -1,4 +1,4 @@
-import { BadgeCheck, FileSignature, Tag } from "lucide-react";
+import { BadgeCheck, FileSignature, MessageSquareText } from "lucide-react";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { cn } from "@/lib/utils";
 
@@ -14,9 +14,9 @@ const blocks = [
     text: "A federally licensed Enrolled Agent reviews every return before it’s filed — a true second check.",
   },
   {
-    Icon: Tag,
-    title: "One Flat Fee, Quoted Upfront",
-    text: "You see the price before you book. Complex schedules don’t add surprise charges.",
+    Icon: MessageSquareText,
+    title: "Plain-English Answers",
+    text: "We explain your return — and any letter from the IRS — in plain English, so you always know what happens next.",
   },
 ];
 

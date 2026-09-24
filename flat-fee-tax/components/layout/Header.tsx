@@ -4,7 +4,7 @@ import type { NavEntry } from "@/components/layout/nav-types";
 import { cities } from "@/content/cities";
 import { taxPrepPages } from "@/content/services";
 import { cta } from "@/lib/cta";
-import { phoneHref, prices, site } from "@/lib/site";
+import { phoneHref, site } from "@/lib/site";
 
 const iconClass = "h-5 w-5";
 const prepIcons = { FileText, Briefcase, House, ChartLine };
@@ -31,7 +31,7 @@ export function Header() {
           }),
         },
       ],
-      footer: { label: `Tax Preparation — ${prices.taxPrep}`, href: "/tax-preparation" },
+      footer: { label: "Tax preparation overview", href: "/tax-preparation" },
     },
     { kind: "link", label: "Tax Resolution", href: "/tax-resolution" },
     {

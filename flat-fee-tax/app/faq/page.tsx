@@ -8,11 +8,12 @@ import { Section } from "@/components/ui/Section";
 import { faqPageGroups } from "@/content/faqs";
 import { cta } from "@/lib/cta";
 import { buildMetadata, faqSchema } from "@/lib/seo";
-import { phoneHref, prices, site } from "@/lib/site";
+import { phoneHref, site } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Tax Preparation FAQ",
-  description: `Tax preparation FAQ: what’s in the flat ${prices.taxPrep} fee, CPA-signed and EA-reviewed returns, documents, ${prices.taxResolution} IRS help and Peachtree City, GA service. Get answers.`,
+  description:
+    "Tax preparation FAQ: what’s included, CPA-signed and EA-reviewed returns, documents, IRS tax resolution and service in Peachtree City, GA. Get answers here.",
   path: "/faq",
 });
 

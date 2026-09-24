@@ -8,18 +8,18 @@ import { ContactCard } from "@/components/sections/ContactCard";
 import { MapEmbed } from "@/components/sections/MapEmbed";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { buildMetadata } from "@/lib/seo";
-import { prices } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Book a Tax Preparer Peachtree City",
-  description: `Book a tax preparer in Peachtree City, GA: a flat ${prices.taxPrep} CPA-signed return or ${prices.taxResolution} IRS tax help. Send a request or pick a time online — get started today.`,
+  description:
+    "Book a tax preparer in Peachtree City, GA: a CPA-signed, EA-reviewed tax return or IRS tax help. Send a request or pick a time online, and get started today.",
   path: "/get-started",
 });
 
 const nextSteps = [
   {
     title: "We confirm the details",
-    description: "We contact you by your preferred method to confirm your service and flat price.",
+    description: "We contact you by your preferred method to confirm your service and answer your questions.",
   },
   {
     title: "You upload securely",
@@ -36,12 +36,8 @@ export default function GetStartedPage() {
     <>
       <PageHero
         eyebrow="Get started"
-        title={
-          <>
-            Get Started — Book Your {prices.taxPrep} Return or {prices.taxResolution} Tax Help
-          </>
-        }
-        subtitle="Tell us a little about your situation. We’ll confirm your flat price and send a secure link for your documents."
+        title="Get Started — Book Your Tax Return or IRS Tax Help"
+        subtitle="Tell us a little about your situation. We’ll confirm the details and send a secure link for your documents."
         primaryCta={{ label: "Fill Out the Form", href: "#request" }}
       />
       <Breadcrumbs items={[{ name: "Get Started", path: "/get-started" }]} />

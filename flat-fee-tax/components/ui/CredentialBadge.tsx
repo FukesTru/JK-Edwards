@@ -4,10 +4,10 @@ import { cn } from "@/lib/utils";
 export const credentials = [
   "Prepared & Signed by a CPA",
   "Reviewed by an Enrolled Agent",
-  "Flat Fee, No Surprises",
+  "In Person or Fully Online",
 ] as const;
 
-/** Reusable pill row: ✓ Prepared & Signed by a CPA · ✓ Reviewed by an Enrolled Agent · ✓ Flat Fee, No Surprises */
+/** Reusable pill row: ✓ Prepared & Signed by a CPA · ✓ Reviewed by an Enrolled Agent · ✓ In Person or Fully Online */
 export function CredentialBadge({
   tone = "dark",
   className,

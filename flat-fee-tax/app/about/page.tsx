@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { BadgeCheck, Laptop, MessageSquareText, Tag } from "lucide-react";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -9,11 +10,12 @@ import { SectionHeading } from "@/components/ui/SectionHeading";
 import { RelatedLinks } from "@/components/sections/RelatedLinks";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { buildMetadata, personSchemas } from "@/lib/seo";
-import { prices, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Enrolled Agent Peachtree City",
-  description: `Meet Kai Mays, an Enrolled Agent in Peachtree City, GA, and our signing CPA. Flat ${prices.taxPrep} CPA-signed, EA-reviewed returns with plain-English help. Get started.`,
+  description:
+    "Meet Kai Mays, an Enrolled Agent in Peachtree City, GA, and our signing CPA: CPA-signed, EA-reviewed tax returns and IRS help in plain English. Get started.",
   path: "/about",
 });
 
@@ -112,10 +114,10 @@ export default function AboutPage() {
               statement. By the time the return is done, the bill feels like a surprise.
             </p>
             <p>
-              We think you deserve to know the price before you start. So we offer two services at two flat prices —{" "}
-              {prices.taxPrep} for tax preparation and {prices.taxResolution} for tax resolution — and we include the
-              schedules that usually cost extra. Instead of competing on add-ons, we compete on care: a CPA prepares and
-              signs your return, and an Enrolled Agent reviews it before it’s filed.
+              We think you deserve to know the price before you start. So we offer two services, each at one flat price
+              published on our <Link href="/pricing">pricing page</Link>, and we include the schedules that usually cost
+              extra. Instead of competing on add-ons, we compete on care: a CPA prepares and signs your return, and an
+              Enrolled Agent reviews it before it’s filed.
             </p>
             <p>
               <Placeholder note="Personal story — client may add">

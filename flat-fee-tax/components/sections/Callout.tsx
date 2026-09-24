@@ -14,7 +14,7 @@ const kinds = {
   },
 };
 
-/** Highlighted note: "It's still $249", compliance notes, cautions. */
+/** Highlighted note: compliance notes, cautions. */
 export function Callout({
   kind = "info",
   title,

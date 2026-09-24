@@ -3,7 +3,7 @@ import { join } from "node:path";
 import { ImageResponse } from "next/og";
 import sharp from "sharp";
 import { brandColors, markSvg } from "@/lib/brand";
-import { prices, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 /**
  * Generated brand images: the Open Graph card, favicons/app icons and the
@@ -35,7 +35,7 @@ const markUri = (options: Parameters<typeof markSvg>[0]) => dataUri(markSvg(opti
 
 export const ogSize = { width: 1200, height: 630 };
 
-/** 1200×630 share card: logo, "$249 CPA-Signed Tax Returns", on navy. */
+/** 1200×630 share card: logo and "CPA-Signed Tax Returns" on navy (no price — it's shared from every page). */
 export async function renderOgImage() {
   return new ImageResponse(
     <div
@@ -61,33 +61,19 @@ export async function renderOgImage() {
         </div>
       </div>
       <div style={{ display: "flex", flexDirection: "column" }}>
-        <div style={{ display: "flex", alignItems: "flex-end", gap: 28 }}>
-          <div
-            style={{
-              display: "flex",
-              fontWeight: 700,
-              fontSize: 150,
-              color: brandColors.gold,
-              lineHeight: 1,
-              letterSpacing: -5,
-            }}
-          >
-            {prices.taxPrep}
-          </div>
-          <div
-            style={{
-              display: "flex",
-              flexDirection: "column",
-              fontFamily: "Playfair Display",
-              fontWeight: 700,
-              fontSize: 56,
-              lineHeight: 1.08,
-              marginBottom: 10,
-            }}
-          >
-            <span>CPA-Signed</span>
-            <span>Tax Returns</span>
-          </div>
+        <div
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            fontFamily: "Playfair Display",
+            fontWeight: 700,
+            fontSize: 100,
+            lineHeight: 1.04,
+            letterSpacing: -1,
+          }}
+        >
+          <span>CPA-Signed</span>
+          <span style={{ color: brandColors.gold }}>Tax Returns</span>
         </div>
         <div style={{ width: 64, height: 5, borderRadius: 3, background: brandColors.gold, marginTop: 34 }} />
       </div>

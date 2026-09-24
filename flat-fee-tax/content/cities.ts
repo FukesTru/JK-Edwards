@@ -1,6 +1,5 @@
 import type { Faq } from "@/content/faqs";
 import type { ImageKey } from "@/lib/images";
-import { prices } from "@/lib/site";
 
 export type CitySlug = "peachtree-city" | "fayetteville" | "newnan" | "tyrone" | "senoia";
 
@@ -92,8 +91,9 @@ export const cityPages: CityPage[] = [
     name: "Peachtree City",
     county: "Fayette County",
     seo: {
-      title: `Tax Preparer Peachtree City GA, ${prices.taxPrep}`,
-      description: `Tax preparer in Peachtree City, GA: flat ${prices.taxPrep} returns prepared and signed by a CPA and reviewed by an Enrolled Agent. Meet in person or online. Book today.`,
+      title: "Tax Preparer in Peachtree City, GA",
+      description:
+        "Tax preparer in Peachtree City, GA: returns prepared and signed by a CPA and reviewed by an Enrolled Agent. Meet at our office or work fully online. Book today.",
     },
     image: "golf-cart-path",
     introTitle: "Your neighborhood tax office, right here in Peachtree City",
@@ -134,7 +134,7 @@ export const cityPages: CityPage[] = [
       },
       {
         q: "Is my return more expensive because I have stock sales and a rental?",
-        a: `No. Brokerage 1099-Bs, Schedule E rentals and K-1s are included in the flat ${prices.taxPrep} price. See everything that’s included on our [pricing page](/pricing).`,
+        a: "No. Brokerage 1099-Bs, Schedule E rentals and K-1s are part of every return we prepare. See everything that’s included on our [pricing page](/pricing).",
       },
     ],
     nearby: ["tyrone", "fayetteville", "senoia"],
@@ -144,8 +144,9 @@ export const cityPages: CityPage[] = [
     name: "Fayetteville",
     county: "Fayette County",
     seo: {
-      title: `Tax Preparation Fayetteville GA, ${prices.taxPrep}`,
-      description: `Tax preparation in Fayetteville, GA for families, freelancers and film crews: flat ${prices.taxPrep}, CPA-signed and EA-reviewed, Schedule C included. Book online.`,
+      title: "Tax Preparation in Fayetteville, GA",
+      description:
+        "Tax preparation in Fayetteville, GA for families, freelancers and film crews: CPA-signed, EA-reviewed returns with Schedule C handled. Book online or call us.",
     },
     image: "freelancer-studio",
     introTitle: "Tax help for Fayette County’s seat — and its creative economy",
@@ -182,7 +183,7 @@ export const cityPages: CityPage[] = [
       },
       {
         q: "What if I had both W-2 and 1099 income this year?",
-        a: `That’s common in production work. We report both on the same return for the same flat ${prices.taxPrep} price.`,
+        a: "That’s common in production work. We report both on the same return, at the same flat fee.",
       },
       {
         q: "Do I need to drive to Peachtree City?",
@@ -196,11 +197,12 @@ export const cityPages: CityPage[] = [
     name: "Newnan",
     county: "Coweta County",
     seo: {
-      title: `Tax Preparation Newnan GA, ${prices.taxPrep}`,
-      description: `Tax preparation in Newnan, GA: flat ${prices.taxPrep} returns for families, landlords and small-business owners, CPA-signed and EA-reviewed. Book online or call today.`,
+      title: "Tax Preparation in Newnan, GA",
+      description:
+        "Tax preparation in Newnan, GA for families, landlords and small-business owners: every return CPA-signed and EA-reviewed. Book online or call our office today.",
     },
     image: "historic-home",
-    introTitle: "Flat-fee tax preparation for Coweta County’s seat",
+    introTitle: "CPA-signed tax preparation for Coweta County’s seat",
     intro: [
       "Newnan wears its history well. The courthouse square anchors a lively downtown of shops and restaurants, and the tree-lined streets of historic homes are a big part of why people call it the City of Homes. Around that historic core, newer neighborhoods and businesses have grown up along the I-85 corridor, bringing families, commuters and entrepreneurs to Coweta County’s seat.",
       "That mix makes for varied tax returns. Many Newnan households are raising families on one or two W-2 incomes and weighing whether itemizing makes sense. Others own a rental house or two — sometimes a former home kept after moving across town — and need Schedule E done right, including depreciation. And the shops, trades and service businesses that keep the square and the surrounding neighborhoods running often report their income on Schedule C.",
@@ -230,7 +232,7 @@ export const cityPages: CityPage[] = [
     faqs: [
       {
         q: "I own a rental house in Newnan. Is that extra?",
-        a: `No. Schedule E rental reporting is included in the flat ${prices.taxPrep} fee. Learn more about [rental property returns](/tax-preparation/rental-property).`,
+        a: "No. Schedule E rental reporting is part of every return we prepare. Learn more about [rental property returns](/tax-preparation/rental-property).",
       },
       {
         q: "Do you work with small-business owners in Newnan?",
@@ -248,8 +250,9 @@ export const cityPages: CityPage[] = [
     name: "Tyrone",
     county: "Fayette County",
     seo: {
-      title: `Tax Preparer Tyrone GA, ${prices.taxPrep}`,
-      description: `Tax preparer near Tyrone, GA: flat ${prices.taxPrep} returns prepared and signed by a CPA and reviewed by an Enrolled Agent, minutes away in Peachtree City. Book today.`,
+      title: "Tax Preparer Near Tyrone, GA",
+      description:
+        "Tax preparer near Tyrone, GA: returns prepared and signed by a CPA and reviewed by an Enrolled Agent, just minutes away in Peachtree City. Book your return now.",
     },
     image: "farmhouse",
     introTitle: "Close to home for Tyrone families",
@@ -290,7 +293,7 @@ export const cityPages: CityPage[] = [
       },
       {
         q: "I got a K-1 from a family business. Is that extra?",
-        a: `No. Schedule K-1 income is included in the flat ${prices.taxPrep} price. See [investments and K-1s](/tax-preparation/investments-k1).`,
+        a: "No. Schedule K-1 income is part of every return we prepare. See [investments and K-1s](/tax-preparation/investments-k1).",
       },
     ],
     nearby: ["peachtree-city", "fayetteville", "newnan"],
@@ -300,8 +303,9 @@ export const cityPages: CityPage[] = [
     name: "Senoia",
     county: "Coweta County",
     seo: {
-      title: `Tax Preparer Senoia GA, ${prices.taxPrep}`,
-      description: `Tax preparer for Senoia, GA: flat ${prices.taxPrep} returns for self-employed, gig and film workers, CPA-signed and EA-reviewed, Schedule C included. Get started online.`,
+      title: "Tax Preparer in Senoia, GA",
+      description:
+        "Tax preparer for Senoia, GA: returns for self-employed, gig and film workers, CPA-signed and EA-reviewed, with Schedule C handled. Get started online today.",
     },
     image: "camera-gear",
     introTitle: "Tax preparation for Senoia’s self-employed and small-town households",
@@ -338,7 +342,7 @@ export const cityPages: CityPage[] = [
       },
       {
         q: "I’m behind on taxes from past gig work. What should I do?",
-        a: `Don’t wait. Our flat ${prices.taxResolution} [tax resolution](/tax-resolution) service can help with unfiled years, IRS notices and payment plan requests. Results depend on your situation.`,
+        a: "Don’t wait. Our [tax resolution](/tax-resolution) service can help with unfiled years, IRS notices and payment plan requests. Results depend on your situation.",
       },
       {
         q: "Can I do everything online from Senoia?",

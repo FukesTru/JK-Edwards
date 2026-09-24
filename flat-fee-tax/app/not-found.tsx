@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { RelatedLinks } from "@/components/sections/RelatedLinks";
-import { prices, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: { absolute: `Page Not Found | ${site.brandName}` },
@@ -15,7 +15,7 @@ export default function NotFound() {
       <PageHero
         eyebrow="Error 404"
         title="We couldn’t find that page"
-        subtitle="The link may be out of date. Try one of the pages below — or start your flat-fee return right now."
+        subtitle="The link may be out of date. Try one of the pages below — or start your return right now."
       />
       <Section tone="white">
         <RelatedLinks
@@ -26,13 +26,13 @@ export default function NotFound() {
             {
               label: "Tax Preparation",
               href: "/tax-preparation",
-              description: `CPA-signed returns for ${prices.taxPrep}.`,
+              description: "CPA-signed, EA-reviewed returns.",
               icon: "FileText",
             },
             {
               label: "Tax Resolution",
               href: "/tax-resolution",
-              description: `IRS help for ${prices.taxResolution}.`,
+              description: "Help with IRS notices and balances due.",
               icon: "ShieldCheck",
             },
             {

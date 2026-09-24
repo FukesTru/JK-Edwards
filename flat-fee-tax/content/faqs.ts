@@ -1,4 +1,4 @@
-import { CLIENT_TO_CONFIRM, prices, site } from "@/lib/site";
+import { CLIENT_TO_CONFIRM, site } from "@/lib/site";
 
 export type Faq = { q: string; a: string };
 export type FaqGroup = { title: string; items: Faq[] };
@@ -6,14 +6,13 @@ export type FaqGroup = { title: string; items: Faq[] };
 /** A confirmed answer from site.config.ts `confirm`, or the [CLIENT TO CONFIRM] marker. */
 const confirmed = (value: string | null) => value ?? CLIENT_TO_CONFIRM;
 
-const { taxPrep, taxResolution } = prices;
 const c = site.confirm;
 
 /* ---- Shared questions (reused across pages) ---------------------------- */
 
 const q = {
   whatsIncluded: {
-    q: `What’s included in the ${taxPrep} price?`,
+    q: "What’s included in tax preparation?",
     a: `Your federal Form 1040 with Schedules A, C and E, brokerage 1099-Bs and Schedule K-1 income, prepared and signed by a CPA, reviewed by an Enrolled Agent and e-filed. See the full list on our [pricing page](/pricing).`,
   },
   stateReturn: {
@@ -54,7 +53,7 @@ const q = {
   },
   hiddenFees: {
     q: "Are there hidden fees or add-ons?",
-    a: `No per-form add-ons. The schedules and forms listed on our [pricing page](/pricing) are included in the flat ${taxPrep} fee, and we’ll tell you before we start if anything falls outside it.`,
+    a: "No per-form add-ons. The schedules and forms listed on our [pricing page](/pricing) are included in the flat fee, and we’ll tell you before we start if anything falls outside it.",
   },
   secureDocs: {
     q: "How do I send my documents?",
@@ -77,7 +76,7 @@ const q = {
     a: "Partnership and S-corp K-1s often arrive in March or later. If yours isn’t in by the filing deadline, we can file an extension, which extends the time to file (not the time to pay) — so we’ll also help estimate any payment due. See [investments & K-1s](/tax-preparation/investments-k1).",
   },
   resolutionScope: {
-    q: `What does the ${taxResolution} tax resolution fee cover?`,
+    q: "What does the tax resolution fee cover?",
     a: `${site.confirm.resolutionScopeConfirmed ? "" : `${CLIENT_TO_CONFIRM} `}Typically: reviewing your IRS or Georgia DOR notice, analyzing your IRS account transcripts, filing a power of attorney (Form 2848), communicating with the IRS for you and building a resolution plan. See the full list on our [tax resolution page](/tax-resolution).`,
   },
   guarantee: {
@@ -101,7 +100,7 @@ const q = {
 /* ---- Page sets ---------------------------------------------------------- */
 
 export const faqs = {
-  homePreview: [q.whatsIncluded, q.whoSigns, q.inPerson, q.hiddenFees],
+  homePreview: [q.whoSigns, q.whatIsEa, q.secureDocs, q.inPerson],
 
   pricing: [q.hiddenFees, q.stateReturn, q.joint, q.payment, q.priorYears],
 
@@ -114,7 +113,7 @@ export const faqs = {
     },
     {
       q: "Does it cost more to itemize?",
-      a: `No. Schedule A is included in the flat ${taxPrep} fee, whether or not itemizing ends up saving you money. See [pricing](/pricing).`,
+      a: "No. Schedule A is part of every return we prepare, whether or not itemizing ends up saving you money. See [pricing](/pricing).",
     },
     {
       q: "What documents do I need to itemize?",
@@ -146,14 +145,14 @@ export const faqs = {
     },
     {
       q: "I have a W-2 job and a side business. Is that extra?",
-      a: `No. W-2 wages and Schedule C side-business income go on the same return for the same flat ${taxPrep} price. [Get started](/get-started).`,
+      a: "No. W-2 wages and Schedule C side-business income go on the same return, at the same flat fee. [Get started](/get-started).",
     },
   ],
 
   rental: [
     {
       q: "Is a rental property extra?",
-      a: `No. Schedule E is included in the flat ${taxPrep} fee. See [pricing](/pricing) for everything that’s covered.`,
+      a: "No. Schedule E is part of every return we prepare. See [pricing](/pricing) for everything that’s covered.",
     },
     q.multiple,
     {
@@ -183,7 +182,7 @@ export const faqs = {
     },
     {
       q: "Are K-1s really included in the flat price?",
-      a: `Yes — Schedule K-1 income from partnerships, S corporations and trusts is included in the flat ${taxPrep} fee. See [pricing](/pricing).`,
+      a: "Yes — Schedule K-1 income from partnerships, S corporations and trusts is part of every return we prepare. See [pricing](/pricing).",
     },
   ],
 

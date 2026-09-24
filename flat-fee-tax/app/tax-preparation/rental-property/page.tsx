@@ -7,11 +7,11 @@ import { SplitFeature } from "@/components/sections/SplitFeature";
 import { TaxPrepSubpage } from "@/components/sections/TaxPrepSubpage";
 import { faqs } from "@/content/faqs";
 import { buildMetadata } from "@/lib/seo";
-import { prices } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Rental Property Tax Preparation Georgia",
-  description: `Rental property tax preparation in Georgia: Schedule E with depreciation done right for a flat ${prices.taxPrep}, CPA-signed and EA-reviewed. For local landlords. Start now.`,
+  description:
+    "Rental property tax preparation in Georgia: Schedule E with depreciation done right, CPA-signed and EA-reviewed, for Fayette and Coweta landlords. Start now.",
   path: "/tax-preparation/rental-property",
 });
 
@@ -20,16 +20,16 @@ export default function RentalPropertyPage() {
     <TaxPrepSubpage
       slug="rental-property"
       title="Rental Property Tax Returns (Schedule E)"
-      subtitle="Rental income, expenses and depreciation reported correctly — for one house, a duplex or a short-term rental — at no extra charge."
-      serviceDescription={`Schedule E rental property tax preparation for a flat ${prices.taxPrep}, prepared and signed by a CPA and reviewed by an Enrolled Agent.`}
-      calloutText="Adding a rental doesn’t change your price. Schedule E is part of the flat fee."
+      subtitle="Rental income, expenses and depreciation reported correctly — for one house, a duplex or a short-term rental."
+      serviceDescription="Schedule E rental property tax preparation, prepared and signed by a CPA and reviewed by an Enrolled Agent."
+      calloutText="Schedule E is part of every return we prepare, with depreciation tracked from year to year."
       faqs={faqs.rental}
       faqTitle="Rental property questions"
       related={[
         {
           label: "Tax Preparation",
           href: "/tax-preparation",
-          description: `Everything in the flat ${prices.taxPrep} return.`,
+          description: "What every return includes.",
           icon: "FileText",
         },
         {

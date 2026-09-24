@@ -7,7 +7,7 @@ import { Container } from "@/components/ui/Container";
 import { CredentialBadge } from "@/components/ui/CredentialBadge";
 import { ConfigValue } from "@/components/ui/Placeholder";
 import { cities } from "@/content/cities";
-import { emailHref, phoneHref, prices, site, socialLinks } from "@/lib/site";
+import { emailHref, phoneHref, site, socialLinks } from "@/lib/site";
 
 const socialIcons = { facebook: FacebookIcon, instagram: InstagramIcon, google: GoogleIcon };
 
@@ -29,7 +29,7 @@ export function Footer() {
           <div>
             <Logo tone="dark" />
             <p className="mt-5 max-w-xs leading-relaxed text-mist">
-              Flat-fee, CPA-signed tax returns for Fayette &amp; Coweta County.
+              CPA-signed tax returns and IRS help for Fayette &amp; Coweta County.
             </p>
             <address className="mt-6 space-y-3 text-[15px] not-italic">
               <p className="flex gap-3">
@@ -83,12 +83,12 @@ export function Footer() {
             <ul className="mt-4 space-y-1.5">
               <li>
                 <Link href="/tax-preparation" className={linkClass}>
-                  Tax Preparation <span className="font-semibold text-gold">{prices.taxPrep}</span>
+                  Tax Preparation
                 </Link>
               </li>
               <li>
                 <Link href="/tax-resolution" className={linkClass}>
-                  Tax Resolution <span className="font-semibold text-gold">{prices.taxResolution}</span>
+                  Tax Resolution
                 </Link>
               </li>
               <li>
@@ -134,13 +134,7 @@ export function Footer() {
           <div>
             <h3 className={headingClass}>Get Started</h3>
             <p className="mt-3 mb-5 text-sm text-mist">Tell us what you need and we’ll send next steps.</p>
-            <QuickForm
-              serviceOptions={[
-                `Tax Preparation — ${prices.taxPrep}`,
-                `Tax Resolution — ${prices.taxResolution}`,
-                "Not sure yet",
-              ]}
-            />
+            <QuickForm serviceOptions={["Tax Preparation", "Tax Resolution", "Not sure yet"]} />
           </div>
         </div>
 

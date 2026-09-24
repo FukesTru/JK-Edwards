@@ -10,16 +10,17 @@ import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { RelatedLinks } from "@/components/sections/RelatedLinks";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { buildMetadata } from "@/lib/seo";
-import { prices, secureUploadHref, site } from "@/lib/site";
+import { secureUploadHref, site } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Online Tax Preparation CPA Georgia",
-  description: `How online tax preparation works in Georgia: book, upload securely, a CPA prepares and signs, an EA reviews, then you e-sign. One flat ${prices.taxPrep}. Start today.`,
+  description:
+    "How online tax preparation works in Georgia: book, upload securely, a CPA prepares and signs, an Enrolled Agent reviews, then you e-sign and we e-file it.",
   path: "/how-it-works",
 });
 
 const steps = [
-  { title: "Book", description: "Book online or call. We confirm your flat price before any work begins." },
+  { title: "Book", description: "Book online or call. We confirm the details before any work begins." },
   {
     title: "Upload",
     description: "Send documents through our secure portal — never by email. We’ll send you the link.",
@@ -35,7 +36,7 @@ export default function HowItWorksPage() {
       <PageHero
         eyebrow="How it works"
         title="How It Works: From Documents to E-File"
-        subtitle="Five clear steps, two licensed professionals and one flat price — whether you meet us in Peachtree City or never leave home."
+        subtitle="Five clear steps and two licensed professionals — whether you meet us in Peachtree City or never leave home."
         image="secure-portal"
       />
       <Breadcrumbs items={[{ name: "How It Works", path: "/how-it-works" }]} />
@@ -119,7 +120,7 @@ export default function HowItWorksPage() {
         </Stagger>
         <div className="mt-12 flex flex-col gap-3 sm:flex-row">
           <ButtonLink href="/get-started?service=tax-preparation" size="lg">
-            Start My {prices.taxPrep} Return
+            Start My Return
           </ButtonLink>
           <ButtonLink href="/faq" variant="outline-dark" size="lg">
             Read the FAQ
@@ -134,7 +135,7 @@ export default function HowItWorksPage() {
             {
               label: "Tax Preparation",
               href: "/tax-preparation",
-              description: "Everything included in the flat fee.",
+              description: "What every return includes.",
               icon: "FileText",
             },
             {

@@ -7,22 +7,23 @@ import { SplitFeature } from "@/components/sections/SplitFeature";
 import { TaxPrepSubpage } from "@/components/sections/TaxPrepSubpage";
 import { faqs } from "@/content/faqs";
 import { buildMetadata } from "@/lib/seo";
-import { prices, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "K-1 and 1099-B Tax Preparation",
-  description: `K-1 and 1099-B tax preparation in Georgia: capital gains, cost basis, crypto and pass-through income for a flat ${prices.taxPrep}, CPA-signed and EA-reviewed. Get started.`,
+  description:
+    "K-1 and 1099-B tax preparation in Georgia: capital gains, cost basis, crypto and pass-through income, CPA-signed and EA-reviewed in Peachtree City. Get started.",
   path: "/tax-preparation/investments-k1",
 });
 
 export default function InvestmentsK1Page() {
-  const claim = `Most preparers charge extra for K-1s. With us it’s still ${prices.taxPrep}.`;
+  const claim = "Most preparers charge extra for K-1s. With us, they’re part of every return.";
   return (
     <TaxPrepSubpage
       slug="investments-k1"
       title="Investment & Pass-Through Income: 1099-B and Schedule K-1"
-      subtitle="Stock, fund and crypto sales plus partnership, S-corp and trust K-1s — reported accurately and included in the flat fee."
-      serviceDescription={`1099-B capital gains and Schedule K-1 pass-through income preparation for a flat ${prices.taxPrep}, prepared and signed by a CPA and reviewed by an Enrolled Agent.`}
+      subtitle="Stock, fund and crypto sales plus partnership, S-corp and trust K-1s — reported accurately on every return."
+      serviceDescription="1099-B capital gains and Schedule K-1 pass-through income preparation, prepared and signed by a CPA and reviewed by an Enrolled Agent."
       calloutTitle={
         site.confirm.k1ClaimConfirmed ? (
           claim
@@ -35,14 +36,14 @@ export default function InvestmentsK1Page() {
           </>
         )
       }
-      calloutText="Brokerage 1099-Bs and Schedule K-1s are part of every return we prepare — no per-form add-ons."
+      calloutText="Brokerage 1099-Bs and Schedule K-1s are reported accurately, with cost basis checked on every sale."
       faqs={faqs.investments}
       faqTitle="Investment & K-1 questions"
       related={[
         {
           label: "Tax Preparation",
           href: "/tax-preparation",
-          description: `Everything in the flat ${prices.taxPrep} return.`,
+          description: "What every return includes.",
           icon: "FileText",
         },
         { label: "Pricing", href: "/pricing", description: "Flat fees, quoted upfront.", icon: "Tag" },

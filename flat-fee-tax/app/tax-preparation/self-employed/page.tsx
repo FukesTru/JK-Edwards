@@ -6,11 +6,11 @@ import { SplitFeature } from "@/components/sections/SplitFeature";
 import { TaxPrepSubpage } from "@/components/sections/TaxPrepSubpage";
 import { faqs } from "@/content/faqs";
 import { buildMetadata } from "@/lib/seo";
-import { prices } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Schedule C Tax Preparation Peachtree City",
-  description: `Schedule C tax preparation in Peachtree City, GA for freelancers, gig workers and contractors: flat ${prices.taxPrep}, CPA-signed and EA-reviewed. Start your return today.`,
+  description:
+    "Schedule C tax preparation in Peachtree City, GA for freelancers, gig workers and contractors: CPA-signed, EA-reviewed, every expense captured. Start today.",
   path: "/tax-preparation/self-employed",
 });
 
@@ -19,16 +19,16 @@ export default function SelfEmployedPage() {
     <TaxPrepSubpage
       slug="self-employed"
       title="Self-Employed & Side-Business Tax Returns (Schedule C)"
-      subtitle="Freelance, gig and small-business income reported correctly — with every legitimate expense captured and no extra charge for the schedule."
-      serviceDescription={`Schedule C preparation for self-employed, freelance and side-business income for a flat ${prices.taxPrep}, prepared and signed by a CPA and reviewed by an Enrolled Agent.`}
-      calloutText="Schedule C is included in the flat fee — whether it’s a full-time business or a side hustle alongside your W-2 job."
+      subtitle="Freelance, gig and small-business income reported correctly — with every legitimate expense captured."
+      serviceDescription="Schedule C preparation for self-employed, freelance and side-business income, prepared and signed by a CPA and reviewed by an Enrolled Agent."
+      calloutText="Schedule C is part of every return we prepare — whether it’s a full-time business or a side hustle alongside your W-2 job."
       faqs={faqs.selfEmployed}
       faqTitle="Self-employed questions"
       related={[
         {
           label: "Tax Preparation",
           href: "/tax-preparation",
-          description: `Everything in the flat ${prices.taxPrep} return.`,
+          description: "What every return includes.",
           icon: "FileText",
         },
         {

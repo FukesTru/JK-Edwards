@@ -6,11 +6,11 @@ import { buttonClasses } from "@/components/ui/Button";
 import { FormError, Honeypot, SelectField, TextAreaField, TextField } from "@/components/forms/fields";
 import { FormSuccess } from "@/components/forms/FormSuccess";
 import { useLeadForm } from "@/components/forms/useLeadForm";
-import { prices, site } from "@/lib/site";
+import { site } from "@/lib/site";
 
 export const serviceChoices = [
-  { value: "tax-preparation", label: `Tax Preparation — ${prices.taxPrep}` },
-  { value: "tax-resolution", label: `Tax Resolution — ${prices.taxResolution}` },
+  { value: "tax-preparation", label: "Tax Preparation" },
+  { value: "tax-resolution", label: "Tax Resolution" },
   { value: "not-sure", label: "Not sure yet" },
 ] as const;
 

@@ -15,7 +15,7 @@ const formIcons: Record<string, LucideIcon> = {
 };
 
 /**
- * The six forms covered by the flat tax-preparation fee.
+ * The six forms handled on every return.
  * `grid`: one card per form, each linking to its sub-page. `mini`: compact checklist.
  */
 export function FormsIncluded({

@@ -3,11 +3,12 @@ import { LegalDocument } from "@/components/sections/LegalDocument";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { PageHero } from "@/components/ui/PageHero";
 import { buildMetadata } from "@/lib/seo";
-import { emailHref, phoneHref, prices, site } from "@/lib/site";
+import { emailHref, phoneHref, site } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Terms of Use & Disclaimer",
-  description: `Terms for using our site. Content is general information, not tax or legal advice, and tax resolution results vary. Flat ${prices.taxPrep} CPA-signed returns in Georgia.`,
+  description:
+    "Terms for using our website. Content is general information, not tax or legal advice for your situation, and results of tax resolution matters vary. Read more.",
   path: "/terms",
 });
 
@@ -51,9 +52,8 @@ export default function TermsPage() {
 
         <h2>Pricing</h2>
         <p>
-          Prices shown on this site ({prices.taxPrep} for tax preparation and {prices.taxResolution} for tax resolution)
-          describe the scope listed on our <Link href="/pricing">pricing page</Link>. We’ll confirm your price before
-          any work begins.
+          Prices shown on our <Link href="/pricing">pricing page</Link> describe the scope listed there. We’ll confirm
+          your price before any work begins.
         </p>
 
         <h2>Credentials</h2>

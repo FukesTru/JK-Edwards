@@ -2,7 +2,6 @@ import type { ReactNode } from "react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PageHero } from "@/components/ui/PageHero";
-import { PriceCard } from "@/components/ui/PriceCard";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { Callout } from "@/components/sections/Callout";
@@ -12,12 +11,11 @@ import type { Faq } from "@/content/faqs";
 import { getTaxPrepPage, type TaxPrepSlug } from "@/content/services";
 import { cta } from "@/lib/cta";
 import { serviceSchema } from "@/lib/seo";
-import { prices, site } from "@/lib/site";
 
 /**
- * Shared frame for the four tax-preparation sub-pages: navy hero with the
- * price card, breadcrumbs, page-specific sections (children), the
- * "still {price}" callout, FAQ and related links.
+ * Shared frame for the four tax-preparation sub-pages: navy hero,
+ * breadcrumbs, page-specific sections (children), the "included on every
+ * return" callout, FAQ and related links. Prices live on /pricing.
  */
 export function TaxPrepSubpage({
   slug,
@@ -25,7 +23,7 @@ export function TaxPrepSubpage({
   subtitle,
   serviceDescription,
   children,
-  calloutTitle = `Still ${prices.taxPrep} — no add-on fees`,
+  calloutTitle = "Included on every return",
   calloutText,
   faqs,
   faqTitle,
@@ -51,26 +49,9 @@ export function TaxPrepSubpage({
           serviceType: "Individual income tax preparation",
           description: serviceDescription,
           path: page.href,
-          price: site.prices.taxPrep,
         })}
       />
-      <PageHero
-        eyebrow={`Tax preparation · ${page.crumb}`}
-        title={title}
-        subtitle={subtitle}
-        image={page.image}
-        aside={
-          <div className="mx-auto w-full max-w-sm">
-            <PriceCard
-              service="taxPrep"
-              title="Tax Preparation"
-              headingLevel="p"
-              tagline={`${page.crumb} included — prepared & signed by a CPA, reviewed by an Enrolled Agent.`}
-              cta={cta.taxPrepShort}
-            />
-          </div>
-        }
-      />
+      <PageHero eyebrow={`Tax preparation · ${page.crumb}`} title={title} subtitle={subtitle} image={page.image} />
       <Breadcrumbs
         items={[
           { name: "Tax Preparation", path: "/tax-preparation" },
@@ -81,7 +62,7 @@ export function TaxPrepSubpage({
       {children}
 
       <Section tone="white" reveal={false}>
-        <Callout kind="price" title={calloutTitle} cta={cta.taxPrep}>
+        <Callout title={calloutTitle} cta={cta.taxPrep}>
           {calloutText}
         </Callout>
       </Section>

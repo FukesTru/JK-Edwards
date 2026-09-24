@@ -4,7 +4,7 @@ import { buttonClasses } from "@/components/ui/Button";
 import { cta } from "@/lib/cta";
 import { phoneHref, site } from "@/lib/site";
 
-/** Floating "Call" + "Start My Return — $249" bar on screens narrower than 768px. */
+/** Floating "Call" + "Start My Return" bar on screens narrower than 768px. */
 export function MobileActionBar() {
   return (
     <nav
@@ -21,8 +21,8 @@ export function MobileActionBar() {
           <Phone aria-hidden className="h-4 w-4" strokeWidth={1.75} />
           Call
         </a>
-        <Link href={cta.mobileStart.href} className={buttonClasses("primary", "md", "px-3 py-3 whitespace-nowrap")}>
-          {cta.mobileStart.label}
+        <Link href={cta.taxPrep.href} className={buttonClasses("primary", "md", "px-3 py-3 whitespace-nowrap")}>
+          {cta.taxPrep.label}
           <ArrowRight aria-hidden className="h-4 w-4 transition-transform group-hover:translate-x-1" />
         </Link>
       </div>

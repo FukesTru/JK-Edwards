@@ -36,7 +36,7 @@ Every business detail comes from **`site.config.ts`**: brand and legal name, own
 - **Placeholders render visibly** (e.g. `{{BRAND_NAME}}`, `Call {{PHONE}}`) with a dashed amber outline while `NEXT_PUBLIC_SHOW_PLACEHOLDERS` isn't `false`.
 - **Placeholders never become broken links.** Until real values are set, phone and email links point to `/get-started`, the map centers on Peachtree City, and placeholder values are left out of the structured data.
 - **`domain`** accepts a bare domain (`example.com`) or a sub-path (`example.com/tax`, `jkedwards.com/transportation`). A sub-path automatically sets Next's `basePath`, so canonical URLs, sitemap, icons, images and the form API all follow. Both modes are tested. Until it's set, canonical URLs use the reserved `www.example.com`.
-- **`prices`** feeds every "$249" / "$749" on the site, in titles, CTAs, schema and the OG image.
+- **`prices`** feeds every "$249" / "$749" on the site. **Prices appear only on Pricing, Tax Preparation and Tax Resolution** (cards, titles, descriptions and `Service`/`Offer` schema). The home page, navigation, footer, mobile bar, city pages, tax-prep sub-pages, forms and share image stay price-free, and buttons read "Start My Return" / "Get Tax Help".
 - **`confirm`** holds the facts the owner still has to confirm: state return, joint returns, multiple schedules, prior-year and amended returns, payment timing, turnaround, the resolution scope and the K-1 comparison claim. While a value is `null` (or `false`), the site shows **[CLIENT TO CONFIRM]** in its place. FAQ answers that depend on one are left out of the FAQ schema until confirmed.
 
 ## Logo system
@@ -91,13 +91,13 @@ Home and Areas We Serve show a real, interactive map (`components/sections/Servi
 
 ## SEO & schema
 
-- **Titles and descriptions:** titles follow `[Primary keyword] | {brandName}` and stay ≤ 60 characters with the placeholder name. **Re-run `npm run audit:seo` after setting the real brand name**, since a longer name can push titles over 60. Descriptions are 150–160 characters and include the price, "CPA-signed" and a call to action.
+- **Titles and descriptions:** titles follow `[Primary keyword] | {brandName}` and stay ≤ 60 characters with the placeholder name. **Re-run `npm run audit:seo` after setting the real brand name**, since a longer name can push titles over 60. Descriptions are 150–160 characters with "CPA-signed" and a call to action; only Pricing and the two service pages mention a price.
 - **Structured data:**
   - site-wide `AccountingService`: address, geo, `areaServed` covering the 7 cities plus Fayette and Coweta County, founder, offer catalog
-  - `Service` + `Offer` with price on Home, Pricing, Tax Preparation (and its sub-pages) and Tax Resolution
+  - `Service` + `Offer` with price on Pricing, Tax Preparation and Tax Resolution; the tax-prep sub-pages carry `Service` without a price
   - `Person` for Kai (Enrolled Agent) and the signing CPA
   - `FAQPage` and `BreadcrumbList`; each city page adds an `AccountingService` with `areaServed` set to that city
-- **Crawling and analytics:** `robots.txt`, `sitemap.xml` and an HTML `/sitemap`, a 1200×630 OG image (logo and "$249 CPA-Signed Tax Returns" on navy), and a GA4 placeholder (`G-XXXXXXXXXX`) in `<head>`.
+- **Crawling and analytics:** `robots.txt`, `sitemap.xml` and an HTML `/sitemap`, a 1200×630 OG image (logo and "CPA-Signed Tax Returns" on navy), and a GA4 placeholder (`G-XXXXXXXXXX`) in `<head>`.
 
 ## Compliance notes
 

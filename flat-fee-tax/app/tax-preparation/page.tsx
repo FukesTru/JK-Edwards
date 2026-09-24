@@ -64,7 +64,7 @@ export default function TaxPreparationPage() {
               title="Tax Preparation"
               headingLevel="p"
               features={includedForms.map((f) => f.form)}
-              cta={cta.taxPrepShort}
+              cta={cta.taxPrep}
             />
           </div>
         }

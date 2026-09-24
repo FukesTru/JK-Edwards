@@ -1,7 +1,6 @@
 import { ButtonLink } from "@/components/ui/Button";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PageHero } from "@/components/ui/PageHero";
-import { PriceCard } from "@/components/ui/PriceCard";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CityChips } from "@/components/sections/CityChips";
@@ -12,23 +11,21 @@ import { FormsIncluded } from "@/components/sections/FormsIncluded";
 import { MeetKai } from "@/components/sections/MeetKai";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ResolutionTeaser } from "@/components/sections/ResolutionTeaser";
-import { JsonLd } from "@/components/seo/JsonLd";
 import { faqs } from "@/content/faqs";
-import { includedForms } from "@/content/forms";
-import { cta } from "@/lib/cta";
-import { buildMetadata, taxPrepService, taxResolutionService } from "@/lib/seo";
-import { prices, site } from "@/lib/site";
+import { buildMetadata } from "@/lib/seo";
+import { site } from "@/lib/site";
 
 export const metadata = buildMetadata({
-  title: `Tax Preparation Peachtree City GA, ${prices.taxPrep}`,
-  description: `Tax preparation in Peachtree City, GA for a flat ${prices.taxPrep}: every return is CPA-signed and reviewed by an Enrolled Agent, Schedules C, E and K-1s included. Book now.`,
+  title: "CPA-Signed Tax Preparation, Peachtree City",
+  description:
+    "Tax preparation in Peachtree City, GA: every return is CPA-signed and reviewed by an Enrolled Agent, with Schedules A, C, E, 1099-Bs and K-1s handled. Book now.",
   path: "/",
 });
 
 const steps = [
   {
     title: "Book or call",
-    description: "Choose a time online or give us a call — we’ll confirm the flat price upfront.",
+    description: "Choose a time online or give us a call — we’ll confirm what you need.",
   },
   { title: "Securely upload", description: "Send your documents through our secure portal. Never by email." },
   {
@@ -41,39 +38,19 @@ const steps = [
 export default function HomePage() {
   return (
     <>
-      <JsonLd data={[taxPrepService(), taxResolutionService()]} />
       <PageHero
         size="large"
-        eyebrow={`Flat-fee tax preparation · ${site.primaryCity}`}
-        title={<>CPA-Signed Tax Returns for One Flat Price: {prices.taxPrep}</>}
-        subtitle="Every return is prepared and signed by a licensed CPA and reviewed by an Enrolled Agent. Schedules C, E, A, brokerage 1099s and K-1s are all included. Serving Peachtree City, Fayetteville, Newnan and all of Fayette & Coweta County."
+        eyebrow={`Tax preparation & resolution · ${site.primaryCity}`}
+        title="CPA-Signed Tax Returns, Reviewed by an Enrolled Agent"
+        subtitle="Two licensed professionals on every return — itemized deductions, self-employment, rentals, brokerage 1099s and K-1s included. Serving Peachtree City, Fayetteville, Newnan and all of Fayette & Coweta County."
         image="ptc-lake"
-        aside={
-          <div className="mx-auto flex w-full max-w-md flex-col gap-4">
-            <PriceCard
-              service="taxPrep"
-              title="Tax Preparation"
-              headingLevel="p"
-              features={includedForms.map((f) => f.form)}
-              cta={cta.taxPrepShort}
-            />
-            <PriceCard
-              variant="compact"
-              service="taxResolution"
-              title="Tax Resolution"
-              headingLevel="p"
-              tagline="IRS problems handled"
-              cta={{ label: "Tax resolution details", href: "/tax-resolution" }}
-            />
-          </div>
-        }
       />
 
       <Section tone="white" labelledBy="credentials-heading">
         <SectionHeading
           id="credentials-heading"
           align="center"
-          eyebrow="Two licensed professionals, one flat price"
+          eyebrow="Two licensed professionals"
           title="Every return gets a CPA’s signature and an Enrolled Agent’s review"
         />
         <div className="mt-12">
@@ -85,12 +62,17 @@ export default function HomePage() {
         <div className="flex flex-col gap-6 lg:flex-row lg:items-end lg:justify-between">
           <SectionHeading
             id="included-heading"
-            eyebrow="No per-form add-ons"
-            title={`What’s included for ${prices.taxPrep}`}
-            intro="The forms that usually cost extra at a tax shop are part of one flat fee here."
+            eyebrow="Every return"
+            title="What we handle on every return"
+            intro="Itemized deductions, self-employment, rentals, investments and K-1s — the forms that make a return complicated are routine for us."
           />
-          <ButtonLink href="/pricing" variant="outline-dark" icon="arrow" className="shrink-0 self-start lg:self-auto">
-            See full pricing
+          <ButtonLink
+            href="/tax-preparation"
+            variant="outline-dark"
+            icon="arrow"
+            className="shrink-0 self-start lg:self-auto"
+          >
+            Tax preparation details
           </ButtonLink>
         </div>
         <div className="mt-12">

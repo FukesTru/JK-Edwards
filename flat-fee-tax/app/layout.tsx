@@ -10,7 +10,7 @@ import { MotionProvider } from "@/components/motion/MotionProvider";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { brandColors } from "@/lib/brand";
 import { accountingServiceSchema, websiteSchema } from "@/lib/seo";
-import { prices, site, siteUrl, withBasePath } from "@/lib/site";
+import { site, siteUrl, withBasePath } from "@/lib/site";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -29,10 +29,10 @@ const playfair = Playfair_Display({
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: {
-    default: `Flat-Fee CPA-Signed Tax Returns, ${prices.taxPrep} | ${site.brandName}`,
+    default: `CPA-Signed Tax Returns | ${site.brandName}`,
     template: `%s | ${site.brandName}`,
   },
-  description: `Flat ${prices.taxPrep} tax returns prepared and signed by a CPA and reviewed by an Enrolled Agent, plus ${prices.taxResolution} IRS tax resolution, in ${site.primaryCity}.`,
+  description: `Tax returns prepared and signed by a CPA and reviewed by an Enrolled Agent, plus IRS tax resolution, in ${site.primaryCity}.`,
   applicationName: site.brandName,
   // Explicit icon routes (rather than app/icon.tsx) so the links also work under a basePath.
   icons: {

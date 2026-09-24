@@ -26,10 +26,10 @@ export function CtaBand() {
               id="cta-band-heading"
               className="font-serif text-[2rem] leading-[1.1] font-bold tracking-tight text-balance sm:text-[2.5rem] lg:text-[2.75rem]"
             >
-              One flat price. A CPA’s signature. No surprises.
+              A CPA’s signature. An Enrolled Agent’s review. No surprises.
             </h2>
             <p className="mt-4 text-lg leading-relaxed text-mist">
-              Every return is prepared and signed by a licensed CPA and reviewed by an Enrolled Agent.
+              Two licensed professionals on every return, and plain-English answers from start to finish.
             </p>
           </div>
           <div className="flex shrink-0 flex-col gap-3 sm:flex-row">

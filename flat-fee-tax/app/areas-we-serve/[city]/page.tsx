@@ -8,7 +8,6 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { CredentialBadge } from "@/components/ui/CredentialBadge";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PageHero } from "@/components/ui/PageHero";
-import { PriceCard } from "@/components/ui/PriceCard";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactCard } from "@/components/sections/ContactCard";
@@ -17,10 +16,7 @@ import { MapEmbed } from "@/components/sections/MapEmbed";
 import { ResolutionTeaser } from "@/components/sections/ResolutionTeaser";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { cities, cityPages, getCityPage, type CitySlug } from "@/content/cities";
-import { includedForms } from "@/content/forms";
-import { cta } from "@/lib/cta";
 import { accountingServiceSchema, buildMetadata } from "@/lib/seo";
-import { prices } from "@/lib/site";
 
 export const dynamicParams = false;
 
@@ -51,12 +47,8 @@ export default async function CityPage({ params }: PageProps<"/areas-we-serve/[c
       <JsonLd data={accountingServiceSchema(page.name)} />
       <PageHero
         eyebrow={`${page.county} · ${page.name}, GA`}
-        title={
-          <>
-            Flat-Fee Tax Preparation in {page.name}, GA — {prices.taxPrep}, CPA-Signed
-          </>
-        }
-        subtitle={`Every return prepared and signed by a licensed CPA and reviewed by an Enrolled Agent, for one flat ${prices.taxPrep} — in person in Peachtree City or fully online.`}
+        title={`CPA-Signed Tax Preparation in ${page.name}, GA`}
+        subtitle="Every return prepared and signed by a licensed CPA and reviewed by an Enrolled Agent — in person in Peachtree City or fully online."
         image={page.image}
       />
       <Breadcrumbs
@@ -104,24 +96,15 @@ export default async function CityPage({ params }: PageProps<"/areas-we-serve/[c
       </Section>
 
       <Section tone="paper" labelledBy="city-included">
-        <div className="grid items-start gap-12 lg:grid-cols-[1.15fr_0.85fr] lg:gap-16">
-          <div>
-            <SectionHeading
-              id="city-included"
-              eyebrow="What’s included"
-              title={`Everything below for ${prices.taxPrep}`}
-              intro={`The same flat fee for every ${page.name} household — no per-form add-ons.`}
-            />
-            <CredentialBadge tone="light" className="mt-7" />
-            <FormsIncluded variant="mini" className="mt-8" />
-          </div>
-          <PriceCard
-            service="taxPrep"
-            title="Tax Preparation"
-            headingLevel="p"
-            features={includedForms.map((f) => f.form)}
-            cta={cta.taxPrep}
-          />
+        <SectionHeading
+          id="city-included"
+          eyebrow="What’s included"
+          title="What we handle on every return"
+          intro={`The same two-professional process for every ${page.name} household.`}
+        />
+        <CredentialBadge tone="light" className="mt-7" />
+        <div className="mt-10">
+          <FormsIncluded />
         </div>
       </Section>
 

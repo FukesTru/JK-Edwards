@@ -6,11 +6,11 @@ import { SplitFeature } from "@/components/sections/SplitFeature";
 import { TaxPrepSubpage } from "@/components/sections/TaxPrepSubpage";
 import { faqs } from "@/content/faqs";
 import { buildMetadata } from "@/lib/seo";
-import { prices } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "1040 & Schedule A Itemized Deductions",
-  description: `Form 1040 and Schedule A itemized deductions preparer in Peachtree City, GA: flat ${prices.taxPrep}, CPA-signed and EA-reviewed. We compare itemizing vs. standard. Book now.`,
+  description:
+    "Form 1040 and Schedule A itemized deductions preparer in Peachtree City, GA: CPA-signed and EA-reviewed. We compare itemizing vs. standard every year. Book now.",
   path: "/tax-preparation/individual-itemized",
 });
 
@@ -20,15 +20,15 @@ export default function IndividualItemizedPage() {
       slug="individual-itemized"
       title="Individual Tax Returns & Itemized Deductions (Form 1040 + Schedule A)"
       subtitle="We prepare your 1040 and run the numbers both ways — itemized and standard — so you claim whichever saves you more."
-      serviceDescription={`Individual Form 1040 preparation with Schedule A itemized deductions for a flat ${prices.taxPrep}, prepared and signed by a CPA and reviewed by an Enrolled Agent.`}
-      calloutText="Itemizing doesn’t cost more. Schedule A is part of every return we prepare — even if the standard deduction ends up winning."
+      serviceDescription="Individual Form 1040 preparation with Schedule A itemized deductions, prepared and signed by a CPA and reviewed by an Enrolled Agent."
+      calloutText="Schedule A is part of every return we prepare — and we compare it with the standard deduction every year, so you claim whichever is larger."
       faqs={faqs.individual}
       faqTitle="Itemizing questions"
       related={[
         {
           label: "Tax Preparation",
           href: "/tax-preparation",
-          description: `Everything in the flat ${prices.taxPrep} return.`,
+          description: "What every return includes.",
           icon: "FileText",
         },
         {
