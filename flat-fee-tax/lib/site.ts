@@ -57,6 +57,13 @@ export const mapEmbedUrl = `https://www.google.com/maps?q=${mapQuery}&output=emb
 export const directionsUrl = (from?: string) =>
   `https://www.google.com/maps/dir/?api=1${from ? `&origin=${encodeURIComponent(from)}` : ""}&destination=${mapQuery}`;
 
+/**
+ * Basemap for the interactive service-area map. OpenFreeMap is free for
+ * commercial use with no API key; set NEXT_PUBLIC_MAP_STYLE_URL to swap in
+ * another MapLibre style (e.g. MapTiler or Stadia with your key).
+ */
+export const mapStyleUrl = process.env.NEXT_PUBLIC_MAP_STYLE_URL || "https://tiles.openfreemap.org/styles/positron";
+
 export const secureUploadHref = real(site.secureUploadUrl);
 export const bookingHref = real(site.bookingUrl);
 

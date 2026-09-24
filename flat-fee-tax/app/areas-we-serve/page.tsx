@@ -5,10 +5,9 @@ import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
-import { CountyMap } from "@/components/sections/CountyMap";
-import { MapEmbed } from "@/components/sections/MapEmbed";
+import { ServiceAreaMap } from "@/components/sections/ServiceAreaMap";
 import { RelatedLinks } from "@/components/sections/RelatedLinks";
-import { cities, smallTownNotes } from "@/content/cities";
+import { cities, cityAnchor, smallTownNotes } from "@/content/cities";
 import { buildMetadata } from "@/lib/seo";
 import { prices } from "@/lib/site";
 
@@ -17,8 +16,6 @@ export const metadata = buildMetadata({
   description: `Tax preparer for Fayette and Coweta County, GA: flat ${prices.taxPrep} CPA-signed returns in Peachtree City, Fayetteville, Newnan and nearby, or fully online. Book today.`,
   path: "/areas-we-serve",
 });
-
-const anchor = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
 
 export default function AreasWeServePage() {
   const counties = ["Fayette County", "Coweta County"] as const;
@@ -63,12 +60,7 @@ export default function AreasWeServePage() {
               </li>
             </ul>
           </div>
-          <div className="space-y-5">
-            <div className="rounded-3xl border border-line bg-white p-5 sm:p-8">
-              <CountyMap />
-            </div>
-            <MapEmbed height={300} />
-          </div>
+          <ServiceAreaMap mapClassName="lg:aspect-[5/4]" />
         </div>
       </Section>
 
@@ -80,7 +72,10 @@ export default function AreasWeServePage() {
               .filter((city) => city.county === county)
               .map((city) => (
                 <StaggerItem as="li" key={city.name}>
-                  <CityCard city={city} href={city.slug ? `/areas-we-serve/${city.slug}` : `#${anchor(city.name)}`} />
+                  <CityCard
+                    city={city}
+                    href={city.slug ? `/areas-we-serve/${city.slug}` : `#${cityAnchor(city.name)}`}
+                  />
                 </StaggerItem>
               ))}
           </Stagger>
@@ -96,7 +91,7 @@ export default function AreasWeServePage() {
         />
         <div className="mt-10 grid gap-6 md:grid-cols-2">
           {smallTownNotes.map((town) => (
-            <article key={town.name} id={anchor(town.name)} className="rounded-2xl border border-line bg-white p-7">
+            <article key={town.name} id={cityAnchor(town.name)} className="rounded-2xl border border-line bg-white p-7">
               <p className="text-xs font-semibold tracking-[0.16em] text-muted uppercase">{town.county}</p>
               <h3 className="mt-2 font-serif text-2xl font-semibold text-navy">Tax preparation in {town.name}, GA</h3>
               <p className="mt-3 leading-relaxed text-muted">{town.text}</p>

@@ -6,7 +6,7 @@ import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { CityChips } from "@/components/sections/CityChips";
 import { ComparisonTable } from "@/components/sections/ComparisonTable";
-import { CountyMap } from "@/components/sections/CountyMap";
+import { ServiceAreaMap } from "@/components/sections/ServiceAreaMap";
 import { CredentialStrip } from "@/components/sections/CredentialStrip";
 import { FormsIncluded } from "@/components/sections/FormsIncluded";
 import { MeetKai } from "@/components/sections/MeetKai";
@@ -144,9 +144,7 @@ export default function HomePage() {
               All areas we serve
             </ButtonLink>
           </div>
-          <div className="rounded-3xl border border-line bg-white p-5 sm:p-8">
-            <CountyMap />
-          </div>
+          <ServiceAreaMap />
         </div>
       </Section>
 

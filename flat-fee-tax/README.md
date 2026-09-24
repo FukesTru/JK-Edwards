@@ -78,6 +78,17 @@ The Get Started form, the IRS notice upload and the footer quick form all post t
 
 **Configure at least one delivery channel before launch.** Without one, production asks visitors to try again or call.
 
+## Service-area map
+
+Home and Areas We Serve show a real, interactive map (`components/sections/ServiceAreaMap.tsx`):
+
+- **Basemap:** [MapLibre GL](https://maplibre.org) with [OpenFreeMap](https://openfreemap.org)'s "positron" style, which is free for commercial use and needs no API key. To use another provider (e.g. MapTiler or Stadia with a key), set `NEXT_PUBLIC_MAP_STYLE_URL` to its MapLibre style URL.
+- **Boundaries:** the shaded Fayette and Coweta County outlines in `content/service-area.json` come from the U.S. Census Bureau's 2020 1:500k cartographic boundary file, which is public domain.
+- **Pins:** there's a pin for each city at its town center, from `coordinates` in `content/cities.ts`. Each pin links to that city's page; Brooks and Sharpsburg link to their sections on `/areas-we-serve`. The office pin follows `site.primaryCity`.
+- **Loading:** MapLibre (about 275 KB gzipped) and its CSS load only when the map scrolls near the viewport, so page speed isn't affected. Scrolling over the map scrolls the page; zooming needs Ctrl/⌘ + scroll or two fingers.
+- **Fallback:** if the basemap can't load, the map box shows a link to Google Maps instead.
+- **Other pages:** the city pages and Get Started keep their Google Maps embed of the office.
+
 ## SEO & schema
 
 - **Titles and descriptions:** titles follow `[Primary keyword] | {brandName}` and stay ≤ 60 characters with the placeholder name. **Re-run `npm run audit:seo` after setting the real brand name**, since a longer name can push titles over 60. Descriptions are 150–160 characters and include the price, "CPA-signed" and a call to action.

@@ -52,6 +52,11 @@ export default function PrivacyPolicyPage() {
           and opt out with the{" "}
           <a href="https://tools.google.com/dlpage/gaoptout">Google Analytics opt-out browser add-on</a>.
         </p>
+        <p>
+          Our maps are provided by third parties: the service-area map loads map tiles from OpenFreeMap (built on
+          OpenStreetMap data), and some pages embed Google Maps. When a map loads, your browser connects to that
+          service, which receives your IP address and basic browser information.
+        </p>
 
         <h2>How we use information</h2>
         <ul>

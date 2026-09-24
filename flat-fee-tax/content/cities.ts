@@ -11,7 +11,12 @@ export type City = {
   slug?: CitySlug;
   /** Short line for city cards. */
   blurb: string;
+  /** Town center as [longitude, latitude], for the service-area map. */
+  coordinates: [number, number];
 };
+
+/** In-page anchor for cities without their own page (Brooks, Sharpsburg) on /areas-we-serve. */
+export const cityAnchor = (name: string) => name.toLowerCase().replace(/\s+/g, "-");
 
 export const cities: City[] = [
   {
@@ -19,40 +24,47 @@ export const cities: City[] = [
     county: "Fayette County",
     slug: "peachtree-city",
     blurb: "Our home base — in-person appointments or fully virtual.",
+    coordinates: [-84.5958, 33.3967],
   },
   {
     name: "Fayetteville",
     county: "Fayette County",
     slug: "fayetteville",
     blurb: "The county seat, with a growing community of freelancers and film professionals.",
+    coordinates: [-84.455, 33.4478],
   },
   {
     name: "Tyrone",
     county: "Fayette County",
     slug: "tyrone",
     blurb: "A small-town neighbor, a short drive from our Peachtree City office.",
+    coordinates: [-84.5978, 33.4711],
   },
   {
     name: "Brooks",
     county: "Fayette County",
     blurb: "Rural southern Fayette County — acreage, small farms and home businesses.",
+    coordinates: [-84.46, 33.2914],
   },
   {
     name: "Newnan",
     county: "Coweta County",
     slug: "newnan",
     blurb: "Coweta’s county seat — families, landlords and small-business owners.",
+    coordinates: [-84.7997, 33.3808],
   },
   {
     name: "Sharpsburg",
     county: "Coweta County",
     blurb: "A quiet Coweta County town between Newnan and Peachtree City.",
+    coordinates: [-84.6497, 33.3389],
   },
   {
     name: "Senoia",
     county: "Coweta County",
     slug: "senoia",
     blurb: "A historic small town with film production and plenty of self-employed income.",
+    coordinates: [-84.5536, 33.3031],
   },
 ];
 

@@ -199,6 +199,91 @@
   }
 }
 
+/* Service-area map pins (MapLibre HTML markers, see ServiceAreaMapCanvas). */
+.map-pin {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  text-decoration: none;
+}
+
+.map-pin--left {
+  flex-direction: row-reverse;
+}
+
+.map-pin__dot {
+  width: 14px;
+  height: 14px;
+  flex-shrink: 0;
+  border: 3px solid var(--white);
+  border-radius: 999px;
+  background: var(--navy);
+  box-shadow: 0 1px 4px rgb(15 30 51 / 0.4);
+}
+
+.map-pin--office .map-pin__dot {
+  width: 20px;
+  height: 20px;
+  border-color: var(--navy);
+  background: var(--gold);
+}
+
+.map-pin__label {
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  padding: 3px 8px;
+  background: rgb(255 255 255 / 0.95);
+  box-shadow: 0 1px 3px rgb(15 30 51 / 0.14);
+  color: var(--navy);
+  font: 600 13px/1.25 var(--font-sans);
+  white-space: nowrap;
+  transition:
+    background-color 0.15s,
+    color 0.15s;
+}
+
+.map-pin__tag {
+  display: block;
+  color: var(--gold-deep);
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+}
+
+.map-pin:hover .map-pin__label,
+.map-pin:focus-visible .map-pin__label {
+  border-color: var(--navy);
+  background: var(--navy);
+  color: var(--white);
+}
+
+.map-pin:hover .map-pin__tag,
+.map-pin:focus-visible .map-pin__tag {
+  color: var(--gold);
+}
+
+.map-pin:focus-visible {
+  outline: none;
+}
+
+.map-pin:focus-visible .map-pin__label {
+  outline: 2px solid var(--gold);
+  outline-offset: 2px;
+}
+
+@media (max-width: 480px) {
+  .map-pin__label {
+    padding: 2px 6px;
+    font-size: 12px;
+  }
+
+  /* The legend identifies the office on small maps. */
+  .map-pin__tag {
+    display: none;
+  }
+}
+
 /* Smooth accordion height where the browser supports it (progressive enhancement). */
 @supports (interpolate-size: allow-keywords) {
   :root {
