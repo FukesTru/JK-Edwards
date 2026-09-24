@@ -3,5 +3,3 @@ node_modules
 package-lock.json
 public
 content/images.json
-*.mdx
-flat-fee-tax

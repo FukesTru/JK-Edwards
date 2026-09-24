@@ -1,0 +1,32 @@
+/*
+ * Design tokens. Every color on the site references one of these variables.
+ */
+:root {
+  /* Core palette (brand spec) */
+  --navy: #0f1e33; /* hero backgrounds, footer, nav on scroll */
+  --navy-2: #1b2f4d; /* cards on dark, hover states */
+  --gold: #c9a24b; /* price highlights, accent bars, icons, badges */
+  --gold-hover: #b08a36; /* button hover */
+  --ink: #1a1d21; /* body text on light */
+  --muted: #5b6472; /* secondary text on light */
+  --paper: #f6f4ef; /* light section backgrounds */
+  --white: #ffffff; /* cards */
+  --success: #2e7d5b; /* checkmarks in "what's included" lists */
+
+  /*
+   * Accessibility companions (WCAG 2.1 AA). Gold on white is only 2.4:1, so
+   * gold is an accent (bars, icons, borders) on light surfaces and small gold
+   * text on light uses --gold-deep (4.9:1 on paper). Secondary text on navy
+   * uses --mist (9.2:1). Buttons are navy text on gold (7:1).
+   */
+  --gold-deep: #86661f;
+  --gold-light: #e3c47a;
+  --mist: #b7c1d1;
+  --line: #e4dfd4; /* hairlines on light surfaces */
+  --line-dark: rgb(255 255 255 / 0.12); /* hairlines on navy */
+
+  /* Layout */
+  --content-max: 1200px;
+  --radius-button: 6px;
+  --header-height: 76px;
+}

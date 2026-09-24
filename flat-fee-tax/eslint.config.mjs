@@ -12,8 +12,6 @@ const eslintConfig = defineConfig([
     "out/**",
     "build/**",
     "next-env.d.ts",
-    // Separate app with its own lint config.
-    "flat-fee-tax/**",
   ]),
 ]);
 

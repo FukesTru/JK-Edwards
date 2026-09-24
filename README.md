@@ -107,6 +107,8 @@ The site is built for [Vercel](https://vercel.com). Any Node host that runs `nex
 2. Add both `www.jkedwards.com` and `jkedwards.com` as domains, with `www` as the primary.
 3. Submit `https://www.jkedwards.com/sitemap.xml` in Google Search Console.
 
+> **`flat-fee-tax/` is a separate website** (a flat-fee tax preparation and resolution practice). It has its own `package.json`, is excluded from this app's TypeScript, ESLint, Prettier and Tailwind scanning, and deploys as its own Vercel project with Root Directory `flat-fee-tax`. See [`flat-fee-tax/README.md`](flat-fee-tax/README.md).
+
 ## Pre-launch checklist
 
 Items marked in the site with a dashed amber outline are unconfirmed. Hover over one to see its note.
