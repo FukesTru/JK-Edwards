@@ -12,7 +12,6 @@ import { FormsIncluded } from "@/components/sections/FormsIncluded";
 import { MeetKai } from "@/components/sections/MeetKai";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { ResolutionTeaser } from "@/components/sections/ResolutionTeaser";
-import { ReviewsPlaceholder } from "@/components/sections/ReviewsPlaceholder";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { faqs } from "@/content/faqs";
 import { includedForms } from "@/content/forms";
@@ -155,14 +154,7 @@ export default function HomePage() {
         <MeetKai headingId="meet-kai-heading" />
       </Section>
 
-      <Section tone="paper" labelledBy="reviews-heading">
-        <SectionHeading id="reviews-heading" align="center" eyebrow="Reviews" title="What our clients say" />
-        <div className="mx-auto mt-10 max-w-3xl">
-          <ReviewsPlaceholder />
-        </div>
-      </Section>
-
-      <Section tone="white" labelledBy="faq-heading">
+      <Section tone="paper" labelledBy="faq-heading">
         <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr]">
           <div>
             <SectionHeading id="faq-heading" eyebrow="FAQ" title="Quick answers" />

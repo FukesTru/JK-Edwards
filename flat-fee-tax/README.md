@@ -94,7 +94,7 @@ The Get Started form, the IRS notice upload and the footer quick form all post t
 - **Tax resolution:** no guarantees and no "pennies on the dollar" claims. A results-vary line appears on the resolution page, the $749 price card on Pricing and the footer disclaimer, in line with Circular 230 §10.30.
 - **Unconfirmed comparisons:** the K-1 comparison and the "typical tax shop" table are factual and name no competitors. The K-1 claim stays marked [CLIENT TO CONFIRM] until approved.
 - **No hard-coded tax thresholds:** standard deduction, SALT cap and similar limits are described generally.
-- **No invented social proof:** there are no invented reviews, ratings, client counts or results. The reviews block is a `[CONNECT GOOGLE BUSINESS PROFILE]` placeholder.
+- **No invented social proof:** there are no reviews, testimonials, ratings, client counts or results on the site.
 - **Imagery:** the photos are AI-generated illustrations (the Terms page says so). Team members appear as initials avatars until real headshots arrive.
 
 ## Images
@@ -113,7 +113,7 @@ Nine photographs were generated with the Artlist connector for this site (Peacht
 - [ ] **Signing CPA:** name and Georgia license number. Confirm the CPA is the paid preparer of record signing with their PTIN, since the site says "prepared & signed by a CPA."
 - [ ] **Pricing confirmations** (`site.confirm`): state return, joint returns, multiple C/E schedules, prior-year and amended returns, payment timing, turnaround, the exact $749 scope, and the K-1 comparison claim.
 - [ ] **Hours, secure upload portal link and booking link** (`hours`, `secureUploadUrl`, `bookingUrl`).
-- [ ] **Google Business Profile:** create it, add it to `social.google` and connect a reviews widget.
+- [ ] **Google Business Profile:** create it and add it to `social.google`; its icon appears in the footer automatically.
 - [ ] **Facebook / Instagram:** add the URLs; their icons appear automatically.
 - [ ] **Logo approval** from Kai (`/brand`), plus **headshots** for Kai and the CPA to replace the initials avatars.
 - [ ] **Bios:** Kai's and the CPA's (About page placeholders).

@@ -122,7 +122,7 @@ Items marked in the site with a dashed amber outline are unconfirmed. Hover over
 - [ ] **Badges:** confirm the AICPA membership, QuickBooks ProAdvisor, Bill.com certification and Dave Ramsey ELP are current.
 - [ ] **Logo files:** upload the official SVG/PNG. The wordmark in `components/brand/Logo.tsx` and the generated `/logo.png` are stand-ins.
 - [ ] **Stats:** replace the `[X]+` placeholders for years in business and client count on the home page. Never estimate them.
-- [ ] **Google Business Profile:** set the review URL in `site.links.googleReviews` and connect a reviews widget. Don't hard-code ratings or quotes.
+- [ ] **Google Business Profile:** set the review URL in `site.links.googleReviews` (used by the Google rating badge in the home page trust bar). Don't hard-code ratings or quotes.
 - [ ] **eBooks** (trucking and healthcare): re-host the PDFs, then pass `downloadUrl` to `EbookOffer`. Until then, each request emails the firm, which replies with the guide.
 - [ ] **Client Center downloads:** upload the engagement letter and tax organizer PDFs.
 - [ ] **Booking tool:** set `NEXT_PUBLIC_BOOKING_URL`.

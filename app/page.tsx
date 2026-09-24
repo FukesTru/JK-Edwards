@@ -8,7 +8,6 @@ import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { CheckList } from "@/components/sections/CheckList";
 import { ClientCenterStrip } from "@/components/sections/ClientCenterStrip";
 import { ContactDetails } from "@/components/sections/ContactDetails";
-import { GoogleReviews } from "@/components/sections/GoogleReviews";
 import { MapEmbed } from "@/components/sections/MapEmbed";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { SplitFeature } from "@/components/sections/SplitFeature";
@@ -227,19 +226,6 @@ export default function HomePage() {
           />
         </div>
       </section>
-
-      {/* Testimonials */}
-      <Section tone="paper" labelledBy="home-reviews">
-        <SectionHeading
-          id="home-reviews"
-          eyebrow="Client reviews"
-          title="What our clients say"
-          intro="Real reviews from our Google Business Profile."
-        />
-        <div className="mt-10">
-          <GoogleReviews />
-        </div>
-      </Section>
 
       {/* Team preview */}
       <Section tone="white" labelledBy="home-team">
