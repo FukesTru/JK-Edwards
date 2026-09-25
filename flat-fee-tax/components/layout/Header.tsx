@@ -12,6 +12,7 @@ const prepIcons = { FileText, Briefcase, House, ChartLine };
 /** Builds navigation on the server (icons render here, not in the client bundle). */
 export function Header() {
   const nav: NavEntry[] = [
+    { kind: "link", label: "Home", href: "/" },
     { kind: "link", label: "Pricing", href: "/pricing" },
     {
       kind: "menu",
