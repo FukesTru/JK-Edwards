@@ -1,4 +1,3 @@
-import { Info } from "lucide-react";
 import { Confirm } from "@/components/ui/Placeholder";
 import { site } from "@/lib/site";
 
@@ -16,10 +15,7 @@ export function GoodToKnow() {
   ];
   return (
     <aside aria-labelledby="good-to-know" className="rounded-2xl border border-gold/50 bg-white p-7 sm:p-9">
-      <h2 id="good-to-know" className="flex items-center gap-3 font-serif text-2xl font-semibold text-navy">
-        <span className="grid h-10 w-10 place-items-center rounded-xl bg-navy text-gold">
-          <Info aria-hidden className="h-5 w-5" strokeWidth={1.75} />
-        </span>
+      <h2 id="good-to-know" className="font-serif text-2xl font-semibold text-navy">
         Good to know
       </h2>
       <dl className="mt-6 divide-y divide-line">

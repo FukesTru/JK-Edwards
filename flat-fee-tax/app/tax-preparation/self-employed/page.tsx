@@ -18,10 +18,10 @@ export default function SelfEmployedPage() {
   return (
     <TaxPrepSubpage
       slug="self-employed"
-      title="Self-Employed & Side-Business Tax Returns (Schedule C)"
-      subtitle="Freelance, gig and small-business income reported correctly — with every legitimate expense captured."
+      title="For Freelancers and Business Owners"
+      subtitle="Freelance, gig and small-business income reported correctly, with every legitimate expense captured."
       serviceDescription="Schedule C preparation for self-employed, freelance and side-business income, prepared and signed by a CPA and reviewed by an Enrolled Agent."
-      calloutText="Schedule C is part of every return we prepare — whether it’s a full-time business or a side hustle alongside your W-2 job."
+      calloutText="Schedule C is part of every return we prepare, whether it’s a full-time business or a side hustle alongside your W-2 job."
       faqs={faqs.selfEmployed}
       faqTitle="Self-employed questions"
       related={[
@@ -29,19 +29,16 @@ export default function SelfEmployedPage() {
           label: "Tax Preparation",
           href: "/tax-preparation",
           description: "What every return includes.",
-          icon: "FileText",
         },
         {
           label: "Tax Resolution",
           href: "/tax-resolution",
           description: "Behind on taxes from past self-employment? We can help.",
-          icon: "ShieldCheck",
         },
         {
           label: "Get Started",
           href: "/get-started",
           description: "Book your Schedule C return.",
-          icon: "CalendarCheck",
         },
       ]}
     >
@@ -53,7 +50,7 @@ export default function SelfEmployedPage() {
             title="If you work for yourself, this is your schedule"
           />
           <p className="mt-6 text-lg leading-relaxed text-muted">
-            Schedule C reports income and expenses for sole proprietors and single-member LLCs — whether it’s your
+            Schedule C reports income and expenses for sole proprietors and single-member LLCs, whether it’s your
             full-time living or a few gigs on the side. We regularly prepare returns for:
           </p>
           <CheckList
@@ -82,36 +79,30 @@ export default function SelfEmployedPage() {
           <IconGrid
             items={[
               {
-                icon: "Receipt",
                 title: "Business income & expenses",
                 description:
                   "Sales, fees and 1099 income, less the ordinary and necessary costs of running your business.",
               },
               {
-                icon: "House",
                 title: "Home office",
                 description:
                   "Space used regularly and exclusively for business, using the simplified method or actual expenses.",
               },
               {
-                icon: "Car",
                 title: "Vehicle & mileage",
                 description:
-                  "Business miles at the IRS standard mileage rate or actual vehicle costs — backed by a mileage log.",
+                  "Business miles at the IRS standard mileage rate or actual vehicle costs, backed by a mileage log.",
               },
               {
-                icon: "Calculator",
                 title: "Self-employment tax",
                 description:
                   "Social Security and Medicare tax on your net earnings, with the deductible portion applied.",
               },
               {
-                icon: "CalendarCheck",
                 title: "Quarterly estimated payments",
                 description: "What to pay and when, generally in April, June, September and January.",
               },
               {
-                icon: "FileText",
                 title: "1099-NEC & 1099-K",
                 description:
                   "Client and payment-platform forms reconciled with your own records so nothing is double-counted.",
@@ -132,7 +123,7 @@ export default function SelfEmployedPage() {
           <CheckList
             items={[
               "Keep a separate bank account or card for business income and expenses",
-              "Save receipts digitally as you go — a photo is fine",
+              "Save receipts digitally as you go (a photo is fine)",
               "Log business miles with the date, destination and purpose",
               "Track 1099-NEC and 1099-K forms against your own income records",
               "Set aside a percentage of each payment for taxes",

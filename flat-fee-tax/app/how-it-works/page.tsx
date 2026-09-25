@@ -1,4 +1,3 @@
-import { Clock, Laptop, MapPin, Upload } from "lucide-react";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ButtonLink } from "@/components/ui/Button";
 import { PageHero } from "@/components/ui/PageHero";
@@ -53,10 +52,7 @@ export default function HowItWorksPage() {
           <ProcessTimeline steps={steps} />
         </div>
         <div className="mx-auto mt-14 max-w-3xl rounded-2xl border border-line bg-paper p-6 sm:p-8">
-          <p className="flex items-center gap-3 font-semibold text-navy">
-            <Upload aria-hidden className="h-5 w-5 text-navy" strokeWidth={1.5} />
-            Secure document upload
-          </p>
+          <p className="font-semibold text-navy">Secure document upload</p>
           <p className="mt-2 leading-relaxed text-muted">
             Upload documents through our secure portal:{" "}
             {secureUploadHref ? (
@@ -92,7 +88,7 @@ export default function HowItWorksPage() {
         <SectionHeading id="timing-heading" eyebrow="Timing & options" title="What to expect" />
         <Stagger className="mt-10 grid gap-6 md:grid-cols-3">
           <StaggerItem className="rounded-2xl border border-line bg-white p-7">
-            <Clock aria-hidden className="h-8 w-8 text-navy" strokeWidth={1.5} />
+            <span aria-hidden className="block h-0.5 w-8 rounded-full bg-gold" />
             <h3 className="mt-4 font-serif text-xl font-semibold text-navy">Turnaround</h3>
             <p className="mt-2 leading-relaxed text-muted">
               <Confirm
@@ -103,7 +99,7 @@ export default function HowItWorksPage() {
             </p>
           </StaggerItem>
           <StaggerItem className="rounded-2xl border border-line bg-white p-7">
-            <MapPin aria-hidden className="h-8 w-8 text-navy" strokeWidth={1.5} />
+            <span aria-hidden className="block h-0.5 w-8 rounded-full bg-gold" />
             <h3 className="mt-4 font-serif text-xl font-semibold text-navy">In person in Peachtree City</h3>
             <p className="mt-2 leading-relaxed text-muted">
               Prefer to talk face to face? Meet us at our Peachtree City office to drop off questions or review your
@@ -111,7 +107,7 @@ export default function HowItWorksPage() {
             </p>
           </StaggerItem>
           <StaggerItem className="rounded-2xl border border-line bg-white p-7">
-            <Laptop aria-hidden className="h-8 w-8 text-navy" strokeWidth={1.5} />
+            <span aria-hidden className="block h-0.5 w-8 rounded-full bg-gold" />
             <h3 className="mt-4 font-serif text-xl font-semibold text-navy">Fully virtual</h3>
             <p className="mt-2 leading-relaxed text-muted">
               Anywhere in Georgia: secure upload, phone or video questions, and e-signature. No office visit needed.
@@ -131,24 +127,21 @@ export default function HowItWorksPage() {
       <Section tone="paper">
         <RelatedLinks
           links={[
-            { label: "Pricing", href: "/pricing", description: "Flat fees, quoted upfront.", icon: "Tag" },
+            { label: "Pricing", href: "/pricing", description: "Flat fees, quoted upfront." },
             {
               label: "Tax Preparation",
               href: "/tax-preparation",
               description: "What every return includes.",
-              icon: "FileText",
             },
             {
               label: "Areas We Serve",
               href: "/areas-we-serve",
               description: "In person in Fayette & Coweta County.",
-              icon: "MapPin",
             },
             {
               label: "Get Started",
               href: "/get-started",
               description: "Book your return today.",
-              icon: "CalendarCheck",
             },
           ]}
         />

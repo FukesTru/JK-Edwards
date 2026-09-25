@@ -141,11 +141,11 @@ export function SiteHeader({ nav, phone, startCta }: Props) {
             : "border-b border-transparent bg-transparent",
         )}
       >
-        <div className="mx-auto flex h-[var(--header-height)] w-full max-w-[1440px] items-center justify-between gap-6 px-5 sm:px-6 lg:px-8">
+        <div className="mx-auto flex h-[var(--header-height)] w-full max-w-[1440px] items-center justify-between gap-4 px-5 sm:px-6 lg:px-6 xl:gap-6 xl:px-8">
           <Logo tone="dark" />
 
           {/* Desktop navigation */}
-          <nav ref={navRef} aria-label="Main" className="hidden xl:block">
+          <nav ref={navRef} aria-label="Main" className="hidden lg:block">
             <ul className="flex items-center gap-0.5">
               {nav.map((entry) =>
                 entry.kind === "link" ? (
@@ -154,7 +154,7 @@ export function SiteHeader({ nav, phone, startCta }: Props) {
                       href={entry.href}
                       aria-current={pathname === entry.href ? "page" : undefined}
                       className={cn(
-                        "inline-flex rounded-md px-2.5 py-2 text-[15px] font-medium text-white/85 transition-colors hover:text-white 2xl:px-3",
+                        "inline-flex rounded-md px-2 py-2 text-[14px] font-medium text-white/85 transition-colors hover:text-white xl:px-2.5 xl:text-[15px] 2xl:px-3",
                         pathname === entry.href &&
                           "text-white underline decoration-gold decoration-2 underline-offset-8",
                       )}
@@ -180,7 +180,7 @@ export function SiteHeader({ nav, phone, startCta }: Props) {
           </nav>
 
           {/* Desktop utilities */}
-          <div className="hidden items-center gap-4 xl:flex">
+          <div className="hidden items-center gap-3 lg:flex xl:gap-4">
             <a
               href={phone.href}
               aria-label={`Call ${phone.display}`}
@@ -196,7 +196,7 @@ export function SiteHeader({ nav, phone, startCta }: Props) {
           </div>
 
           {/* Mobile controls */}
-          <div className="flex items-center gap-1 xl:hidden">
+          <div className="flex items-center gap-1 lg:hidden">
             <a
               href={phone.href}
               aria-label={`Call ${phone.display}`}
@@ -228,7 +228,7 @@ export function SiteHeader({ nav, phone, startCta }: Props) {
         aria-label="Site menu"
         inert={!mobileOpen}
         className={cn(
-          "fixed inset-0 z-[60] flex flex-col bg-navy text-white transition-[transform,visibility] duration-300 ease-out xl:hidden",
+          "fixed inset-0 z-[60] flex flex-col bg-navy text-white transition-[transform,visibility] duration-300 ease-out lg:hidden",
           mobileOpen ? "visible translate-x-0" : "invisible translate-x-full",
         )}
       >
@@ -294,7 +294,7 @@ export function SiteHeader({ nav, phone, startCta }: Props) {
                                 onClick={() => setMobileOpen(false)}
                                 className="flex items-center gap-3 rounded-lg px-1 py-2.5 text-[1.02rem] text-white/90 hover:text-white"
                               >
-                                <span className="text-gold">{item.icon}</span>
+                                {item.icon && <span className="text-gold">{item.icon}</span>}
                                 {item.label}
                               </Link>
                             </li>
@@ -403,7 +403,7 @@ function DesktopMenu({
         onClick={onToggle}
         onKeyDown={onTriggerKeyDown}
         className={cn(
-          "inline-flex items-center gap-1 rounded-md px-2.5 py-2 text-[15px] font-medium transition-colors hover:text-white 2xl:px-3",
+          "inline-flex items-center gap-1 rounded-md px-2 py-2 text-[14px] font-medium transition-colors hover:text-white xl:px-2.5 xl:text-[15px] 2xl:px-3",
           open || active ? "text-white" : "text-white/85",
         )}
       >
@@ -446,9 +446,11 @@ function DesktopMenu({
                         href={item.href}
                         className="group/item flex items-start gap-3 rounded-xl p-3 transition-colors hover:bg-paper focus-visible:bg-paper"
                       >
-                        <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-navy/5 text-navy transition-colors group-hover/item:bg-navy group-hover/item:text-gold">
-                          {item.icon}
-                        </span>
+                        {item.icon && (
+                          <span className="grid h-10 w-10 shrink-0 place-items-center rounded-lg bg-navy/5 text-navy transition-colors group-hover/item:bg-navy group-hover/item:text-gold">
+                            {item.icon}
+                          </span>
+                        )}
                         <span>
                           <span className="block text-[15px] font-semibold text-navy">{item.label}</span>
                           {item.description && (

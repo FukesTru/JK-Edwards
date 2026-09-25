@@ -21,8 +21,8 @@ export default function InvestmentsK1Page() {
   return (
     <TaxPrepSubpage
       slug="investments-k1"
-      title="Investment & Pass-Through Income: 1099-B and Schedule K-1"
-      subtitle="Stock, fund and crypto sales plus partnership, S-corp and trust K-1s — reported accurately on every return."
+      title="For Investors and Partners"
+      subtitle="Stock, fund and crypto sales plus partnership, S-corp and trust K-1s, all reported accurately on every return."
       serviceDescription="1099-B capital gains and Schedule K-1 pass-through income preparation, prepared and signed by a CPA and reviewed by an Enrolled Agent."
       calloutTitle={
         site.confirm.k1ClaimConfirmed ? (
@@ -30,7 +30,7 @@ export default function InvestmentsK1Page() {
         ) : (
           <>
             {claim}{" "}
-            <Placeholder note="Comparative claim — confirm before launch, then set confirm.k1ClaimConfirmed">
+            <Placeholder note="Comparative claim: confirm before launch, then set confirm.k1ClaimConfirmed">
               [CLIENT TO CONFIRM this claim before launch]
             </Placeholder>
           </>
@@ -44,14 +44,12 @@ export default function InvestmentsK1Page() {
           label: "Tax Preparation",
           href: "/tax-preparation",
           description: "What every return includes.",
-          icon: "FileText",
         },
-        { label: "Pricing", href: "/pricing", description: "Flat fees, quoted upfront.", icon: "Tag" },
+        { label: "Pricing", href: "/pricing", description: "Flat fees, quoted upfront." },
         {
           label: "Rental Property (Sch E)",
           href: "/tax-preparation/rental-property",
           description: "K-1 and rental income both flow through Schedule E.",
-          icon: "House",
         },
       ]}
     >
@@ -66,7 +64,7 @@ export default function InvestmentsK1Page() {
             </p>
             <p>
               We work through every sale and every K-1 box, reconcile them with your statements and flag anything that
-              doesn’t look right — then an Enrolled Agent reviews it all again before filing.
+              doesn’t look right. Then an Enrolled Agent reviews it all again before filing.
             </p>
           </div>
         </SplitFeature>
@@ -77,44 +75,38 @@ export default function InvestmentsK1Page() {
           id="invest-topics"
           eyebrow="What we handle"
           title="1099-B and K-1 essentials"
-          intro="General information — how each item is taxed depends on your holdings and the rules for the year."
+          intro="This is general information. How each item is taxed depends on your holdings and the rules for the year."
         />
         <div className="mt-12">
           <IconGrid
             items={[
               {
-                icon: "ChartLine",
                 title: "Capital gains & losses",
                 description: "Short- and long-term gains and losses from stocks, funds and other investments.",
               },
               {
-                icon: "Calculator",
                 title: "Cost basis",
                 description:
-                  "What you paid, adjusted for reinvested dividends and other events — checked on every sale.",
+                  "What you paid, adjusted for reinvested dividends and other events, checked on every sale.",
               },
               {
-                icon: "Ban",
                 title: "Wash sales",
                 description:
                   "Losses on sales followed by a repurchase within 30 days may be deferred; we report them correctly.",
               },
               {
-                icon: "Coins",
                 title: "Crypto reporting",
                 description:
                   "Sales and exchanges of digital assets, whether reported on Form 1099-B, 1099-DA or your own records.",
               },
               {
-                icon: "Users",
                 title: "K-1s from partnerships, S-corps & trusts",
                 description: "Pass-through income, deductions and credits carried to the right places on your return.",
               },
               {
-                icon: "FileClock",
                 title: "Late K-1s & extensions",
                 description:
-                  "When a K-1 arrives late, an extension gives time to file correctly — we estimate any payment due.",
+                  "When a K-1 arrives late, an extension gives time to file correctly, and we estimate any payment due.",
               },
             ]}
           />
@@ -127,7 +119,7 @@ export default function InvestmentsK1Page() {
             id="invest-records"
             eyebrow="Documents"
             title="What to send us"
-            intro="Upload everything through our secure portal — never by email."
+            intro="Upload everything through our secure portal, never by email."
           />
           <CheckList
             items={[

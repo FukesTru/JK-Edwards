@@ -1,4 +1,3 @@
-import { Landmark } from "lucide-react";
 import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { Reveal } from "@/components/motion/Reveal";
@@ -60,9 +59,7 @@ export function ResolutionTeaser({
             </div>
           </div>
           <div className="rounded-3xl border border-white/10 bg-navy-2 p-8 text-center">
-            <span className="mx-auto grid h-16 w-16 place-items-center rounded-2xl bg-gold/15 text-gold">
-              <Landmark aria-hidden className="h-8 w-8" strokeWidth={1.5} />
-            </span>
+            <span aria-hidden className="mx-auto block h-0.5 w-10 rounded-full bg-gold" />
             <p className="mt-5 font-serif text-2xl font-semibold text-white">Represented by an Enrolled Agent</p>
             <p className="mt-2 text-mist">
               Federally licensed by the IRS, with unlimited rights to represent taxpayers before it.

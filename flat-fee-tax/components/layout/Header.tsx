@@ -1,4 +1,3 @@
-import { Briefcase, ChartLine, FileText, House, LayoutGrid, MapPin } from "lucide-react";
 import { SiteHeader } from "@/components/layout/SiteHeader";
 import type { NavEntry } from "@/components/layout/nav-types";
 import { cities } from "@/content/cities";
@@ -6,35 +5,38 @@ import { taxPrepPages } from "@/content/services";
 import { cta } from "@/lib/cta";
 import { phoneHref, site } from "@/lib/site";
 
-const iconClass = "h-5 w-5";
-const prepIcons = { FileText, Briefcase, House, ChartLine };
-
-/** Builds navigation on the server (icons render here, not in the client bundle). */
+/** Main navigation: Home · Services · Pricing · Areas We Serve · About · FAQ. */
 export function Header() {
   const nav: NavEntry[] = [
     { kind: "link", label: "Home", href: "/" },
-    { kind: "link", label: "Pricing", href: "/pricing" },
     {
       kind: "menu",
-      id: "tax-preparation",
-      label: "Tax Preparation",
+      id: "services",
+      label: "Services",
       variant: "list",
       groups: [
         {
-          items: taxPrepPages.map((page) => {
-            const Icon = prepIcons[page.icon];
-            return {
+          items: [
+            {
+              label: "Tax Preparation",
+              href: "/tax-preparation",
+              description: "Prepared by a CPA, reviewed by an Enrolled Agent",
+            },
+            ...taxPrepPages.map((page) => ({
               label: page.name,
               href: page.href,
               description: page.navDescription,
-              icon: <Icon className={iconClass} strokeWidth={1.5} aria-hidden />,
-            };
-          }),
+            })),
+            {
+              label: "Tax Resolution",
+              href: "/tax-resolution",
+              description: "IRS notices, back taxes and payment plans",
+            },
+          ],
         },
       ],
-      footer: { label: "Tax preparation overview", href: "/tax-preparation" },
     },
-    { kind: "link", label: "Tax Resolution", href: "/tax-resolution" },
+    { kind: "link", label: "Pricing", href: "/pricing" },
     {
       kind: "menu",
       id: "areas",
@@ -49,14 +51,8 @@ export function Header() {
                 label: `${city.name}, GA`,
                 href: `/areas-we-serve/${city.slug}`,
                 description: city.county,
-                icon: <MapPin className={iconClass} strokeWidth={1.5} aria-hidden />,
               })),
-            {
-              label: "All Areas",
-              href: "/areas-we-serve",
-              description: "Fayette & Coweta County — and virtual statewide",
-              icon: <LayoutGrid className={iconClass} strokeWidth={1.5} aria-hidden />,
-            },
+            { label: "Virtually", href: "/areas-we-serve#virtual", description: "Anywhere in Georgia, fully online" },
           ],
         },
       ],

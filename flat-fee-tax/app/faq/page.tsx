@@ -1,4 +1,3 @@
-import { MessageCircleQuestion } from "lucide-react";
 import { JsonLd } from "@/components/seo/JsonLd";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { ButtonLink } from "@/components/ui/Button";
@@ -76,10 +75,7 @@ export default function FaqPage() {
               aria-labelledby="faq-more"
               className="flex flex-col gap-6 rounded-2xl bg-navy p-8 text-white sm:flex-row sm:items-center sm:justify-between sm:p-10"
             >
-              <div className="flex gap-5">
-                <span className="grid h-14 w-14 shrink-0 place-items-center rounded-2xl bg-gold text-navy">
-                  <MessageCircleQuestion aria-hidden className="h-7 w-7" strokeWidth={1.5} />
-                </span>
+              <div>
                 <div>
                   <h2 id="faq-more" className="font-serif text-2xl font-semibold">
                     Still have a question?

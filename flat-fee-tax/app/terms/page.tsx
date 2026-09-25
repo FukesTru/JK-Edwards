@@ -45,7 +45,7 @@ export default function TermsPage() {
 
         <h2>No client relationship</h2>
         <p>
-          Using this site or submitting a form does not create a client relationship. We become your tax preparer or
+          Using this site or contacting us does not create a client relationship. We become your tax preparer or
           representative only after we both agree to an engagement. Until then, please don’t send confidential
           information such as Social Security numbers, bank details or tax documents through the site or by email.
         </p>

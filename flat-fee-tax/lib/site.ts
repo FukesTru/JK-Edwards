@@ -65,7 +65,7 @@ export const directionsUrl = (from?: string) =>
 export const mapStyleUrl = process.env.NEXT_PUBLIC_MAP_STYLE_URL || "https://tiles.openfreemap.org/styles/positron";
 
 export const secureUploadHref = real(site.secureUploadUrl);
-export const bookingHref = real(site.bookingUrl);
+export const formEmbedHref = real(site.formEmbedUrl);
 
 /** Social profiles with a URL set (empty ones stay hidden). */
 export const socialLinks = (

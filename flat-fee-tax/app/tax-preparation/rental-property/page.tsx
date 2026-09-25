@@ -19,8 +19,8 @@ export default function RentalPropertyPage() {
   return (
     <TaxPrepSubpage
       slug="rental-property"
-      title="Rental Property Tax Returns (Schedule E)"
-      subtitle="Rental income, expenses and depreciation reported correctly — for one house, a duplex or a short-term rental."
+      title="For Rental Property Owners"
+      subtitle="Rental income, expenses and depreciation reported correctly, whether you own one house, a duplex or a short-term rental."
       serviceDescription="Schedule E rental property tax preparation, prepared and signed by a CPA and reviewed by an Enrolled Agent."
       calloutText="Schedule E is part of every return we prepare, with depreciation tracked from year to year."
       faqs={faqs.rental}
@@ -30,15 +30,13 @@ export default function RentalPropertyPage() {
           label: "Tax Preparation",
           href: "/tax-preparation",
           description: "What every return includes.",
-          icon: "FileText",
         },
         {
           label: "Investments & K-1s",
           href: "/tax-preparation/investments-k1",
           description: "Real estate partnerships and K-1 income.",
-          icon: "ChartLine",
         },
-        { label: "Pricing", href: "/pricing", description: "Flat fees, quoted upfront.", icon: "Tag" },
+        { label: "Pricing", href: "/pricing", description: "Flat fees, quoted upfront." },
       ]}
     >
       <Section tone="white" labelledBy="rental-intro">
@@ -46,7 +44,7 @@ export default function RentalPropertyPage() {
           <SectionHeading id="rental-intro" eyebrow="For landlords" title="Rental income, reported the right way" />
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted">
             <p>
-              Owning a rental is one of the most common ways Fayette and Coweta County families build wealth — a first
+              Owning a rental is one of the most common ways Fayette and Coweta County families build wealth: a first
               home kept after a move, a small duplex, or a cottage rented by the week. Each one needs a Schedule E that
               reports rent received, the costs of running the property and depreciation.
             </p>
@@ -64,42 +62,36 @@ export default function RentalPropertyPage() {
           id="rental-topics"
           eyebrow="What we handle"
           title="Schedule E, line by line"
-          intro="General information — the right treatment always depends on your facts, which we’ll review with you."
+          intro="This is general information. The right treatment always depends on your facts, which we’ll review with you."
         />
         <div className="mt-12">
           <IconGrid
             items={[
               {
-                icon: "Receipt",
                 title: "Rental income & expenses",
                 description:
                   "Rent, fees and deposits you keep, less mortgage interest, taxes, insurance, repairs, management and utilities.",
               },
               {
-                icon: "TrendingUp",
                 title: "Depreciation",
-                description: "Recovering the cost of the building and improvements over time — tracked year to year.",
+                description: "Recovering the cost of the building and improvements over time, tracked year to year.",
               },
               {
-                icon: "Wrench",
                 title: "Repairs vs. improvements",
                 description:
                   "Repairs are generally deducted now; improvements are generally depreciated. We classify each expense.",
               },
               {
-                icon: "CalendarCheck",
                 title: "Short-term rentals",
                 description:
                   "Nightly and weekly rentals can follow different rules depending on use and your involvement.",
               },
               {
-                icon: "Scale",
                 title: "Passive activity rules",
                 description:
                   "Rental losses are generally passive and may be limited; we apply the rules and track carryovers.",
               },
               {
-                icon: "Users",
                 title: "Personal use days",
                 description:
                   "When you also use the property yourself, expenses are split between personal and rental use.",
@@ -116,7 +108,7 @@ export default function RentalPropertyPage() {
               id="rental-local"
               eyebrow="Local landlords"
               title="Rental owners across Fayette & Coweta County"
-              intro="From Peachtree City townhomes to rental houses around Newnan’s historic neighborhoods, we prepare Schedule E for landlords throughout the area — in person or online."
+              intro="From Peachtree City townhomes to rental houses around Newnan’s historic neighborhoods, we prepare Schedule E for landlords throughout the area, in person or online."
             />
             <CityChips className="mt-8" />
           </div>

@@ -1,6 +1,5 @@
-import { FileSignature, LockKeyhole, Scale } from "lucide-react";
-import { NoticeUploadForm } from "@/components/forms/NoticeUploadForm";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
+import { ButtonLink } from "@/components/ui/Button";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
 import { PageHero } from "@/components/ui/PageHero";
 import { Placeholder } from "@/components/ui/Placeholder";
@@ -16,7 +15,7 @@ import { faqs } from "@/content/faqs";
 import { resolutionIssues, resolutionScope } from "@/content/resolution";
 import { cta } from "@/lib/cta";
 import { buildMetadata, taxResolutionService } from "@/lib/seo";
-import { prices, site } from "@/lib/site";
+import { phoneHref, prices, site } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: `IRS Tax Resolution Peachtree City GA, ${prices.taxResolution}`,
@@ -42,8 +41,8 @@ export default function TaxResolutionPage() {
     <>
       <JsonLd data={taxResolutionService()} />
       <PageHero
-        eyebrow={`Tax resolution · Flat ${prices.taxResolution}`}
-        title={<>IRS Tax Resolution — Flat {prices.taxResolution}</>}
+        eyebrow="Tax resolution"
+        title="Let Us Handle the IRS"
         subtitle="An IRS letter is stressful. We’ll read it, explain it, and deal with the IRS for you."
         primaryCta={cta.taxResolution}
         aside={
@@ -84,11 +83,11 @@ export default function TaxResolutionPage() {
           </div>
           <ul className="mt-7 space-y-3 text-ink">
             <li className="flex gap-3">
-              <FileSignature aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-navy" strokeWidth={1.5} />
+              <span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
               Form 2848 power of attorney, prepared with you
             </li>
             <li className="flex gap-3">
-              <Scale aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-navy" strokeWidth={1.5} />
+              <span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
               Honest options — never “pennies on the dollar” promises
             </li>
           </ul>
@@ -119,22 +118,21 @@ export default function TaxResolutionPage() {
         </div>
       </Section>
 
-      <Section tone="paper" id="upload-notice" labelledBy="upload-heading">
-        <div className="grid gap-12 lg:grid-cols-[0.8fr_1.2fr] lg:gap-16">
-          <div>
-            <SectionHeading
-              id="upload-heading"
-              eyebrow="Start here"
-              title="Upload your IRS notice"
-              intro="Send us a copy of the letter and a few details. We’ll review it and contact you to talk through your options."
-            />
-            <p className="mt-8 flex items-start gap-3 rounded-2xl border border-line bg-white p-5 text-sm leading-relaxed text-muted">
-              <LockKeyhole aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-navy" strokeWidth={1.5} />
-              Your upload is sent securely to our team. Please don’t include your full Social Security number.
-            </p>
-          </div>
-          <div className="rounded-2xl border border-line bg-white p-6 sm:p-9">
-            <NoticeUploadForm />
+      <Section tone="paper" id="got-a-notice" labelledBy="notice-heading">
+        <div className="flex flex-col gap-8 lg:flex-row lg:items-end lg:justify-between">
+          <SectionHeading
+            id="notice-heading"
+            eyebrow="Start here"
+            title="Got a letter from the IRS?"
+            intro="Call us and we’ll talk it through. If it makes sense to move forward, we’ll send a secure link so you can share a copy of the notice. Please don’t email it."
+          />
+          <div className="flex shrink-0 flex-col gap-3 sm:flex-row">
+            <ButtonLink href={phoneHref} icon="phone" size="lg">
+              Call {site.phone}
+            </ButtonLink>
+            <ButtonLink href={cta.taxResolution.href} variant="outline-dark" size="lg">
+              {cta.taxResolution.label}
+            </ButtonLink>
           </div>
         </div>
       </Section>
@@ -156,18 +154,16 @@ export default function TaxResolutionPage() {
       <Section tone="paper">
         <RelatedLinks
           links={[
-            { label: "Pricing", href: "/pricing", description: "Both flat fees, side by side.", icon: "Tag" },
+            { label: "Pricing", href: "/pricing", description: "Both flat fees, side by side." },
             {
-              label: "Self-Employed (Sch C)",
+              label: "Self-Employed",
               href: "/tax-preparation/self-employed",
               description: "Stay current once your back taxes are handled.",
-              icon: "Briefcase",
             },
             {
               label: "Get Started",
               href: "/get-started?service=tax-resolution",
               description: `Book your ${prices.taxResolution} tax help.`,
-              icon: "CalendarCheck",
             },
           ]}
         />

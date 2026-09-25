@@ -1,4 +1,3 @@
-import Link from "next/link";
 import { LegalDocument } from "@/components/sections/LegalDocument";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { PageHero } from "@/components/ui/PageHero";
@@ -8,7 +7,7 @@ import { emailHref, phoneHref, site } from "@/lib/site";
 export const metadata = buildMetadata({
   title: "Privacy Policy",
   description:
-    "How we collect, use and protect the information you share through our website and forms. Our forms never ask for Social Security numbers or bank details.",
+    "How we collect, use and protect the information you share when you visit our website, call or email us. Please never email Social Security numbers or documents.",
   path: "/privacy-policy",
 });
 
@@ -31,18 +30,15 @@ export default function PrivacyPolicyPage() {
 
         <h2>Information we collect</h2>
         <h3>Information you give us</h3>
-        <p>
-          When you request an appointment, send us an IRS notice or use a form on this site, we collect what you enter:
-        </p>
+        <p>When you call, email or book an appointment with us, we collect the details you share:</p>
         <ul>
           <li>Your name, email address and phone number</li>
           <li>Your city, the service you’re interested in and which tax situations apply to you</li>
-          <li>Your message and preferred contact method</li>
-          <li>Files you choose to upload, such as a copy of an IRS notice</li>
+          <li>Your questions and preferred contact method</li>
         </ul>
         <p>
-          <strong>Our forms never ask for Social Security numbers or bank details.</strong> Please don’t include them in
-          website forms or email. When we need documents, we’ll send you a link to a secure upload portal.
+          <strong>Please don’t email Social Security numbers, bank details or tax documents.</strong> When we need
+          documents, we’ll send you a link to a secure upload portal.
         </p>
         <h3>Information collected automatically</h3>
         <p>
@@ -74,7 +70,7 @@ export default function PrivacyPolicyPage() {
         <ul>
           <li>
             <strong>Service providers</strong> that help us run the site and our practice — such as hosting, email
-            delivery, form processing, scheduling and analytics — who may use it only to provide services to us.
+            delivery, scheduling and analytics — who may use it only to provide services to us.
           </li>
           <li>
             <strong>Secure portal and software providers</strong> you use with us. Their own privacy policies apply.
@@ -118,8 +114,7 @@ export default function PrivacyPolicyPage() {
         <h2>Contact us</h2>
         <p>
           Questions about this policy? Email <a href={emailHref}>{site.email}</a>, call{" "}
-          <a href={phoneHref}>{site.phone}</a>, write to us at {site.address}, or use our{" "}
-          <Link href="/get-started">Get Started form</Link>.
+          <a href={phoneHref}>{site.phone}</a>, or write to us at {site.address}.
         </p>
       </LegalDocument>
     </>

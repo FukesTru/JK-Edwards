@@ -26,8 +26,11 @@ export const site = {
   hours: "{{HOURS}}", // e.g. "Mon–Fri 9 AM–6 PM · Sat by appointment"
   /** Secure document portal (TaxCaddy, SafeSend, Liscio…). Documents are never collected by email. */
   secureUploadUrl: "{{SECURE_UPLOAD_URL}}",
-  /** Calendly / GoHighLevel booking page, embedded on /get-started. */
-  bookingUrl: "{{BOOKING_URL}}",
+  /**
+   * Optional: the embed URL of your own lead form (GoHighLevel, JotForm, HubSpot…).
+   * When set, it appears on /get-started. Leave empty to show call and email options only.
+   */
+  formEmbedUrl: "",
   /** GA4 measurement ID. The gtag library only loads once this is a real ID. */
   ga4Id: process.env.NEXT_PUBLIC_GA4_ID || "G-XXXXXXXXXX",
   /** Approximate center of Peachtree City — replace with the office's exact coordinates. */

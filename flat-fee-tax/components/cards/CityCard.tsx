@@ -1,5 +1,5 @@
 import Link from "next/link";
-import { ArrowRight, MapPin } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import type { City } from "@/content/cities";
 import { cn } from "@/lib/utils";
 
@@ -13,10 +13,7 @@ export function CityCard({ city, href, className }: { city: City; href: string; 
         className,
       )}
     >
-      <span className="flex items-center gap-2 text-xs font-semibold tracking-[0.16em] text-muted uppercase">
-        <MapPin aria-hidden className="h-4 w-4 text-gold-deep" strokeWidth={1.75} />
-        {city.county}
-      </span>
+      <span className="text-xs font-semibold tracking-[0.16em] text-muted uppercase">{city.county}</span>
       <span className="mt-3 font-serif text-2xl font-semibold text-navy">{city.name}, GA</span>
       <span className="mt-2 flex-1 leading-relaxed text-muted">{city.blurb}</span>
       <span className="mt-5 inline-flex items-center gap-1.5 text-sm font-semibold text-gold-deep">

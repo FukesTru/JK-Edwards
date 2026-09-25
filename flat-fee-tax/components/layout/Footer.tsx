@@ -1,12 +1,13 @@
 import Link from "next/link";
-import { BadgeCheck, Clock, Mail, MapPin, Phone, ShieldCheck } from "lucide-react";
+import { Clock, Mail, MapPin, Phone } from "lucide-react";
 import { Logo } from "@/components/brand/Logo";
-import { QuickForm } from "@/components/forms/QuickForm";
 import { FacebookIcon, GoogleIcon, InstagramIcon } from "@/components/icons/BrandIcons";
+import { ButtonLink } from "@/components/ui/Button";
 import { Container } from "@/components/ui/Container";
 import { CredentialBadge } from "@/components/ui/CredentialBadge";
 import { ConfigValue } from "@/components/ui/Placeholder";
 import { cities } from "@/content/cities";
+import { cta } from "@/lib/cta";
 import { emailHref, phoneHref, site, socialLinks } from "@/lib/site";
 
 const socialIcons = { facebook: FacebookIcon, instagram: InstagramIcon, google: GoogleIcon };
@@ -130,11 +131,18 @@ export function Footer() {
             </ul>
           </nav>
 
-          {/* Column 4 — get started */}
+          {/* Column 4: get started */}
           <div>
             <h3 className={headingClass}>Get Started</h3>
-            <p className="mt-3 mb-5 text-sm text-mist">Tell us what you need and we’ll send next steps.</p>
-            <QuickForm serviceOptions={["Tax Preparation", "Tax Resolution", "Not sure yet"]} />
+            <p className="mt-3 mb-6 text-sm leading-relaxed text-mist">
+              Call or email us and we’ll send next steps. Please don’t email tax documents.
+            </p>
+            <div className="flex flex-col gap-3">
+              <ButtonLink href={cta.taxPrep.href}>{cta.taxPrep.label}</ButtonLink>
+              <ButtonLink href={phoneHref} variant="outline-light" icon="phone">
+                Call <ConfigValue value={site.phone} />
+              </ButtonLink>
+            </div>
           </div>
         </div>
 
@@ -143,11 +151,9 @@ export function Footer() {
           <CredentialBadge size="sm" />
           <ul className="mt-5 grid gap-3 text-sm text-white/85 md:grid-cols-2">
             <li className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
-              <BadgeCheck aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-gold" strokeWidth={1.5} />
               <span>Enrolled Agent — licensed by the IRS</span>
             </li>
             <li className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
-              <ShieldCheck aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-gold" strokeWidth={1.5} />
               <span>
                 Returns signed by <ConfigValue value={site.cpaName} /> — GA License #
                 <ConfigValue value={site.cpaLicense} />

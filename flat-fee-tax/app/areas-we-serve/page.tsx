@@ -1,4 +1,3 @@
-import { Laptop, MapPin } from "lucide-react";
 import { CityCard } from "@/components/cards/CityCard";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
@@ -23,10 +22,8 @@ export default function AreasWeServePage() {
     <>
       <PageHero
         eyebrow="Areas we serve"
-        title="Tax Preparation Across Fayette & Coweta County, GA"
+        title="Proudly Serving Fayette & Coweta County"
         subtitle="In person at our Peachtree City office, or fully virtual anywhere in Georgia — with two licensed professionals on every return."
-        image="ptc-lake"
-        imageClassName="object-[60%_center]"
       />
       <Breadcrumbs items={[{ name: "Areas We Serve", path: "/areas-we-serve" }]} />
 
@@ -41,7 +38,7 @@ export default function AreasWeServePage() {
             />
             <ul className="mt-8 space-y-4">
               <li className="flex gap-4 rounded-2xl border border-line bg-paper p-5">
-                <MapPin aria-hidden className="mt-0.5 h-6 w-6 shrink-0 text-navy" strokeWidth={1.5} />
+                <span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                 <span>
                   <span className="block font-semibold text-navy">In person in Peachtree City</span>
                   <span className="mt-1 block text-muted">
@@ -49,8 +46,8 @@ export default function AreasWeServePage() {
                   </span>
                 </span>
               </li>
-              <li className="flex gap-4 rounded-2xl border border-line bg-paper p-5">
-                <Laptop aria-hidden className="mt-0.5 h-6 w-6 shrink-0 text-navy" strokeWidth={1.5} />
+              <li id="virtual" className="flex scroll-mt-28 gap-4 rounded-2xl border border-line bg-paper p-5">
+                <span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                 <span>
                   <span className="block font-semibold text-navy">Fully virtual anywhere in Georgia</span>
                   <span className="mt-1 block text-muted">
@@ -107,20 +104,17 @@ export default function AreasWeServePage() {
               label: "Peachtree City",
               href: "/areas-we-serve/peachtree-city",
               description: "Our home base and office.",
-              icon: "MapPin",
             },
-            { label: "Pricing", href: "/pricing", description: "Flat fees, quoted upfront.", icon: "Tag" },
+            { label: "Pricing", href: "/pricing", description: "Flat fees, quoted upfront." },
             {
               label: "How It Works",
               href: "/how-it-works",
               description: "In person or fully online.",
-              icon: "ListChecks",
             },
             {
               label: "Get Started",
               href: "/get-started",
               description: "Book your return today.",
-              icon: "CalendarCheck",
             },
           ]}
         />

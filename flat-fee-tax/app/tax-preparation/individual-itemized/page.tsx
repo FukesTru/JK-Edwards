@@ -18,10 +18,10 @@ export default function IndividualItemizedPage() {
   return (
     <TaxPrepSubpage
       slug="individual-itemized"
-      title="Individual Tax Returns & Itemized Deductions (Form 1040 + Schedule A)"
-      subtitle="We prepare your 1040 and run the numbers both ways — itemized and standard — so you claim whichever saves you more."
+      title="For Individuals and Families"
+      subtitle="We prepare your 1040 and run the numbers both ways (itemized and standard) so you claim whichever saves you more."
       serviceDescription="Individual Form 1040 preparation with Schedule A itemized deductions, prepared and signed by a CPA and reviewed by an Enrolled Agent."
-      calloutText="Schedule A is part of every return we prepare — and we compare it with the standard deduction every year, so you claim whichever is larger."
+      calloutText="Schedule A is part of every return we prepare, and we compare it with the standard deduction every year, so you claim whichever is larger."
       faqs={faqs.individual}
       faqTitle="Itemizing questions"
       related={[
@@ -29,15 +29,13 @@ export default function IndividualItemizedPage() {
           label: "Tax Preparation",
           href: "/tax-preparation",
           description: "What every return includes.",
-          icon: "FileText",
         },
         {
           label: "Rental Property (Sch E)",
           href: "/tax-preparation/rental-property",
           description: "Own a rental? It’s included too.",
-          icon: "House",
         },
-        { label: "Pricing", href: "/pricing", description: "Flat fees, quoted upfront.", icon: "Tag" },
+        { label: "Pricing", href: "/pricing", description: "Flat fees, quoted upfront." },
       ]}
     >
       <Section tone="white" labelledBy="standard-vs-itemized">
@@ -45,12 +43,12 @@ export default function IndividualItemizedPage() {
           <SectionHeading
             id="standard-vs-itemized"
             eyebrow="Standard vs. itemized"
-            title="Two ways to deduct — you get the bigger one"
+            title="Two ways to deduct, and you get the bigger one"
           />
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted">
             <p>
-              Every year, you can subtract either the <strong className="text-ink">standard deduction</strong> — a fixed
-              amount set by law for your filing status and adjusted for inflation — or your{" "}
+              Every year, you can subtract either the <strong className="text-ink">standard deduction</strong> (a fixed
+              amount set by law for your filing status and adjusted for inflation) or your{" "}
               <strong className="text-ink">itemized deductions</strong>, the actual total of certain expenses you paid.
             </p>
             <p>
@@ -82,25 +80,21 @@ export default function IndividualItemizedPage() {
             columns={2}
             items={[
               {
-                icon: "House",
                 title: "Mortgage interest",
                 description:
                   "Interest on a mortgage for your main home or a second home, reported on Form 1098, subject to loan limits.",
               },
               {
-                icon: "Landmark",
                 title: "Property and state taxes",
                 description:
                   "Property taxes plus state income or sales taxes, up to the state and local tax (SALT) limit in effect for the year.",
               },
               {
-                icon: "HandCoins",
                 title: "Charitable giving",
                 description:
                   "Cash and property donations to qualified charities, with receipts or acknowledgment letters.",
               },
               {
-                icon: "ClipboardCheck",
                 title: "Medical expenses",
                 description: "Qualifying out-of-pocket medical and dental costs above a percentage of your income.",
               },
@@ -120,7 +114,7 @@ export default function IndividualItemizedPage() {
           <CheckList
             items={[
               "Whether a new home purchase, refinance or large gift changes the itemize-vs-standard decision this year",
-              "Timing charitable gifts — some households benefit from grouping donations into alternate years",
+              "Timing charitable gifts, since some households benefit from grouping donations into alternate years",
               "State and local taxes paid through withholding, estimates and property tax bills",
               "Medical costs that are easy to forget, such as mileage to appointments and certain insurance premiums",
               "Married couples: whether your filing status changes the math",

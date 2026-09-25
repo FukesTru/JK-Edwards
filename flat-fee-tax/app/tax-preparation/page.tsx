@@ -1,6 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
-import { ArrowRight, BadgeCheck, FileSignature } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { FaqAccordion } from "@/components/ui/FaqAccordion";
@@ -53,8 +53,12 @@ export default function TaxPreparationPage() {
     <>
       <JsonLd data={taxPrepService()} />
       <PageHero
-        eyebrow={`Tax preparation · Flat ${prices.taxPrep}`}
-        title={<>Tax Preparation for a Flat {prices.taxPrep} — Prepared &amp; Signed by a CPA</>}
+        eyebrow="Tax preparation"
+        title={
+          <>
+            Your Return, <span className="text-gold">Handled.</span>
+          </>
+        }
         subtitle="Your individual return with the schedules that usually cost extra — for one price you know before you start."
         image="suburban-homes"
         aside={
@@ -104,11 +108,11 @@ export default function TaxPreparationPage() {
             </p>
             <ul className="mt-5 space-y-4 text-ink">
               <li className="flex gap-3">
-                <FileSignature aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-navy" strokeWidth={1.5} />
+                <span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                 Prepared and signed by <strong className="font-semibold">{site.cpaName}</strong>
               </li>
               <li className="flex gap-3">
-                <BadgeCheck aria-hidden className="mt-0.5 h-5 w-5 shrink-0 text-navy" strokeWidth={1.5} />
+                <span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
                 Reviewed by <strong className="font-semibold">{site.owner}</strong>
               </li>
               <li className="flex gap-3">
@@ -222,7 +226,6 @@ export default function TaxPreparationPage() {
               label: page.name,
               href: page.href,
               description: page.summary,
-              icon: page.icon,
             })),
           ]}
         />

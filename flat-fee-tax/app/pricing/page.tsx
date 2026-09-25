@@ -107,25 +107,21 @@ export default function PricingPage() {
               label: "Tax Preparation",
               href: "/tax-preparation",
               description: `What’s included in the ${prices.taxPrep} return.`,
-              icon: "FileText",
             },
             {
               label: "Tax Resolution",
               href: "/tax-resolution",
               description: `How the ${prices.taxResolution} IRS help works.`,
-              icon: "ShieldCheck",
             },
             {
               label: "How It Works",
               href: "/how-it-works",
               description: "From documents to e-file in five steps.",
-              icon: "ListChecks",
             },
             {
               label: "Get Started",
               href: "/get-started",
               description: "Book your return or tax help.",
-              icon: "CalendarCheck",
             },
           ]}
         />

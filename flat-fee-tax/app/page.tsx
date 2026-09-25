@@ -40,10 +40,17 @@ export default function HomePage() {
     <>
       <PageHero
         size="large"
-        eyebrow={`Tax preparation & resolution · ${site.primaryCity}`}
-        title="CPA-Signed Tax Returns, Reviewed by an Enrolled Agent"
-        subtitle="Two licensed professionals on every return — itemized deductions, self-employment, rentals, brokerage 1099s and K-1s included. Serving Peachtree City, Fayetteville, Newnan and all of Fayette & Coweta County."
-        image="ptc-lake"
+        eyebrow={`Tax preparation & IRS help · ${site.primaryCity}`}
+        title={
+          <>
+            Done Right.
+            <br />
+            <span className="text-gold">Checked Twice.</span>
+          </>
+        }
+        subtitle="Every return is prepared and signed by a licensed CPA, then reviewed by an Enrolled Agent before it’s filed. Meet us in Peachtree City or work with us from anywhere in Georgia."
+        image="cpa-desk"
+        imageClassName="opacity-60 object-[70%_center]"
       />
 
       <Section tone="white" labelledBy="credentials-heading">

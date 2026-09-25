@@ -95,7 +95,7 @@ export const cityPages: CityPage[] = [
       description:
         "Tax preparer in Peachtree City, GA: returns prepared and signed by a CPA and reviewed by an Enrolled Agent. Meet at our office or work fully online. Book today.",
     },
-    image: "golf-cart-path",
+    image: "consult-room",
     introTitle: "Your neighborhood tax office, right here in Peachtree City",
     intro: [
       "Peachtree City is home base. It’s where we live, where we meet clients in person and where we built a simple idea: every return should get two licensed professionals and one flat price you know before you start. If you’d rather sit across the table than upload from your couch, you can — and if you’d rather never leave the house, that works too.",

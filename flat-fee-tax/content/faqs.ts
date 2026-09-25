@@ -89,7 +89,7 @@ const q = {
   },
   unfiled: {
     q: "I haven’t filed in a few years. Can you help?",
-    a: "Yes. We start by pulling your IRS transcripts to see what the IRS has on file, then plan how to bring you current. [Upload a notice](/tax-resolution#upload-notice) or [get started](/get-started).",
+    a: "Yes. We start by pulling your IRS transcripts to see what the IRS has on file, then plan how to bring you current. [Call us](/get-started) and we’ll take a look.",
   },
   georgiaDor: {
     q: "Do you handle Georgia Department of Revenue notices?",

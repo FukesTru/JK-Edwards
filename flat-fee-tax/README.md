@@ -10,7 +10,6 @@ It has 18 pages plus the utility pages (privacy, terms, HTML sitemap, 404) and a
   - production build, ESLint, TypeScript and Prettier
   - an SEO and link audit of all 21 indexable pages
   - no horizontal scroll at 375 / 768 / 1440 px on all 23 pages
-  - end-to-end form submissions
   - a build under a sub-path domain
   - Lighthouse (mobile): Performance 92–96, Accessibility 100, SEO 100, Best Practices 96–100 (the only deduction came from the image CDN being blocked in the test sandbox)
 
@@ -31,7 +30,7 @@ npm run dev          # http://localhost:3000
 
 ## `site.config.ts` — change the business details in one place
 
-Every business detail comes from **`site.config.ts`**: brand and legal name, owner, signing CPA and license number, phone, email, address, domain, prices, cities, social links, hours, secure upload link and booking link. Nothing is hard-coded elsewhere. Swap the `{{PLACEHOLDER}}` values and rebuild.
+Every business detail comes from **`site.config.ts`**: brand and legal name, owner, signing CPA and license number, phone, email, address, domain, prices, cities, social links, hours, secure upload link and an optional form embed link. Nothing is hard-coded elsewhere. Swap the `{{PLACEHOLDER}}` values and rebuild.
 
 - **Placeholders render visibly** (e.g. `{{BRAND_NAME}}`, `Call {{PHONE}}`) with a dashed amber outline while `NEXT_PUBLIC_SHOW_PLACEHOLDERS` isn't `false`.
 - **Placeholders never become broken links.** Until real values are set, phone and email links point to `/get-started`, the map centers on Peachtree City, and placeholder values are left out of the structured data.
@@ -60,23 +59,18 @@ Open **`/brand`** (not indexed) to preview everything, download the files and se
 | Pricing                                     | `/pricing`                                                                                                          |
 | How It Works (printable document checklist) | `/how-it-works`                                                                                                     |
 | Tax Preparation (+ 4 sub-pages)             | `/tax-preparation`, `/tax-preparation/individual-itemized`, `/self-employed`, `/rental-property`, `/investments-k1` |
-| Tax Resolution (+ notice upload form)       | `/tax-resolution`                                                                                                   |
+| Tax Resolution                              | `/tax-resolution`                                                                                                   |
 | Areas We Serve (+ 5 city pages)             | `/areas-we-serve`, `/areas-we-serve/peachtree-city`, `/fayetteville`, `/newnan`, `/tyrone`, `/senoia`               |
 | About · FAQ (25 questions) · Get Started    | `/about`, `/faq`, `/get-started`                                                                                    |
 | Utility                                     | `/privacy-policy`, `/terms`, `/sitemap`, 404, `/brand` (noindex)                                                    |
 
 The content lives in `content/`: services, the forms included in the flat fee, cities (unique local copy of 300+ words per city page), FAQs, resolution scope and issues, and the image manifest.
 
-## Forms
+## Contact and lead capture
 
-The Get Started form, the IRS notice upload and the footer quick form all post to `app/api/contact/route.ts`. That route:
+The site has **no forms of its own**. Every "Start My Return" and "Get Tax Help" button leads to `/get-started`, which shows the phone number, email, address, hours, a map and what happens next. The footer and the Tax Resolution page point people to call.
 
-- validates the fields and accepts a notice as a PDF, JPG or PNG up to 4 MB
-- **rejects anything that looks like a Social Security number**; forms never ask for SSNs or bank details
-- drops spam silently (a hidden honeypot field, submissions faster than 2.5 s) and rate-limits each IP
-- delivers each lead to `CONTACT_WEBHOOK_URL` and/or by email through Resend (see `.env.example`)
-
-**Configure at least one delivery channel before launch.** Without one, production asks visitors to try again or call.
+To use your own form (GoHighLevel, JotForm, HubSpot…), paste its embed URL into `formEmbedUrl` in `site.config.ts`. It then appears on `/get-started` in a full-width frame. Leave it empty to show only the call and email options.
 
 ## Service-area map
 
@@ -110,10 +104,10 @@ Home and Areas We Serve show a real, interactive map (`components/sections/Servi
 
 ## Images
 
-Nine photographs were generated with the Artlist connector for this site (Peachtree City-style lake and golf-cart path, suburban homes, a rental home, a tradesperson, a freelance editor, a farmhouse, a camera operator, a historic home). Four fitting images were reused from an earlier set. The manifest is `content/images.json`.
+Photographs were generated with the Artlist connector for this site. The home page hero is a CPA's desk with a return being signed (`cpa-desk`), and the Peachtree City page uses a bright consultation room (`consult-room`). Other pages use suburban homes, a rental home, a tradesperson, a freelance editor, a farmhouse, a camera operator and a historic home, plus four images reused from an earlier set. The manifest is `content/images.json`.
 
 - **Hosting:** the images are currently hotlinked from Artlist's CDN via signed URLs valid until 2036. Run `npm run images:pull` from a machine with normal internet access to self-host them.
-- **Review before launch.** Only two of the new images could be visually checked during the build, and both passed: `tradesperson` and `freelancer-studio`. Look at the rest in Artlist or on the site and regenerate any with defects: `ptc-lake`, `golf-cart-path`, `suburban-homes`, `rental-property`, `farmhouse`, `camera-gear` and `historic-home`.
+- **Review before launch.** Four images were visually checked and passed: `cpa-desk`, `consult-room`, `tradesperson` and `freelancer-studio`. Look at the rest in Artlist or on the site and regenerate any with defects: `suburban-homes`, `rental-property`, `farmhouse`, `camera-gear` and `historic-home`.
 - **Location claims:** the city pages use generic scenes, and their alt text doesn't claim to show a specific real place.
 
 ## Pre-launch checklist
@@ -123,12 +117,12 @@ Nine photographs were generated with the Artlist connector for this site (Peacht
 - [ ] **Domain:** a standalone domain, or a sub-path such as `jkedwards.com/transportation`. Both work, but a sub-path of another business's site needs that site to route the path to this app.
 - [ ] **Signing CPA:** name and Georgia license number. Confirm the CPA is the paid preparer of record signing with their PTIN, since the site says "prepared & signed by a CPA."
 - [ ] **Pricing confirmations** (`site.confirm`): state return, joint returns, multiple C/E schedules, prior-year and amended returns, payment timing, turnaround, the exact $749 scope, and the K-1 comparison claim.
-- [ ] **Hours, secure upload portal link and booking link** (`hours`, `secureUploadUrl`, `bookingUrl`).
+- [ ] **Hours and secure upload portal link** (`hours`, `secureUploadUrl`).
 - [ ] **Google Business Profile:** create it and add it to `social.google`; its icon appears in the footer automatically.
 - [ ] **Facebook / Instagram:** add the URLs; their icons appear automatically.
 - [ ] **Logo approval** from Kai (`/brand`), plus **headshots** for Kai and the CPA to replace the initials avatars.
 - [ ] **Bios:** Kai's and the CPA's (About page placeholders).
-- [ ] **Form delivery:** set `CONTACT_WEBHOOK_URL` and/or the Resend variables, then send a test submission.
+- [ ] **Your lead form (optional):** paste its embed URL into `formEmbedUrl` to show it on `/get-started`.
 - [ ] **GA4:** set `NEXT_PUBLIC_GA4_ID`.
 - [ ] **Legal review:** have the Privacy Policy and Terms reviewed by the business's attorney.
 - [ ] **Images:** review the unreviewed images and run `npm run images:pull`.

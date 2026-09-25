@@ -22,24 +22,21 @@ export default function NotFound() {
           eyebrow="Popular pages"
           title="Where would you like to go?"
           links={[
-            { label: "Pricing", href: "/pricing", description: "Two services, two flat fees.", icon: "Tag" },
+            { label: "Pricing", href: "/pricing", description: "Two services, two flat fees." },
             {
               label: "Tax Preparation",
               href: "/tax-preparation",
               description: "CPA-signed, EA-reviewed returns.",
-              icon: "FileText",
             },
             {
               label: "Tax Resolution",
               href: "/tax-resolution",
               description: "Help with IRS notices and balances due.",
-              icon: "ShieldCheck",
             },
             {
               label: "Get Started",
               href: "/get-started",
               description: "Book your return today.",
-              icon: "CalendarCheck",
             },
           ]}
         />

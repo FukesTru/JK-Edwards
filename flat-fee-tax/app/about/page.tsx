@@ -1,5 +1,4 @@
 import Link from "next/link";
-import { BadgeCheck, Laptop, MessageSquareText, Tag } from "lucide-react";
 import { Stagger, StaggerItem } from "@/components/motion/Reveal";
 import { Breadcrumbs } from "@/components/ui/Breadcrumbs";
 import { InitialsAvatar } from "@/components/ui/InitialsAvatar";
@@ -21,22 +20,18 @@ export const metadata = buildMetadata({
 
 const values = [
   {
-    Icon: Tag,
     title: "Transparent pricing",
     text: "Two flat fees, published on our website and quoted before you book.",
   },
   {
-    Icon: BadgeCheck,
     title: "Two licensed professionals on every return",
     text: "A CPA prepares and signs; an Enrolled Agent reviews. Every time.",
   },
   {
-    Icon: MessageSquareText,
     title: "Plain-English answers",
     text: "No jargon — just what your return means and what to do next.",
   },
   {
-    Icon: Laptop,
     title: "Local and virtual",
     text: "Meet us in Peachtree City or work with us online from anywhere in Georgia.",
   },
@@ -131,12 +126,10 @@ export default function AboutPage() {
       <Section tone="paper" labelledBy="values-heading">
         <SectionHeading id="values-heading" align="center" eyebrow="Our values" title="What you can count on" />
         <Stagger as="ul" className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          {values.map(({ Icon, title, text }) => (
+          {values.map(({ title, text }) => (
             <StaggerItem as="li" key={title} className="rounded-2xl border border-line bg-white p-7">
-              <span className="grid h-12 w-12 place-items-center rounded-xl bg-navy text-gold">
-                <Icon aria-hidden className="h-6 w-6" strokeWidth={1.5} />
-              </span>
-              <h3 className="mt-5 font-serif text-xl font-semibold text-navy">{title}</h3>
+              <span aria-hidden className="block h-0.5 w-8 rounded-full bg-gold" />
+              <h3 className="mt-4 font-serif text-xl font-semibold text-navy">{title}</h3>
               <p className="mt-2 leading-relaxed text-muted">{text}</p>
             </StaggerItem>
           ))}
@@ -146,18 +139,16 @@ export default function AboutPage() {
       <Section tone="white">
         <RelatedLinks
           links={[
-            { label: "Pricing", href: "/pricing", description: "Two services, two flat fees.", icon: "Tag" },
+            { label: "Pricing", href: "/pricing", description: "Two services, two flat fees." },
             {
               label: "How It Works",
               href: "/how-it-works",
               description: "CPA preparation and EA review, step by step.",
-              icon: "ListChecks",
             },
             {
               label: "Tax Resolution",
               href: "/tax-resolution",
               description: "Representation before the IRS by an EA.",
-              icon: "ShieldCheck",
             },
           ]}
         />
