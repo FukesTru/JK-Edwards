@@ -20,7 +20,7 @@ export const includedForms: IncludedForm[] = [
   {
     form: "Schedule A",
     short: "Sch A",
-    description: "Itemized deductions — mortgage interest, property tax and charitable gifts.",
+    description: "Itemized deductions like mortgage interest, property tax and charitable gifts.",
     href: "/tax-preparation/individual-itemized",
   },
   {

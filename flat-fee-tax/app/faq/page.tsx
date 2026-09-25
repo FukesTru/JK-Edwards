@@ -81,7 +81,7 @@ export default function FaqPage() {
                     Still have a question?
                   </h2>
                   <p className="mt-1.5 max-w-md text-mist">
-                    Ask us directly — we’ll tell you if your return fits the flat fee.
+                    Ask us directly and we’ll tell you if your return fits the flat fee.
                   </p>
                 </div>
               </div>

@@ -37,7 +37,7 @@ const q = {
   },
   payment: {
     q: "When do I pay?",
-    a: `${confirmed(c.paymentTiming)} Either way, you’ll know the flat price before we start — see [pricing](/pricing).`,
+    a: `${confirmed(c.paymentTiming)} Either way, you’ll know the flat price before we start. See [pricing](/pricing).`,
   },
   turnaround: {
     q: "How long does it take?",
@@ -45,7 +45,7 @@ const q = {
   },
   whoSigns: {
     q: "Who actually prepares and signs my return?",
-    a: `A licensed CPA prepares and signs your return, and an Enrolled Agent reviews it before it’s filed — two licensed professionals on every return. [Meet the team](/about).`,
+    a: `A licensed CPA prepares and signs your return, and an Enrolled Agent reviews it before it’s filed. That’s two licensed professionals on every return. [Meet the team](/about).`,
   },
   whatIsEa: {
     q: "What is an Enrolled Agent?",
@@ -57,11 +57,11 @@ const q = {
   },
   secureDocs: {
     q: "How do I send my documents?",
-    a: "Through our secure upload portal — never by email. We send you a secure link after you [get started](/get-started). Please don’t email Social Security numbers or tax documents.",
+    a: "Through our secure upload portal, never by email. We send you a secure link after you [get started](/get-started). Please don’t email Social Security numbers or tax documents.",
   },
   inPerson: {
     q: "Can I meet in person?",
-    a: "Yes — in person at our [Peachtree City](/areas-we-serve/peachtree-city) office, or fully virtual from anywhere in Georgia.",
+    a: "Yes, in person at our [Peachtree City](/areas-we-serve/peachtree-city) office, or fully virtual from anywhere in Georgia.",
   },
   virtual: {
     q: "Do you work with clients outside Fayette and Coweta County?",
@@ -73,7 +73,7 @@ const q = {
   },
   lateK1: {
     q: "What if my K-1 arrives late?",
-    a: "Partnership and S-corp K-1s often arrive in March or later. If yours isn’t in by the filing deadline, we can file an extension, which extends the time to file (not the time to pay) — so we’ll also help estimate any payment due. See [investments & K-1s](/tax-preparation/investments-k1).",
+    a: "Partnership and S-corp K-1s often arrive in March or later. If yours isn’t in by the filing deadline, we can file an extension, which extends the time to file (not the time to pay), so we’ll also help estimate any payment due. See [investments & K-1s](/tax-preparation/investments-k1).",
   },
   resolutionScope: {
     q: "What does the tax resolution fee cover?",
@@ -109,7 +109,7 @@ export const faqs = {
   individual: [
     {
       q: "Should I itemize or take the standard deduction?",
-      a: "You get whichever is larger. We add up your itemized deductions — mortgage interest, state and local taxes (up to the current limit), charitable gifts and qualifying medical costs — and compare them with your standard deduction every year.",
+      a: "You get whichever is larger. We add up your itemized deductions: mortgage interest, state and local taxes (up to the current limit), charitable gifts and qualifying medical costs. Then we compare them with your standard deduction every year.",
     },
     {
       q: "Does it cost more to itemize?",
@@ -133,11 +133,11 @@ export const faqs = {
     },
     {
       q: "What expenses can I deduct?",
-      a: "Ordinary and necessary business costs — supplies, software, equipment, business mileage, a portion of your phone, and a home office if you use part of your home regularly and exclusively for business. We’ll help you sort out what qualifies.",
+      a: "Ordinary and necessary business costs: supplies, software, equipment, business mileage, a portion of your phone, and a home office if you use part of your home regularly and exclusively for business. We’ll help you sort out what qualifies.",
     },
     {
       q: "Do I have to make quarterly estimated payments?",
-      a: "Often, yes — self-employed income usually has no withholding. We’ll estimate what to set aside for the coming year so there are no surprises. Already behind? See [tax resolution](/tax-resolution).",
+      a: "Often, yes. Self-employed income usually has no withholding. We’ll estimate what to set aside for the coming year so there are no surprises. Already behind? See [tax resolution](/tax-resolution).",
     },
     {
       q: "I got a 1099-K from an app or payment platform. What do I do with it?",
@@ -182,7 +182,7 @@ export const faqs = {
     },
     {
       q: "Are K-1s really included in the flat price?",
-      a: "Yes — Schedule K-1 income from partnerships, S corporations and trusts is part of every return we prepare. See [pricing](/pricing).",
+      a: "Yes. Schedule K-1 income from partnerships, S corporations and trusts is part of every return we prepare. See [pricing](/pricing).",
     },
   ],
 

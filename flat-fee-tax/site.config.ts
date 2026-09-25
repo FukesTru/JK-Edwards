@@ -23,7 +23,7 @@ export const site = {
   social: { facebook: "", instagram: "", google: "" }, // icons whose value is empty stay hidden
 
   /* ---- Additional details ------------------------------------------------ */
-  hours: "{{HOURS}}", // e.g. "Mon–Fri 9 AM–6 PM · Sat by appointment"
+  hours: "{{HOURS}}", // e.g. "Mon to Fri 9 AM to 6 PM · Sat by appointment"
   /** Secure document portal (TaxCaddy, SafeSend, Liscio…). Documents are never collected by email. */
   secureUploadUrl: "{{SECURE_UPLOAD_URL}}",
   /**

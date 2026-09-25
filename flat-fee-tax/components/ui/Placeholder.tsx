@@ -9,7 +9,7 @@ import { cn } from "@/lib/utils";
  */
 export function Placeholder({
   children,
-  note = "Placeholder — client to confirm",
+  note = "Placeholder: client to confirm",
   className,
   block,
 }: {

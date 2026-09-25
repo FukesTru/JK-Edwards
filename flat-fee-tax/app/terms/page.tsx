@@ -18,7 +18,7 @@ export default function TermsPage() {
       <PageHero
         eyebrow="Legal"
         title="Terms of Use & Disclaimer"
-        subtitle="The ground rules for using this website — and what its content can and can’t do for you."
+        subtitle="The ground rules for using this website, and what its content can and can’t do for you."
       />
       <Breadcrumbs items={[{ name: "Terms", path: "/terms" }]} />
 

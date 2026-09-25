@@ -59,7 +59,7 @@ export default function TaxPreparationPage() {
             Your Return, <span className="text-gold">Handled.</span>
           </>
         }
-        subtitle="Your individual return with the schedules that usually cost extra — for one price you know before you start."
+        subtitle="Your individual return with the schedules that usually cost extra, for one price you know before you start."
         image="suburban-homes"
         aside={
           <div className="mx-auto w-full max-w-md">
@@ -92,13 +92,14 @@ export default function TaxPreparationPage() {
               <p>
                 We do it differently. For one flat {prices.taxPrep}, we prepare your federal Form 1040 with Schedule A
                 itemized deductions, Schedule C self-employment income, Schedule E rental and pass-through income,
-                brokerage 1099-Bs and Schedule K-1s — the forms that make a return complicated, included from the start.
+                brokerage 1099-Bs and Schedule K-1s. Those are the forms that make a return complicated, and they’re
+                included from the start.
               </p>
               <p>
                 Every return also gets two licensed professionals. A Certified Public Accountant prepares and signs it,
-                and an Enrolled Agent — a tax professional licensed by the IRS — reviews it before anything is filed.
-                You get a careful, double-checked return, a clear explanation of the result and e-filing, all for the
-                price you saw before you booked.
+                and an Enrolled Agent (a tax professional licensed by the IRS) reviews it before anything is filed. You
+                get a careful, double-checked return, a clear explanation of the result and e-filing, all for the price
+                you saw before you booked.
               </p>
             </div>
           </div>
@@ -180,7 +181,7 @@ export default function TaxPreparationPage() {
             tone="dark"
             eyebrow="Quality control"
             title="Two licensed professionals on every return"
-            intro="A second set of expert eyes catches what a single preparer can miss — missing income, overlooked deductions, basis errors."
+            intro="A second set of expert eyes catches what a single preparer can miss: missing income, overlooked deductions, basis errors."
           />
           <ol className="space-y-5">
             {[

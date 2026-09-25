@@ -45,7 +45,7 @@ export function TaxPrepSubpage({
     <>
       <JsonLd
         data={serviceSchema({
-          name: `Tax Preparation — ${page.crumb}`,
+          name: `Tax Preparation: ${page.crumb}`,
           serviceType: "Individual income tax preparation",
           description: serviceDescription,
           path: page.href,

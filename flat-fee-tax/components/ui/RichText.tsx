@@ -20,7 +20,7 @@ export function RichText({ text, linkClassName }: { text: string; linkClassName?
     last = match.index + full.length;
     if (!href) {
       parts.push(
-        <Placeholder key={match.index} note="Client to confirm — see site.config.ts">
+        <Placeholder key={match.index} note="Client to confirm (see site.config.ts)">
           {full}
         </Placeholder>,
       );

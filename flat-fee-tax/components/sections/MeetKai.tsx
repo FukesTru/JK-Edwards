@@ -10,7 +10,7 @@ export function MeetKai({ headingId }: { headingId?: string }) {
     <div className="grid items-center gap-10 md:grid-cols-[auto_1fr] md:gap-14">
       <Placeholder
         block
-        note="Headshot — client to provide (initials avatar until then)"
+        note="Headshot: client to provide (initials avatar until then)"
         className="justify-self-center"
       >
         <InitialsAvatar name={site.owner} className="w-40 text-5xl sm:w-48 sm:text-6xl" />
@@ -18,7 +18,7 @@ export function MeetKai({ headingId }: { headingId?: string }) {
       <div>
         <SectionHeading id={headingId} eyebrow="Meet Kai" title={`${site.owner}, founder`} />
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-          Kai is an Enrolled Agent — a tax professional federally licensed by the IRS to represent taxpayers — and
+          Kai is an Enrolled Agent (a tax professional federally licensed by the IRS to represent taxpayers) and
           founded {site.brandName} to make expert tax help simple: two licensed professionals on every return and
           plain-English answers from someone local to Peachtree City.
         </p>

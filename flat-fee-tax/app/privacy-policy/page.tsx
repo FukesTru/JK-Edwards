@@ -69,8 +69,8 @@ export default function PrivacyPolicyPage() {
         <h2>How we share information</h2>
         <ul>
           <li>
-            <strong>Service providers</strong> that help us run the site and our practice — such as hosting, email
-            delivery, scheduling and analytics — who may use it only to provide services to us.
+            <strong>Service providers</strong> that help us run the site and our practice (such as hosting, email
+            delivery, scheduling and analytics), who may use it only to provide services to us.
           </li>
           <li>
             <strong>Secure portal and software providers</strong> you use with us. Their own privacy policies apply.

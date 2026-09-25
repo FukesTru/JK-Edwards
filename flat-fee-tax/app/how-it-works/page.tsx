@@ -22,7 +22,7 @@ const steps = [
   { title: "Book", description: "Book online or call. We confirm the details before any work begins." },
   {
     title: "Upload",
-    description: "Send documents through our secure portal — never by email. We’ll send you the link.",
+    description: "Send documents through our secure portal, never by email. We’ll send you the link.",
   },
   { title: "CPA preparation", description: "A licensed CPA prepares your return and signs it as the preparer." },
   { title: "EA review", description: "An Enrolled Agent reviews the return line by line before it’s filed." },
@@ -35,7 +35,7 @@ export default function HowItWorksPage() {
       <PageHero
         eyebrow="How it works"
         title="How It Works: From Documents to E-File"
-        subtitle="Five clear steps and two licensed professionals — whether you meet us in Peachtree City or never leave home."
+        subtitle="Five clear steps and two licensed professionals, whether you meet us in Peachtree City or never leave home."
         image="secure-portal"
       />
       <Breadcrumbs items={[{ name: "How It Works", path: "/how-it-works" }]} />
@@ -46,7 +46,7 @@ export default function HowItWorksPage() {
           align="center"
           eyebrow="The process"
           title="Five steps from start to e-file"
-          intro="You’ll always know what happens next — and who’s working on your return."
+          intro="You’ll always know what happens next and who’s working on your return."
         />
         <div className="mt-14">
           <ProcessTimeline steps={steps} />
@@ -65,7 +65,7 @@ export default function HowItWorksPage() {
                 open the secure portal<span className="sr-only"> (opens in a new tab)</span>
               </a>
             ) : (
-              <ConfigValue value={site.secureUploadUrl} note="Secure upload portal link — set in site.config.ts" />
+              <ConfigValue value={site.secureUploadUrl} note="Secure upload portal link: set in site.config.ts" />
             )}
             . Please never email tax documents or Social Security numbers.
           </p>
@@ -93,7 +93,7 @@ export default function HowItWorksPage() {
             <p className="mt-2 leading-relaxed text-muted">
               <Confirm
                 value={site.confirm.turnaround}
-                note="Turnaround time — set confirm.turnaround in site.config.ts"
+                note="Turnaround time: set confirm.turnaround in site.config.ts"
               />{" "}
               Uploading everything at once is the fastest way to get your return back.
             </p>

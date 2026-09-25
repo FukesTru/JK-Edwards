@@ -11,16 +11,16 @@ import { withBasePath } from "@/lib/site";
 export const metadata = buildMetadata({
   title: "Brand Kit",
   description:
-    "Logo system for review: horizontal logos for light and dark backgrounds, the square icon mark, favicon sizes, brand colors and typography. Internal page — not indexed by search engines.",
+    "Logo system for review: horizontal logos for light and dark backgrounds, the icon mark, favicon sizes, brand colors and typography. Internal page, not indexed.",
   path: "/brand",
   noindex: true,
 });
 
 const downloads = [
-  { label: "Horizontal logo — dark background (SVG)", href: "/brand/logo-horizontal-dark.svg" },
-  { label: "Horizontal logo — dark background (PNG)", href: "/brand/logo-horizontal-dark.png" },
-  { label: "Horizontal logo — light background (SVG)", href: "/brand/logo-horizontal-light.svg" },
-  { label: "Horizontal logo — light background (PNG)", href: "/brand/logo-horizontal-light.png" },
+  { label: "Horizontal logo for dark backgrounds (SVG)", href: "/brand/logo-horizontal-dark.svg" },
+  { label: "Horizontal logo for dark backgrounds (PNG)", href: "/brand/logo-horizontal-dark.png" },
+  { label: "Horizontal logo for light backgrounds (SVG)", href: "/brand/logo-horizontal-light.svg" },
+  { label: "Horizontal logo for light backgrounds (PNG)", href: "/brand/logo-horizontal-light.png" },
   { label: "Square icon mark (SVG)", href: "/brand/icon-mark.svg" },
   { label: "App icon 512 × 512 (PNG)", href: "/brand/icon-512.png" },
   { label: "App icon 192 × 192 (PNG)", href: "/brand/icon-192.png" },

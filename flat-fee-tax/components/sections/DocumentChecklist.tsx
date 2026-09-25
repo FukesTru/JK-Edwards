@@ -34,7 +34,7 @@ export function DocumentChecklist({ headingLevel = "h2" }: { headingLevel?: "h2"
         </PrintButton>
       </div>
       <p className="mt-3 text-muted">
-        Gather what applies to you. Not sure about something? Bring it — we’ll sort it out.
+        Gather what applies to you. Not sure about something? Bring it and we’ll sort it out.
       </p>
       <div className="mt-8 grid gap-8 md:grid-cols-2">
         {documentChecklist.map((section) => (

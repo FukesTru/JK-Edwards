@@ -13,7 +13,7 @@ export function Logo({ tone = "dark", className }: { tone?: "dark" | "light"; cl
   return (
     <Link
       href="/"
-      aria-label={`${site.brandName} — home`}
+      aria-label={`${site.brandName} home page`}
       className={cn("group inline-flex items-center gap-2.5 rounded-sm", className)}
     >
       {tone === "dark" ? (

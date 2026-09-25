@@ -48,7 +48,7 @@ export default function PricingPage() {
           align="center"
           eyebrow="What you pay"
           title="One flat price per service"
-          intro="No per-form add-ons and no surprise invoices — you know the price before you book."
+          intro="No per-form add-ons and no surprise invoices. You know the price before you book."
         />
         <div className="mx-auto mt-12 grid max-w-5xl gap-6 lg:grid-cols-2">
           <PriceCard
@@ -69,7 +69,7 @@ export default function PricingPage() {
               ) : (
                 <>
                   IRS problems handled by an Enrolled Agent.{" "}
-                  <Placeholder note="Owner to confirm the exact scope — then set confirm.resolutionScopeConfirmed">
+                  <Placeholder note="Owner to confirm the exact scope, then set confirm.resolutionScopeConfirmed">
                     [CLIENT TO CONFIRM SCOPE]
                   </Placeholder>
                 </>

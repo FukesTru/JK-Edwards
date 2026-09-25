@@ -7,7 +7,7 @@ export const defaultOgImage = {
   url: absoluteUrl("/opengraph-image"),
   width: 1200,
   height: 630,
-  alt: `${site.brandName} — CPA-signed tax returns in ${site.primaryCity}`,
+  alt: `${site.brandName}: CPA-signed tax returns in ${site.primaryCity}`,
 };
 
 type MetadataInput = {
@@ -184,7 +184,7 @@ export const taxPrepService = () =>
   serviceSchema({
     name: "Tax Preparation",
     serviceType: "Individual income tax preparation",
-    description: `Flat ${prices.taxPrep} individual tax return (Form 1040) including Schedules A, C and E, 1099-B brokerage statements and Schedule K-1 income — prepared and signed by a CPA and reviewed by an Enrolled Agent.`,
+    description: `Flat ${prices.taxPrep} individual tax return (Form 1040) including Schedules A, C and E, 1099-B brokerage statements and Schedule K-1 income, prepared and signed by a CPA and reviewed by an Enrolled Agent.`,
     path: "/tax-preparation",
     price: site.prices.taxPrep,
   });

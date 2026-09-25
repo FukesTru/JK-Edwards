@@ -29,7 +29,7 @@ const values = [
   },
   {
     title: "Plain-English answers",
-    text: "No jargon — just what your return means and what to do next.",
+    text: "No jargon, just what your return means and what to do next.",
   },
   {
     title: "Local and virtual",
@@ -50,14 +50,14 @@ export default function AboutPage() {
 
       <Section tone="white" labelledBy="kai-heading">
         <div id="kai-mays" className="grid items-start gap-10 md:grid-cols-[auto_1fr] md:gap-14">
-          <Placeholder block note="Headshot — client to provide" className="justify-self-center">
+          <Placeholder block note="Headshot: client to provide" className="justify-self-center">
             <InitialsAvatar name={site.owner} className="w-44 text-5xl sm:w-52 sm:text-6xl" />
           </Placeholder>
           <div>
             <SectionHeading id="kai-heading" eyebrow="Founder · Enrolled Agent" title={site.owner} />
             <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted">
               <p>
-                <Placeholder note="Kai’s bio — client to provide">
+                <Placeholder note="Kai’s bio: client to provide">
                   [CLIENT TO PROVIDE: background, years of experience]
                 </Placeholder>
               </p>
@@ -66,7 +66,7 @@ export default function AboutPage() {
                 professional federally licensed by the Internal Revenue Service. EAs earn the credential by passing a
                 comprehensive IRS exam covering individual and business tax and representation (or through qualifying
                 experience as an IRS employee), and they must complete continuing education to keep it. EAs have
-                unlimited rights to represent taxpayers before the IRS — on audits, collections and appeals.
+                unlimited rights to represent taxpayers before the IRS. That includes audits, collections and appeals.
               </p>
             </div>
           </div>
@@ -75,7 +75,7 @@ export default function AboutPage() {
 
       <Section tone="paper" labelledBy="cpa-heading">
         <div id="signing-cpa" className="grid items-start gap-10 md:grid-cols-[auto_1fr] md:gap-14">
-          <Placeholder block note="CPA headshot — client to provide" className="justify-self-center">
+          <Placeholder block note="CPA headshot: client to provide" className="justify-self-center">
             <InitialsAvatar name={site.cpaName} className="w-44 text-5xl sm:w-52 sm:text-6xl" />
           </Placeholder>
           <div>
@@ -85,9 +85,7 @@ export default function AboutPage() {
             </p>
             <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted">
               <p>
-                <Placeholder note="CPA bio — client to provide">
-                  [CLIENT TO PROVIDE: CPA bio and background]
-                </Placeholder>
+                <Placeholder note="CPA bio: client to provide">[CLIENT TO PROVIDE: CPA bio and background]</Placeholder>
               </p>
               <p>
                 A Certified Public Accountant is licensed by a state board of accountancy after meeting education and
@@ -105,7 +103,7 @@ export default function AboutPage() {
           <div className="space-y-5 text-lg leading-relaxed text-muted">
             <p>
               Too many people walk into a tax office without knowing what they’ll pay. The price starts low, then grows
-              with every form — a charge for the side business, another for the rental, another for the brokerage
+              with every form: a charge for the side business, another for the rental, another for the brokerage
               statement. By the time the return is done, the bill feels like a surprise.
             </p>
             <p>
@@ -115,8 +113,8 @@ export default function AboutPage() {
               Enrolled Agent reviews it before it’s filed.
             </p>
             <p>
-              <Placeholder note="Personal story — client may add">
-                [OPTIONAL: Kai’s personal story — what led to starting the practice.]
+              <Placeholder note="Personal story: client may add">
+                [OPTIONAL: Kai’s personal story about what led to starting the practice.]
               </Placeholder>
             </p>
           </div>

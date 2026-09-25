@@ -48,7 +48,7 @@ export default async function CityPage({ params }: PageProps<"/areas-we-serve/[c
       <PageHero
         eyebrow={`${page.county} · ${page.name}, GA`}
         title={`CPA-Signed Tax Preparation in ${page.name}, GA`}
-        subtitle="Every return prepared and signed by a licensed CPA and reviewed by an Enrolled Agent — in person in Peachtree City or fully online."
+        subtitle="Every return is prepared and signed by a licensed CPA and reviewed by an Enrolled Agent, whether you meet us in Peachtree City or work fully online."
         image={page.image}
       />
       <Breadcrumbs
@@ -122,7 +122,7 @@ export default async function CityPage({ params }: PageProps<"/areas-we-serve/[c
           id="city-visit"
           eyebrow="Visit or go virtual"
           title={`From ${page.name} to our Peachtree City office`}
-          intro="Get turn-by-turn directions below — or skip the drive and work with us online."
+          intro="Get turn-by-turn directions below, or skip the drive and work with us online."
         />
         <div className="mt-10 grid gap-8 lg:grid-cols-[0.9fr_1.1fr]">
           <ContactCard directionsFrom={`${page.name}, GA`} />

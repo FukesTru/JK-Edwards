@@ -4,14 +4,14 @@ export const resolutionScope = [
   "IRS account transcript analysis",
   "Power of attorney (Form 2848)",
   "Communication with the IRS on your behalf",
-  "A resolution plan — e.g., a payment plan request or penalty abatement request where eligible",
+  "A resolution plan, such as a payment plan request or penalty abatement request where eligible",
 ];
 
 /** Issues we help with (icon grid on /tax-resolution). */
 export const resolutionIssues: { title: string; description: string }[] = [
   {
     title: "IRS notices & letters",
-    description: "CP14, CP2000, CP501–504 and other notices explained and answered.",
+    description: "CP14, CP2000, CP501 through CP504 and other notices explained and answered.",
   },
   {
     title: "Unfiled past-year returns",

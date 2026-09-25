@@ -8,11 +8,11 @@ const blocks = [
   },
   {
     title: "Reviewed by an Enrolled Agent",
-    text: "A federally licensed Enrolled Agent reviews every return before it’s filed — a true second check.",
+    text: "A federally licensed Enrolled Agent reviews every return before it’s filed, giving you a true second check.",
   },
   {
     title: "Plain-English Answers",
-    text: "We explain your return — and any letter from the IRS — in plain English, so you always know what happens next.",
+    text: "We explain your return (and any letter from the IRS) in plain English, so you always know what happens next.",
   },
 ];
 

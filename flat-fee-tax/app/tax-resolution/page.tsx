@@ -53,7 +53,7 @@ export default function TaxResolutionPage() {
               headingLevel="p"
               tagline={
                 site.confirm.resolutionScopeConfirmed ? undefined : (
-                  <Placeholder note="Owner to confirm the exact scope — then set confirm.resolutionScopeConfirmed">
+                  <Placeholder note="Owner to confirm the exact scope, then set confirm.resolutionScopeConfirmed">
                     [CLIENT TO CONFIRM SCOPE]
                   </Placeholder>
                 )
@@ -73,7 +73,7 @@ export default function TaxResolutionPage() {
           <div className="mt-6 space-y-5 text-lg leading-relaxed text-muted">
             <p>
               Enrolled Agents are tax professionals federally licensed by the IRS, with unlimited rights to represent
-              taxpayers before it — on notices, audits, collections and appeals.
+              taxpayers before it. That includes notices, audits, collections and appeals.
             </p>
             <p>
               When you sign IRS Form 2848, a power of attorney, {site.owner} can speak and correspond with the IRS on
@@ -88,7 +88,7 @@ export default function TaxResolutionPage() {
             </li>
             <li className="flex gap-3">
               <span aria-hidden className="mt-2.5 h-1.5 w-1.5 shrink-0 rounded-full bg-gold" />
-              Honest options — never “pennies on the dollar” promises
+              Honest options, never “pennies on the dollar” promises
             </li>
           </ul>
         </SplitFeature>

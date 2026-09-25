@@ -23,7 +23,7 @@ export default function AreasWeServePage() {
       <PageHero
         eyebrow="Areas we serve"
         title="Proudly Serving Fayette & Coweta County"
-        subtitle="In person at our Peachtree City office, or fully virtual anywhere in Georgia — with two licensed professionals on every return."
+        subtitle="In person at our Peachtree City office or fully virtual anywhere in Georgia. Either way, you get two licensed professionals on every return."
       />
       <Breadcrumbs items={[{ name: "Areas We Serve", path: "/areas-we-serve" }]} />
 

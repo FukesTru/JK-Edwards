@@ -25,7 +25,7 @@ export const metadata = buildMetadata({
 const steps = [
   {
     title: "Book or call",
-    description: "Choose a time online or give us a call — we’ll confirm what you need.",
+    description: "Choose a time online or give us a call, and we’ll confirm what you need.",
   },
   { title: "Securely upload", description: "Send your documents through our secure portal. Never by email." },
   {
@@ -71,7 +71,7 @@ export default function HomePage() {
             id="included-heading"
             eyebrow="Every return"
             title="What we handle on every return"
-            intro="Itemized deductions, self-employment, rentals, investments and K-1s — the forms that make a return complicated are routine for us."
+            intro="Itemized deductions, self-employment, rentals, investments and K-1s are the forms that make a return complicated, and they’re routine for us."
           />
           <ButtonLink
             href="/tax-preparation"
@@ -93,7 +93,7 @@ export default function HomePage() {
             id="why-heading"
             eyebrow="Why it matters"
             title="Typical tax shop vs. us"
-            intro="Who prepares your return — and who checks it — matters more than the logo on the door. Here’s what’s different."
+            intro="Who prepares your return, and who checks it, matters more than the logo on the door. Here’s what’s different."
           />
           <ComparisonTable brandName={site.brandName} />
         </div>
@@ -107,7 +107,7 @@ export default function HomePage() {
           align="center"
           eyebrow="How it works"
           title="Four simple steps"
-          intro="In person in Peachtree City or completely online — the process is the same."
+          intro="In person in Peachtree City or completely online, the process is the same."
         />
         <div className="mt-14">
           <ProcessTimeline steps={steps} />

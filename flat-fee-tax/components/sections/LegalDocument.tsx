@@ -18,7 +18,7 @@ export function LegalDocument({ updated, children }: { updated: string; children
           Last updated <time dateTime={updated}>{date}</time>
         </p>
         {showPlaceholders && (
-          <Placeholder block note="Legal review — client to confirm" className="mt-4">
+          <Placeholder block note="Legal review: client to confirm" className="mt-4">
             <p className="rounded-xl border border-amber-500/40 bg-amber-50 px-4 py-3 text-sm text-ink">
               [PLACEHOLDER] Plain-English starting draft. Have it reviewed by the business’s attorney before launch.
             </p>

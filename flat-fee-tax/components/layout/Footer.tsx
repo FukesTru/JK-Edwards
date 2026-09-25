@@ -151,12 +151,12 @@ export function Footer() {
           <CredentialBadge size="sm" />
           <ul className="mt-5 grid gap-3 text-sm text-white/85 md:grid-cols-2">
             <li className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
-              <span>Enrolled Agent — licensed by the IRS</span>
+              <span>Enrolled Agent, licensed by the IRS</span>
             </li>
             <li className="flex items-start gap-3 rounded-xl border border-white/10 bg-white/[0.03] px-4 py-3">
               <span>
-                Returns signed by <ConfigValue value={site.cpaName} /> — GA License #
-                <ConfigValue value={site.cpaLicense} />
+                Returns signed by <ConfigValue value={site.cpaName} /> (GA License #
+                <ConfigValue value={site.cpaLicense} />)
               </span>
             </li>
           </ul>

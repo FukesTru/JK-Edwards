@@ -15,7 +15,7 @@ export default function NotFound() {
       <PageHero
         eyebrow="Error 404"
         title="We couldn’t find that page"
-        subtitle="The link may be out of date. Try one of the pages below — or start your return right now."
+        subtitle="The link may be out of date. Try one of the pages below, or start your return right now."
       />
       <Section tone="white">
         <RelatedLinks
