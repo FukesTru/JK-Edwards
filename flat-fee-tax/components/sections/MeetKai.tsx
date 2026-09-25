@@ -18,9 +18,9 @@ export function MeetKai({ headingId }: { headingId?: string }) {
       <div>
         <SectionHeading id={headingId} eyebrow="Meet Kai" title={`${site.owner}, founder`} />
         <p className="mt-5 max-w-2xl text-lg leading-relaxed text-muted">
-          Kai is an Enrolled Agent (a tax professional federally licensed by the IRS to represent taxpayers) and
-          founded {site.brandName} to make expert tax help simple: two licensed professionals on every return and
-          plain-English answers from someone local to Peachtree City.
+          Kai is an Enrolled Agent (a tax professional federally licensed by the IRS to represent taxpayers) and founded{" "}
+          {site.brandName} to make expert tax help simple: two licensed professionals on every return and plain-English
+          answers from someone local to Peachtree City.
         </p>
         <ButtonLink href="/about" variant="outline-dark" className="mt-7" icon="arrow">
           More about Kai and our signing CPA

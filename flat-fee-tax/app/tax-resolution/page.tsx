@@ -76,7 +76,7 @@ export default function TaxResolutionPage() {
               taxpayers before it. That includes notices, audits, collections and appeals.
             </p>
             <p>
-              When you sign IRS Form 2848, a power of attorney, {site.owner} can speak and correspond with the IRS on
+              When you sign IRS Form 2848 (a power of attorney), {site.owner} can speak and correspond with the IRS on
               your behalf. That means fewer phone calls for you, a professional reading every letter, and a clear plan
               for what happens next.
             </p>

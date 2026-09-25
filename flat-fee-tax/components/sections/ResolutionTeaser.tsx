@@ -36,8 +36,8 @@ export function ResolutionTeaser({
               Got a letter from the IRS? We’ll take it off your plate.
             </Heading>
             <p className="mt-5 max-w-2xl text-lg leading-relaxed text-mist">
-              An Enrolled Agent reads your notice, explains it in plain English and, with your power of attorney,
-              deals with the IRS for you. Results depend on your situation and IRS decisions.
+              An Enrolled Agent reads your notice, explains it in plain English and, with your power of attorney, deals
+              with the IRS for you. Results depend on your situation and IRS decisions.
             </p>
             <ul className="mt-7 flex flex-wrap gap-2" aria-label="Issues we help with">
               {issues.map((issue) => (

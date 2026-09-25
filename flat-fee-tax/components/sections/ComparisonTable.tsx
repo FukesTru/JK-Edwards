@@ -1,4 +1,4 @@
-import { Check, Minus } from "lucide-react";
+import { Check } from "lucide-react";
 const rows = [
   { label: "Who signs your return", typical: "Often a seasonal preparer", us: "A licensed CPA" },
   { label: "Second professional review", typical: "Rarely", us: "An Enrolled Agent reviews every return" },
@@ -36,10 +36,7 @@ export function ComparisonTable({ brandName }: { brandName: string }) {
                 {row.label}
               </th>
               <td className="px-4 py-5 text-[15px] text-muted sm:px-6">
-                <span className="flex items-start gap-2">
-                  <Minus aria-hidden className="mt-0.5 h-4 w-4 shrink-0 text-muted" strokeWidth={2} />
-                  {row.typical}
-                </span>
+                <span className="flex items-start gap-2">{row.typical}</span>
               </td>
               <td className="bg-navy/[0.03] px-4 py-5 text-[15px] font-medium text-ink sm:px-6">
                 <span className="flex items-start gap-2">
