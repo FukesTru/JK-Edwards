@@ -68,9 +68,9 @@ The content lives in `content/`: services, the forms included in the flat fee, c
 
 ## Contact and lead capture
 
-The site has **no forms of its own**. Every "Start My Return" and "Get Tax Help" button leads to `/get-started`, which shows the phone number, email, address, hours, a map and what happens next. The footer and the Tax Resolution page point people to call.
+Every "Start My Return" and "Get Tax Help" button leads to `/get-started`, which shows the **LeadConnector (GoHighLevel) request form** next to the phone number, email, address, hours and a map. The form is set in `site.config.ts` under `leadForm` (form ID, name and starting height); LeadConnector's `form_embed.js` resizes it to fit. Submissions go straight to LeadConnector, so the site has no form backend of its own.
 
-To use your own form (GoHighLevel, JotForm, HubSpot…), paste its embed URL into `formEmbedUrl` in `site.config.ts`. It then appears on `/get-started` in a full-width frame. Leave it empty to show only the call and email options.
+**Website chat:** the LeadConnector (GoHighLevel) chat widget loads on every page once the browser is idle, so it doesn't slow the first paint. Its ID is `chatWidgetId` in `site.config.ts`; change it to swap widgets or clear it to remove the chat. On phones, the bottom action bar leaves room on the right for the chat bubble.
 
 ## Service-area map
 
@@ -122,7 +122,7 @@ Photographs were generated with the Artlist connector for this site. The home pa
 - [ ] **Facebook / Instagram:** add the URLs; their icons appear automatically.
 - [ ] **Logo approval** from Kai (`/brand`), plus **headshots** for Kai and the CPA to replace the initials avatars.
 - [ ] **Bios:** Kai's and the CPA's (About page placeholders).
-- [ ] **Your lead form (optional):** paste its embed URL into `formEmbedUrl` to show it on `/get-started`.
+- [ ] **Request form and chat:** send a test through the form on `/get-started` and the chat bubble, and confirm both arrive in LeadConnector.
 - [ ] **GA4:** set `NEXT_PUBLIC_GA4_ID`.
 - [ ] **Legal review:** have the Privacy Policy and Terms reviewed by the business's attorney.
 - [ ] **Images:** review the unreviewed images and run `npm run images:pull`.

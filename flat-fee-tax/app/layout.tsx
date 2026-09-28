@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
+import { ChatWidget } from "@/components/analytics/ChatWidget";
 import { GoogleAnalytics } from "@/components/analytics/GoogleAnalytics";
 import { CtaBand } from "@/components/layout/CtaBand";
 import { Footer } from "@/components/layout/Footer";
@@ -84,6 +85,7 @@ export default function RootLayout({ children }: LayoutProps<"/">) {
           <Footer />
           <MobileActionBar />
         </MotionProvider>
+        <ChatWidget />
       </body>
     </html>
   );

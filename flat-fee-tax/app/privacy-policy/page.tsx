@@ -30,7 +30,10 @@ export default function PrivacyPolicyPage() {
 
         <h2>Information we collect</h2>
         <h3>Information you give us</h3>
-        <p>When you call, email or book an appointment with us, we collect the details you share:</p>
+        <p>
+          When you send our request form, chat, call, email or book an appointment with us, we collect the details you
+          share:
+        </p>
         <ul>
           <li>Your name, email address and phone number</li>
           <li>Your city, the service you’re interested in and which tax situations apply to you</li>
@@ -53,6 +56,11 @@ export default function PrivacyPolicyPage() {
           Our maps are provided by third parties: the service-area map loads map tiles from OpenFreeMap (built on
           OpenStreetMap data), and some pages embed Google Maps. When a map loads, your browser connects to that
           service, which receives your IP address and basic browser information.
+        </p>
+        <p>
+          Our website request form and chat are provided by LeadConnector. When you send the form or start a chat, what
+          you enter is sent to our team through that service. Please don’t share Social Security numbers, bank details
+          or tax documents in the form or the chat.
         </p>
 
         <h2>How we use information</h2>

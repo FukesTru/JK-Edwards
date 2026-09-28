@@ -135,7 +135,7 @@ export function Footer() {
           <div>
             <h3 className={headingClass}>Get Started</h3>
             <p className="mt-3 mb-6 text-sm leading-relaxed text-mist">
-              Call or email us and we’ll send next steps. Please don’t email tax documents.
+              Send a quick request or call us and we’ll send next steps. Please don’t email tax documents.
             </p>
             <div className="flex flex-col gap-3">
               <ButtonLink href={cta.taxPrep.href}>{cta.taxPrep.label}</ButtonLink>

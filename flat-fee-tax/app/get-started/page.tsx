@@ -3,21 +3,22 @@ import { PageHero } from "@/components/ui/PageHero";
 import { Section } from "@/components/ui/Section";
 import { SectionHeading } from "@/components/ui/SectionHeading";
 import { ContactCard } from "@/components/sections/ContactCard";
+import { LeadForm } from "@/components/sections/LeadForm";
 import { MapEmbed } from "@/components/sections/MapEmbed";
 import { ProcessTimeline } from "@/components/sections/ProcessTimeline";
 import { buildMetadata } from "@/lib/seo";
-import { formEmbedHref, phoneHref, site } from "@/lib/site";
+import { phoneHref, site } from "@/lib/site";
 
 export const metadata = buildMetadata({
   title: "Book a Tax Preparer Peachtree City",
   description:
-    "Book a tax preparer in Peachtree City, GA: a CPA-signed, EA-reviewed tax return or IRS tax help. Call or email us, or visit our office, and get started today.",
+    "Book a tax preparer in Peachtree City, GA: a CPA-signed, EA-reviewed tax return or IRS tax help. Send a quick request or call us, and get started today.",
   path: "/get-started",
 });
 
 const nextSteps = [
   {
-    title: "Call or email us",
+    title: "Send a request or call",
     description: "Tell us what you need. We confirm your service and answer your questions.",
   },
   {
@@ -36,33 +37,27 @@ export default function GetStartedPage() {
       <PageHero
         eyebrow="Get started"
         title="Let’s Get Started"
-        subtitle="Call or email us and we’ll take it from there. We’ll confirm the details and send a secure link for your documents."
-        primaryCta={{ label: `Call ${site.phone}`, href: phoneHref }}
-        secondaryCta={false}
+        subtitle="Send a quick request or give us a call. We’ll confirm the details and send a secure link for your documents."
+        primaryCta={{ label: "Fill Out the Form", href: "#request" }}
+        secondaryCta={{ label: `Call ${site.phone}`, href: phoneHref }}
       />
       <Breadcrumbs items={[{ name: "Get Started", path: "/get-started" }]} />
 
-      <Section tone="white" labelledBy="contact-heading">
-        <SectionHeading
-          id="contact-heading"
-          eyebrow="Reach us directly"
-          title="Talk to a real person"
-          intro="Meet us in Peachtree City or work with us from anywhere in Georgia. Please don’t email tax documents or Social Security numbers."
-        />
-        <div className="mt-10 grid gap-8 lg:grid-cols-2">
-          <ContactCard />
-          <MapEmbed height={380} />
-        </div>
-        {formEmbedHref && (
-          <div className="mt-12 overflow-hidden rounded-2xl border border-line bg-white">
-            <iframe
-              title="Request an appointment"
-              src={formEmbedHref}
-              loading="lazy"
-              className="block h-[900px] w-full border-0"
+      <Section tone="white" labelledBy="request-heading">
+        <div className="grid gap-10 lg:grid-cols-[1.2fr_0.8fr] lg:gap-12">
+          <div id="request" className="scroll-mt-28 rounded-2xl border border-line bg-paper p-5 sm:p-8">
+            <SectionHeading
+              id="request-heading"
+              title="Request your appointment"
+              intro="Tell us a little about what you need and we’ll be in touch. Please don’t include Social Security numbers or tax documents."
             />
+            <LeadForm className="mt-8" />
           </div>
-        )}
+          <div className="flex flex-col gap-6">
+            <ContactCard />
+            <MapEmbed height={320} />
+          </div>
+        </div>
       </Section>
 
       <Section tone="paper" labelledBy="next-steps">
@@ -71,7 +66,7 @@ export default function GetStartedPage() {
           align="center"
           eyebrow="What happens next"
           title="Three simple steps"
-          intro="Here’s what to expect once you reach out."
+          intro="Here’s what to expect after you send your request."
         />
         <div className="mt-14">
           <ProcessTimeline steps={nextSteps} />
